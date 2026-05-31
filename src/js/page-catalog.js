@@ -136,6 +136,7 @@ function applyFilters(main) {
       ? products.map(cardHTML).join('')
       : `<div class="catalog-empty"><strong>Ничего лишнего</strong><p>Напишите нам — подберем модель вручную.</p><a href="${leadLink('Здравствуйте! Помогите подобрать дверь под интерьер.')}" target="_blank" rel="noopener noreferrer">Подобрать</a></div>`;
     bindCards(main);
+    grid.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
   }
 }
 
