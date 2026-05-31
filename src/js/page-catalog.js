@@ -10,6 +10,13 @@ const STYLE_LABELS = {
 };
 
 const ORDERED_CATEGORIES = ['Классика', 'Неоклассика', 'Минимализм', 'Дизайн'];
+const DOOR_CATEGORY_NAV = [
+  { label: 'Классика', href: categoryHref('Классика') },
+  { label: 'Неоклассика', href: categoryHref('Неоклассика') },
+  { label: 'Минимализм', href: categoryHref('Минимализм') },
+  { label: 'Скрытые двери', href: leadLink('Здравствуйте! Хочу обсудить скрытые двери под интерьер.') },
+  { label: 'Алюминиевые перегородки', href: leadLink('Здравствуйте! Хочу рассчитать алюминиевую перегородку.') },
+];
 
 function categoryByName(name) {
   return CATALOG.find(c => c.name === name) || CATALOG.find(c => c.name.includes(name));
@@ -25,10 +32,18 @@ function lifestyleFromCategory(name) {
   return (found && (CATEGORY_HEROES[found.name] || found.products?.[0]?.images?.find(im => /\.(jpg|jpeg|webp)$/i.test(im)) || found.products?.[0]?.images?.[0])) || '';
 }
 
+function doorCollectionSlides() {
+  return [
+    ['Классика', lifestyleFromCategory('Классика')],
+    ['Неоклассика', lifestyleFromCategory('Неоклассика')],
+    ['Минимализм', lifestyleFromCategory('Минимализм')],
+    ['Дизайн', lifestyleFromCategory('Дизайн')],
+  ].filter(([, image]) => image).map(([label, image]) => ({ label, image }));
+}
+
 function directionCards() {
   const doorImage = lifestyleFromCategory('Дизайн') || lifestyleFromCategory('Неоклассика') || ALL[0]?.images?.[0] || '';
   const panelImage = lifestyleFromCategory('Минимализм') || doorImage;
-  const partitionImage = lifestyleFromCategory('Дизайн') || panelImage;
   return [
     {
       mod: 'catalog-direction--featured',
@@ -59,14 +74,6 @@ function directionCards() {
       image: panelImage,
       href: leadLink('Здравствуйте! Хочу обсудить стеновые панели и рейки для интерьера.'),
       cta: 'Обсудить панели',
-    },
-    {
-      kicker: 'Свет и зонирование',
-      title: 'Алюминиевые перегородки',
-      text: 'Стекло и алюминий для кухни-гостиной, кабинета, гардеробной или коммерческого пространства.',
-      image: partitionImage,
-      href: leadLink('Здравствуйте! Хочу рассчитать алюминиевую перегородку.'),
-      cta: 'Рассчитать',
     },
   ];
 }
@@ -108,6 +115,7 @@ export function renderCatalog(main, activeCategory) {
   const directions = directionCards();
   const isDoorCatalog = activeCategory === 'doors';
   const showDoorCollections = Boolean(activeCategory);
+  const doorSlides = doorCollectionSlides();
   main.innerHTML = `
     <section class="catalog-studio">
       <div class="catalog-studio__hero">
@@ -120,6 +128,7 @@ export function renderCatalog(main, activeCategory) {
         </div>
       </div>
 
+      ${!showDoorCollections ? `
       <div class="catalog-directions reveal-stagger" aria-label="Направления каталога">
         ${directions.map((item) => `
           <article class="catalog-direction ${item.mod || ''}">
@@ -145,6 +154,26 @@ export function renderCatalog(main, activeCategory) {
           </article>
         `).join('')}
       </div>
+      ` : ''}
+
+      ${showDoorCollections ? `
+        <section class="door-collections-intro reveal" aria-label="Межкомнатные двери">
+          <div class="door-collections-slider" aria-label="Интерьеры с дверями">
+            ${doorSlides.map((slide) => `
+              <figure class="door-collections-slide">
+                <img src="${assetPath(slide.image)}" alt="${slide.label}" loading="lazy">
+                <figcaption>${slide.label}</figcaption>
+              </figure>
+            `).join('')}
+          </div>
+          <div class="door-collections-nav" aria-label="Категории межкомнатных дверей">
+            ${DOOR_CATEGORY_NAV.map(item => `
+              <a href="${item.href}" ${item.href.startsWith('http') ? 'target="_blank" rel="noopener noreferrer"' : ''}>${item.label}</a>
+            `).join('')}
+          </div>
+          <div class="door-collections-scrollhint" aria-hidden="true"><span></span></div>
+        </section>
+      ` : ''}
 
       <div class="catalog-filter reveal" id="door-collections">
         <div class="catalog-filter__top">
