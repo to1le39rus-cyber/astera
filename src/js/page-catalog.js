@@ -45,6 +45,16 @@ function popularProducts(products, limit = 9) {
   return [...products].sort(() => Math.random() - 0.5).slice(0, limit);
 }
 
+function normalizeText(value = '') {
+  return String(value).trim().toLocaleLowerCase('ru-RU');
+}
+
+function productsForCategory(category) {
+  if (!category) return ALL;
+  const found = CATALOG.find(c => normalizeText(c.name) === normalizeText(category));
+  return found?.products?.length ? found.products : ALL.filter(p => normalizeText(p.category) === normalizeText(category));
+}
+
 function directionCards() {
   const doorImage = lifestyleFromCategory('Дизайн') || lifestyleFromCategory('Неоклассика') || ALL[0]?.images?.[0] || '';
   const panelImage = lifestyleFromCategory('Минимализм') || doorImage;
@@ -89,20 +99,23 @@ function applyFilters(main) {
   const budget = main.querySelector('[data-filter-budget].is-active')?.dataset.value || '';
   const sort = main.querySelector('[data-filter-sort]')?.value || 'popular';
 
-  let products = ALL.filter((p) => {
+  const sourceProducts = productsForCategory(category);
+  let products = sourceProducts.filter((p) => {
     const haystack = `${p.name} ${p.category} ${p.description || ''}`.toLowerCase();
     const searchOk = !search || haystack.includes(search);
-    const categoryOk = !category || p.category === category;
     const price = p.priceFrom || 0;
     const budgetOk = !budget
       || (budget === 'mid' && price && price < 24000)
       || (budget === 'premium' && price >= 24000 && price < 32000)
       || (budget === 'signature' && price >= 32000)
       || (budget === 'custom' && !price);
-    return searchOk && categoryOk && budgetOk;
+    return searchOk && budgetOk;
   });
 
   const isDoorMode = main.dataset.catalogMode === 'doors';
+  if (!products.length && isDoorMode && category) {
+    products = productsForCategory(category);
+  }
   if (isDoorMode) {
     products = popularProducts(products);
   } else {
