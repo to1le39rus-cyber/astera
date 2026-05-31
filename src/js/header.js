@@ -85,7 +85,7 @@ export function renderFooter(id = 'site-footer') {
       <div class="footer__inner">
         <div class="footer__top">
           <div>
-            <img class="footer__logo" src="${assetPath('branding/logo-astera-hor-monochrome.png')}" alt="Astera" width="220" height="40" loading="lazy">
+            <img class="footer__logo" src="${assetPath('branding/logo-astera-hor-monochrome.png')}" alt="Astera" width="150" height="52" loading="lazy">
             <p class="footer__about">Astera — двери, панели, рейки и входные группы для спокойных интерьеров. Калининград, Горького, 98.</p>
           </div>
           <div>

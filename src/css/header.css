@@ -163,7 +163,15 @@
   padding-bottom:var(--sp-xl);
   border-bottom:1px solid rgba(255,255,255,.06);
 }
-.footer__logo{height:32px;margin-bottom:20px;filter:none;opacity:.95}
+.footer__logo{
+  width:150px;
+  height:auto;
+  max-height:52px;
+  margin-bottom:20px;
+  object-fit:contain;
+  filter:none;
+  opacity:.95;
+}
 .footer__about{font-size:14px;color:rgba(255,255,255,.35);line-height:1.8;max-width:300px}
 .footer__col-title{
   font-size:11px;letter-spacing:.2em;text-transform:uppercase;
