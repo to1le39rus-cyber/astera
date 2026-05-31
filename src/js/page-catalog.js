@@ -112,7 +112,10 @@ function applyFilters(main) {
 
   const grid = main.querySelector('[data-catalog-grid]');
   const count = main.querySelector('[data-catalog-count]');
-  const countLabel = isDoorMode ? 'Популярные модели' : `${products.length} моделей`;
+  const selectedCategory = main.querySelector('[data-filter-category].is-active')?.dataset.value || '';
+  const countLabel = isDoorMode
+    ? (selectedCategory ? `Популярное: ${selectedCategory}` : 'Популярные модели')
+    : `${products.length} моделей`;
   if (count) count.textContent = `${products.length} моделей`;
   if (count) count.textContent = countLabel;
   if (grid) {
@@ -276,6 +279,9 @@ export function renderCatalog(main, activeCategory) {
       main.querySelectorAll(group).forEach(item => item.classList.remove('is-active'));
       btn.classList.add('is-active');
       applyFilters(main);
+      if (main.dataset.catalogMode === 'doors') {
+        main.querySelector('.catalog-studio__summary')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     });
   });
   main.querySelector('[data-filter-search]')?.addEventListener('input', () => applyFilters(main));
