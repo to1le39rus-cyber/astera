@@ -51,11 +51,12 @@ function directionCards() {
       title: 'Межкомнатные двери',
       text: 'Коллекции под классические, современные и минималистичные интерьеры.',
       image: doorImage,
+      slides: doorCollectionSlides(),
       href: '#/catalog/doors',
       cta: 'Смотреть коллекции',
       second: 'Подобрать по фото',
       secondHref: leadLink('Здравствуйте! Хочу подобрать межкомнатные двери по фото интерьера.'),
-      chips: ORDERED_CATEGORIES.map(name => ({ label: name, href: categoryHref(name) })),
+      chips: DOOR_CATEGORY_NAV,
     },
     {
       kicker: 'Astera на заказ',
@@ -115,7 +116,6 @@ export function renderCatalog(main, activeCategory) {
   const directions = directionCards();
   const isDoorCatalog = activeCategory === 'doors';
   const showDoorCollections = Boolean(activeCategory);
-  const doorSlides = doorCollectionSlides();
   main.innerHTML = `
     <section class="catalog-studio">
       <div class="catalog-studio__hero">
@@ -133,7 +133,16 @@ export function renderCatalog(main, activeCategory) {
         ${directions.map((item) => `
           <article class="catalog-direction ${item.mod || ''}">
             <a class="catalog-direction__media" href="${item.href}" ${item.href.startsWith('http') ? 'target="_blank" rel="noopener noreferrer"' : ''}>
-              ${item.image ? `<img src="${assetPath(item.image)}" alt="${item.title}" loading="lazy">` : ''}
+              ${item.slides?.length ? `
+                <div class="catalog-direction__slider" aria-label="Интерьеры межкомнатных дверей">
+                  ${item.slides.map(slide => `
+                    <figure>
+                      <img src="${assetPath(slide.image)}" alt="${slide.label}" loading="lazy">
+                      <figcaption>${slide.label}</figcaption>
+                    </figure>
+                  `).join('')}
+                </div>
+              ` : item.image ? `<img src="${assetPath(item.image)}" alt="${item.title}" loading="lazy">` : ''}
               <span>${item.kicker}</span>
             </a>
             <div class="catalog-direction__body">
@@ -145,6 +154,7 @@ export function renderCatalog(main, activeCategory) {
                 <div class="catalog-direction__chips" aria-label="Стили межкомнатных дверей">
                   ${item.chips.map(chip => `<a href="${chip.href}">${chip.label}</a>`).join('')}
                 </div>
+                <div class="catalog-direction__scrollhint" aria-hidden="true"><span></span></div>
               ` : ''}
               <div class="catalog-direction__actions">
                 <a href="${item.href}" ${item.href.startsWith('http') ? 'target="_blank" rel="noopener noreferrer"' : ''}>${item.cta}</a>
@@ -154,25 +164,6 @@ export function renderCatalog(main, activeCategory) {
           </article>
         `).join('')}
       </div>
-      ` : ''}
-
-      ${showDoorCollections ? `
-        <section class="door-collections-intro reveal" aria-label="Межкомнатные двери">
-          <div class="door-collections-slider" aria-label="Интерьеры с дверями">
-            ${doorSlides.map((slide) => `
-              <figure class="door-collections-slide">
-                <img src="${assetPath(slide.image)}" alt="${slide.label}" loading="lazy">
-                <figcaption>${slide.label}</figcaption>
-              </figure>
-            `).join('')}
-          </div>
-          <div class="door-collections-nav" aria-label="Категории межкомнатных дверей">
-            ${DOOR_CATEGORY_NAV.map(item => `
-              <a href="${item.href}" ${item.href.startsWith('http') ? 'target="_blank" rel="noopener noreferrer"' : ''}>${item.label}</a>
-            `).join('')}
-          </div>
-          <div class="door-collections-scrollhint" aria-hidden="true"><span></span></div>
-        </section>
       ` : ''}
 
       <div class="catalog-filter reveal" id="door-collections">
