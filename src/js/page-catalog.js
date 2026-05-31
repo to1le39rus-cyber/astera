@@ -41,6 +41,10 @@ function doorCollectionSlides() {
   ].filter(([, image]) => image).map(([label, image]) => ({ label, image }));
 }
 
+function popularProducts(products, limit = 9) {
+  return [...products].sort(() => Math.random() - 0.5).slice(0, limit);
+}
+
 function directionCards() {
   const doorImage = lifestyleFromCategory('Дизайн') || lifestyleFromCategory('Неоклассика') || ALL[0]?.images?.[0] || '';
   const panelImage = lifestyleFromCategory('Минимализм') || doorImage;
@@ -98,12 +102,19 @@ function applyFilters(main) {
     return searchOk && categoryOk && budgetOk;
   });
 
-  if (sort === 'price') products = products.sort((a, b) => (a.priceFrom || 999999) - (b.priceFrom || 999999));
-  if (sort === 'name') products = products.sort((a, b) => a.name.localeCompare(b.name, 'ru'));
+  const isDoorMode = main.dataset.catalogMode === 'doors';
+  if (isDoorMode) {
+    products = popularProducts(products);
+  } else {
+    if (sort === 'price') products = products.sort((a, b) => (a.priceFrom || 999999) - (b.priceFrom || 999999));
+    if (sort === 'name') products = products.sort((a, b) => a.name.localeCompare(b.name, 'ru'));
+  }
 
   const grid = main.querySelector('[data-catalog-grid]');
   const count = main.querySelector('[data-catalog-count]');
+  const countLabel = isDoorMode ? 'Популярные модели' : `${products.length} моделей`;
   if (count) count.textContent = `${products.length} моделей`;
+  if (count) count.textContent = countLabel;
   if (grid) {
     grid.innerHTML = products.length
       ? products.map(cardHTML).join('')
@@ -116,6 +127,7 @@ export function renderCatalog(main, activeCategory) {
   const directions = directionCards();
   const isDoorCatalog = activeCategory === 'doors';
   const showDoorCollections = Boolean(activeCategory);
+  main.dataset.catalogMode = showDoorCollections ? 'doors' : '';
   main.innerHTML = `
     <section class="catalog-studio">
       <div class="catalog-studio__hero">
@@ -226,6 +238,31 @@ export function renderCatalog(main, activeCategory) {
     main.querySelector('.catalog-consult')?.remove();
     return;
   }
+
+  main.querySelector('.catalog-studio__hero').innerHTML = `
+    <nav class="catalog-breadcrumbs" aria-label="Хлебные крошки">
+      <a href="#/">Главная</a><span>/</span><a href="#/catalog">Каталог</a><span>/</span><strong>Межкомнатные двери</strong>
+    </nav>
+    <span class="studio-kicker">Коллекции Astera</span>
+    <h1>Межкомнатные двери</h1>
+  `;
+  main.querySelector('.catalog-filter__top')?.remove();
+  main.querySelector('.catalog-filter__group--budget')?.remove();
+  const categoryGroup = main.querySelector('.catalog-filter__group');
+  if (categoryGroup) {
+    categoryGroup.innerHTML = `
+      <button class="${isDoorCatalog ? 'is-active' : ''}" data-filter-category data-value="">Все</button>
+      ${ORDERED_CATEGORIES.map(name => categoryByName(name)).filter(Boolean).map(c => `
+        <button class="${activeCategory === c.name ? 'is-active' : ''}" data-filter-category data-value="${c.name}">
+          ${c.name}
+        </button>
+      `).join('')}
+      <a class="catalog-filter__link" href="${leadLink('Здравствуйте! Хочу рассчитать алюминиевую перегородку.')}" target="_blank" rel="noopener noreferrer">Алюминиевые перегородки</a>
+    `;
+  }
+  const summaryText = main.querySelector('.catalog-studio__summary span');
+  if (summaryText) summaryText.textContent = 'Случайная подборка моделей из разных коллекций. Обновляется при переходе и выборе категории.';
+  main.querySelector('.catalog-consult')?.remove();
 
   if (activeCategory && !isDoorCatalog) {
     main.querySelectorAll('[data-filter-category]').forEach(btn => {
