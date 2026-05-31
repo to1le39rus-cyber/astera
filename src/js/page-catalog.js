@@ -36,7 +36,7 @@ function directionCards() {
       title: 'Межкомнатные двери',
       text: 'Коллекции под классические, современные и минималистичные интерьеры.',
       image: doorImage,
-      href: '#/catalog',
+      href: '#/catalog/doors',
       cta: 'Смотреть коллекции',
       second: 'Подобрать по фото',
       secondHref: leadLink('Здравствуйте! Хочу подобрать межкомнатные двери по фото интерьера.'),
@@ -106,6 +106,7 @@ function applyFilters(main) {
 
 export function renderCatalog(main, activeCategory) {
   const directions = directionCards();
+  const isDoorCatalog = activeCategory === 'doors';
   const showDoorCollections = Boolean(activeCategory);
   main.innerHTML = `
     <section class="catalog-studio">
@@ -206,7 +207,7 @@ export function renderCatalog(main, activeCategory) {
     return;
   }
 
-  if (activeCategory) {
+  if (activeCategory && !isDoorCatalog) {
     main.querySelectorAll('[data-filter-category]').forEach(btn => {
       btn.classList.toggle('is-active', btn.dataset.value === activeCategory);
     });
