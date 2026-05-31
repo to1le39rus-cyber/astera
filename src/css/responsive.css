@@ -82,34 +82,43 @@
   }
   .header{padding:0 16px;height:60px}
   .header__nav,.header__cta{display:none}
-  .header__logo-img{height:27px}
-  .header__phone{
+  .header__logo-img{height:39px}
+  .header__phone{display:none}
+  .header__phone-trigger{
     font-size:0;
-    width:42px;
-    height:42px;
+    width:48px;
+    height:48px;
     border-radius:999px;
     border:1px solid rgba(65,66,61,.16);
-    display:grid;
-    place-items:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     background:rgba(255,255,255,.45);
+    color:var(--c-char);
+    padding:0;
+    line-height:0;
+    cursor:pointer;
   }
-  .header__phone::before{
-    content:'';
-    width:18px;
-    height:18px;
-    background:currentColor;
-    -webkit-mask:url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='black' d='M6.62 10.79a15.1 15.1 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.24.2 2.45.57 3.57a1 1 0 0 1-.24 1.02l-2.21 2.2Z'/%3E%3C/svg%3E") center/contain no-repeat;
-    mask:url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='black' d='M6.62 10.79a15.1 15.1 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.24.2 2.45.57 3.57a1 1 0 0 1-.24 1.02l-2.21 2.2Z'/%3E%3C/svg%3E") center/contain no-repeat;
+  .header__phone-trigger svg{
+    width:20px;
+    height:20px;
+    display:block;
+    fill:currentColor;
   }
-  .header--on-hero .header__phone{
+  .header--on-hero .header__phone-trigger{
     color:var(--c-white);
     border-color:rgba(255,255,255,.24);
     background:rgba(255,255,255,.1);
   }
-  .header--on-hero.header--scrolled .header__phone{
+  .header--on-hero.header--scrolled .header__phone-trigger{
     color:var(--c-char);
     border-color:rgba(65,66,61,.16);
     background:rgba(255,255,255,.45);
+  }
+  .header-contact-menu{
+    top:calc(100% + 10px);
+    right:0;
+    width:min(252px, calc(100vw - 32px));
   }
   .main{padding-top:60px}
   .mobile-nav{display:grid}

@@ -33,6 +33,15 @@
   border-top:1px solid var(--c-border-l);
   padding:6px 0 max(6px,env(safe-area-inset-bottom));
   grid-template-columns:repeat(4,1fr);
+  opacity:0;
+  transform:translateY(110%);
+  pointer-events:none;
+  transition:opacity .36s ease, transform .36s cubic-bezier(.16,1,.3,1);
+}
+.mobile-nav.is-visible{
+  opacity:1;
+  transform:none;
+  pointer-events:auto;
 }
 .mobile-nav__item{
   display:flex;flex-direction:column;align-items:center;gap:4px;

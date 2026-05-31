@@ -87,16 +87,31 @@ route();
 
 function initCookieConsent() {
   if (localStorage.getItem('astera_cookie_ok') === '1') return;
-  const banner = document.createElement('div');
-  banner.className = 'cookie-note';
-  banner.innerHTML = `
-    <p>Мы используем cookie для работы сайта и аналитики. Продолжая пользоваться сайтом, вы соглашаетесь с политикой конфиденциальности.</p>
-    <button type="button">Понятно</button>`;
-  banner.querySelector('button').addEventListener('click', () => {
-    localStorage.setItem('astera_cookie_ok', '1');
-    banner.remove();
-  });
-  document.body.appendChild(banner);
+  const showBanner = () => {
+    if (document.querySelector('.cookie-note')) return;
+    const banner = document.createElement('div');
+    banner.className = 'cookie-note';
+    banner.innerHTML = `
+      <p>Мы используем cookie для работы сайта и аналитики. Продолжая пользоваться сайтом, вы соглашаетесь с политикой конфиденциальности.</p>
+      <button type="button">Понятно</button>`;
+    banner.querySelector('button').addEventListener('click', () => {
+      localStorage.setItem('astera_cookie_ok', '1');
+      banner.remove();
+    });
+    document.body.appendChild(banner);
+  };
+
+  if (window.matchMedia('(max-width: 768px)').matches) {
+    const onFirstScroll = () => {
+      if (window.scrollY < 90) return;
+      window.removeEventListener('scroll', onFirstScroll);
+      showBanner();
+    };
+    window.addEventListener('scroll', onFirstScroll, { passive: true });
+    return;
+  }
+
+  showBanner();
 }
 
 initCookieConsent();

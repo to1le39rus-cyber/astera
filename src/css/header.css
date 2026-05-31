@@ -69,13 +69,57 @@
 .header--on-hero.header--scrolled .header__nav a::after{background:rgba(65,66,61,.08)}
 
 .header__right{display:flex;align-items:center;gap:28px}
+.header__contact{position:relative;display:flex;align-items:center}
 .header__phone{
   font-size:13px;font-weight:400;color:var(--c-char);letter-spacing:.03em;
   transition:color var(--ease);
 }
+.header__phone-trigger{display:none}
 .header--on-hero .header__phone{color:rgba(255,255,255,.8)}
 .header--on-hero.header--scrolled .header__phone{color:var(--c-char)}
 .header__phone:hover{color:var(--c-olive)}
+.header-contact-menu{
+  position:absolute;
+  top:calc(100% + 12px);
+  right:0;
+  width:230px;
+  padding:8px;
+  border:1px solid rgba(65,66,61,.12);
+  border-radius:16px;
+  background:rgba(248,247,244,.96);
+  box-shadow:0 22px 70px rgba(18,19,17,.18);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(-6px);
+  transition:opacity .28s ease, transform .28s ease, visibility .28s;
+}
+.header__contact.is-open .header-contact-menu{
+  opacity:1;
+  visibility:visible;
+  transform:none;
+}
+.header-contact-menu a{
+  display:block;
+  padding:13px 14px;
+  border-radius:12px;
+  color:var(--c-char);
+}
+.header-contact-menu a:hover{background:rgba(65,66,61,.06)}
+.header-contact-menu span{
+  display:block;
+  margin-bottom:4px;
+  color:var(--c-muted);
+  font-size:10px;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+}
+.header-contact-menu strong{
+  display:block;
+  font-size:14px;
+  font-weight:600;
+}
 .header__cta{
   background:var(--c-char);color:var(--c-cream);
   padding:12px 28px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;

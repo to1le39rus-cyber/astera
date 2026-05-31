@@ -17,13 +17,49 @@ export function renderHeader(id = 'site-header') {
       <a href="#/contacts" data-nav-link="contacts">Контакты</a>
     </nav>
     <div class="header__right">
-      <a class="header__phone" href="tel:+74012336555">+7 (4012) 33&#8209;65&#8209;55</a>
+      <div class="header__contact" data-contact-menu>
+        <a class="header__phone" href="tel:+74012336555">+7 (4012) 33&#8209;65&#8209;55</a>
+        <button class="header__phone-trigger" type="button" aria-label="Открыть контакты" aria-expanded="false" data-contact-trigger>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+        </button>
+        <div class="header-contact-menu" data-contact-panel>
+          <a href="tel:+74012336555">
+            <span>Позвонить</span>
+            <strong>+7 (4012) 33-65-55</strong>
+          </a>
+          <a href="https://t.me/asteradoors" target="_blank" rel="noopener noreferrer">
+            <span>Написать нам</span>
+            <strong>Telegram</strong>
+          </a>
+        </div>
+      </div>
       <a class="header__cta" href="https://t.me/asteradoors" target="_blank" rel="noopener noreferrer"><span>Обсудить</span></a>
     </div>`;
 
-  window.addEventListener('scroll', () => {
-    el.classList.toggle('header--scrolled', window.scrollY > 60);
-  }, { passive: true });
+  const contact = el.querySelector('[data-contact-menu]');
+  const trigger = el.querySelector('[data-contact-trigger]');
+  trigger?.addEventListener('click', (event) => {
+    event.stopPropagation();
+    const open = !contact.classList.contains('is-open');
+    contact.classList.toggle('is-open', open);
+    trigger.setAttribute('aria-expanded', String(open));
+  });
+  document.addEventListener('click', (event) => {
+    if (!contact?.contains(event.target)) {
+      contact?.classList.remove('is-open');
+      trigger?.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  const syncScroll = () => {
+    const isScrolled = window.scrollY > 60;
+    el.classList.toggle('header--scrolled', isScrolled);
+    document.getElementById('mobile-nav')?.classList.toggle('is-visible', window.scrollY > 90);
+  };
+  window.addEventListener('scroll', syncScroll, { passive: true });
+  syncScroll();
 }
 
 export function setHeroHeader(on) {
