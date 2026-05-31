@@ -32,6 +32,23 @@ function observeReveal() {
     .forEach(el => revealIO.observe(el));
 }
 
+function initScrollTop() {
+  const button = document.getElementById('scroll-top');
+  if (!button) return;
+
+  const sync = () => {
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+    button.classList.toggle('is-visible', isMobile && window.scrollY > 560);
+  };
+
+  button.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  window.addEventListener('scroll', sync, { passive: true });
+  window.addEventListener('resize', sync);
+  sync();
+}
+
 // Router
 function route() {
   const raw = location.hash.replace(/^#\/?/, '');
@@ -115,6 +132,7 @@ function initCookieConsent() {
 }
 
 initCookieConsent();
+initScrollTop();
 
 function showAppWhenStable() {
   const ls = document.getElementById('loading-screen');

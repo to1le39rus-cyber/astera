@@ -82,28 +82,34 @@
   }
   .header{padding:0 16px;height:60px}
   .header__nav,.header__cta{display:none}
-  .header__logo-img:not(.header__logo-img--hero){
-    display:none;
+  .header__logo{
+    width:132px;
   }
-  .header__logo-img--hero{
-    position:static;
-    inset:auto;
-    opacity:1;
-    pointer-events:auto;
+  .header__logo-img{
     width:132px;
     height:auto;
     max-height:46px;
     object-fit:contain;
   }
-  .header--scrolled .header__logo-img--hero{
+  .header--scrolled .header__logo,
+  .header--scrolled .header__logo-img{
     width:116px;
-    height:auto;
-    max-height:40px;
-    object-fit:contain;
+  }
+  .header--on-hero .header__logo-img:not(.header__logo-img--hero){
+    opacity:0;
+  }
+  .header--on-hero .header__logo-img--hero{
+    opacity:1;
   }
   .header--on-hero .header__logo-img--hero,
   .header--on-hero.header--scrolled .header__logo-img--hero{
     opacity:1;
+  }
+  .header:not(.header--on-hero) .header__logo-img:not(.header__logo-img--hero){
+    opacity:1;
+  }
+  .header:not(.header--on-hero) .header__logo-img--hero{
+    opacity:0;
   }
   .header--on-hero.header--scrolled{
     background:rgba(10,11,10,.38);
@@ -158,6 +164,7 @@
   .header-contact-menu strong{color:#fff}
   .main{padding-top:60px}
   .mobile-nav{display:grid}
+  .scroll-top{display:grid;place-items:center}
   .cat-bar{top:60px;padding:12px 16px}
   .hero{
     padding:calc(var(--header-h) + 56px) 16px 48px;

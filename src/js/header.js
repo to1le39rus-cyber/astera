@@ -6,7 +6,7 @@ export function renderHeader(id = 'site-header') {
   el.className = 'header';
   el.innerHTML = `
     <a href="#/" class="header__logo" aria-label="ASTERA — главная">
-      <img class="header__logo-img" src="${assetPath('branding/logo-astera-hor-dark.jpg')}" alt="Astera интерьерные решения" loading="eager" width="220" height="40">
+      <img class="header__logo-img" src="${assetPath('branding/logo-astera-hor-charcoal.png')}" alt="Astera интерьерные решения" loading="eager" width="220" height="40">
       <img class="header__logo-img header__logo-img--hero" src="${assetPath('branding/logo-astera-hor-monochrome.png')}" alt="Astera интерьерные решения" loading="eager" width="220" height="40">
     </a>
     <nav class="header__nav" aria-label="Основная навигация">
