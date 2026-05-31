@@ -1005,20 +1005,27 @@
     padding-right:16px;
   }
   .studio-hero__copy h1{
-    font-size:clamp(38px,12vw,62px);
+    margin:18px 0 22px;
+    font-size:clamp(38px,11.2vw,58px);
+    line-height:.92;
   }
   .studio-hero__inner{
-    min-height:auto;
-    padding-top:calc(var(--header-h) + 82px);
-    padding-bottom:210px;
+    min-height:100svh;
+    padding-top:calc(var(--header-h) + 58px);
+    padding-bottom:158px;
+    align-items:start;
+  }
+  .studio-hero__copy{
+    padding-top:clamp(20px,4.5svh,46px);
   }
   .studio-hero__nav{
     left:16px;
     right:16px;
-    bottom:42px;
+    bottom:clamp(72px,9svh,96px);
     width:auto;
     transform:none;
     align-items:flex-start;
+    padding-top:14px;
   }
   .studio-hero__nav > button{
     display:none;
@@ -1037,10 +1044,14 @@
   .catalog-studio__actions{
     flex-direction:column;
   }
+  .studio-hero__actions{
+    gap:8px;
+    margin-top:24px;
+  }
   .studio-hero__directions{
     display:grid;
     grid-template-columns:1fr;
-    gap:10px;
+    gap:8px;
   }
   .studio-hero__directions span{
     min-height:0;
@@ -1048,8 +1059,13 @@
   .studio-hero__directions span:not(:last-child)::after{
     display:none;
   }
+  .studio-hero__image{
+    background-position:center 58%;
+  }
   .studio-btn{
     width:100%;
+    min-height:54px;
+    padding:14px 20px;
   }
   .studio-facts,
   .studio-door-grid,
