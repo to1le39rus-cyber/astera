@@ -106,6 +106,7 @@ function applyFilters(main) {
 
 export function renderCatalog(main, activeCategory) {
   const directions = directionCards();
+  const showDoorCollections = Boolean(activeCategory);
   main.innerHTML = `
     <section class="catalog-studio">
       <div class="catalog-studio__hero">
@@ -196,6 +197,14 @@ export function renderCatalog(main, activeCategory) {
         <a class="studio-btn studio-btn--light" href="${leadLink('Здравствуйте! Хочу подбор дверей под интерьер.')}" target="_blank" rel="noopener noreferrer">Написать</a>
       </section>
     </section>`;
+
+  if (!showDoorCollections) {
+    main.querySelector('.catalog-filter')?.remove();
+    main.querySelector('.catalog-studio__summary')?.remove();
+    main.querySelector('.catalog-door-grid')?.remove();
+    main.querySelector('.catalog-consult')?.remove();
+    return;
+  }
 
   if (activeCategory) {
     main.querySelectorAll('[data-filter-category]').forEach(btn => {
