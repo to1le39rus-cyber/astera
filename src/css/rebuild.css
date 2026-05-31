@@ -1070,28 +1070,81 @@
   .studio-facts,
   .studio-door-grid,
   .studio-promo-grid,
-  .studio-advantages,
   .designer-needs__grid,
   .designer-kit__list,
   .designer-process__rail{
     grid-template-columns:1fr;
   }
+  .studio-facts-section{
+    padding-top:58px;
+    padding-bottom:72px;
+  }
+  .studio-facts-head{
+    gap:18px;
+    margin-bottom:28px;
+  }
+  .studio-facts-head p{
+    font-size:14px;
+    line-height:1.7;
+  }
+  .studio-facts{
+    grid-template-columns:repeat(3, minmax(0,1fr));
+    gap:0;
+    padding-top:22px;
+  }
   .studio-facts div{
     min-height:0;
-    padding:28px 0;
+    padding:0 12px 0 0;
     border-right:0;
   }
   .studio-facts div + div{
     padding-left:0;
   }
   .studio-facts strong{
-    font-size:clamp(42px,14vw,62px);
+    font-size:clamp(34px,11vw,48px);
+    letter-spacing:0;
+  }
+  .studio-facts span{
+    max-width:96px;
+    margin-top:8px;
+    font-size:11px;
+    line-height:1.35;
+  }
+  .studio-advantages{
+    display:flex;
+    grid-template-columns:none;
+    gap:12px;
+    margin:34px -16px 0;
+    padding:0 16px 8px;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    scrollbar-width:none;
+  }
+  .studio-advantages::-webkit-scrollbar{
+    display:none;
   }
   .studio-advantage{
-    min-height:auto;
+    flex:0 0 min(82vw,340px);
+    min-height:218px;
+    padding:22px;
+    border:1px solid rgba(65,66,61,.12);
+    border-radius:0;
+    background:rgba(255,255,255,.52);
+    box-shadow:0 20px 54px rgba(39,42,36,.07);
+    scroll-snap-align:start;
+  }
+  .studio-advantage span{
+    font-size:18px;
   }
   .studio-advantage h3{
-    margin-top:32px;
+    margin:34px 0 14px;
+    font-size:28px;
+    line-height:1.05;
+  }
+  .studio-advantage p{
+    max-width:none;
+    font-size:13px;
+    line-height:1.65;
   }
   .studio-product{
     grid-template-columns:1fr;
