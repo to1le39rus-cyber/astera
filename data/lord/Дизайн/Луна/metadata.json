@@ -1,0 +1,19 @@
+{
+  "category": "Дизайн",
+  "name": "Луна",
+  "slug": "moon",
+  "source_url": "https://dveri-lord.ru/product/moon/",
+  "details_text": "",
+  "image_urls": [
+    "https://dveri-lord.ru/wp-content/uploads/2026/01/moon-1-nalichnik-komplanarnyj-ncs-s-4005-y50r.png",
+    "https://dveri-lord.ru/wp-content/uploads/2026/01/moon-2-nalichnik-komplanarnyj-ncs-s-4005-y50r.png",
+    "https://dveri-lord.ru/wp-content/uploads/2026/01/moon-3-nalichnik-komplanarnyj-ncs-s-4005-y50r.png",
+    "https://dveri-lord.ru/wp-content/uploads/2026/01/moon-4-nalichnik-komplanarnyj-ncs-s-4005-y50r.png"
+  ],
+  "local_images": [
+    "data\\lord\\Дизайн\\Луна\\images\\01.png",
+    "data\\lord\\Дизайн\\Луна\\images\\02.png",
+    "data\\lord\\Дизайн\\Луна\\images\\03.png",
+    "data\\lord\\Дизайн\\Луна\\images\\04.png"
+  ]
+}

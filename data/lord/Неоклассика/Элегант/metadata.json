@@ -1,0 +1,33 @@
+{
+  "category": "Неоклассика",
+  "name": "Элегант",
+  "slug": "elegant",
+  "source_url": "https://dveri-lord.ru/product/elegant/",
+  "details_text": "Сборная межкомнатная дверь\nВарианты остекления:\nРефлекторное стекло.\nПрозрачное стекло, Прозрачное бронза, Прозрачное графит.\nСатинат белый, Сатинат Графит, Сатинат бронза.\nВарианты покрытия:\nПВХ\nПолипропилен\nВарианты оформления проёма двери:\nКороб Telescope\nКомпланарная система\nСтандартные размеры:\nШирина двери: 400/500/600/700/800/900 мм\nВысота двери: 1900/2000 мм\nТолщина двери: 38 мм\nНестандартные размеры:\nШирина двери: до 1100 мм (с шагом 10 мм)\nВысота двери: до 2300 мм (с шагом 10 мм)",
+  "image_urls": [
+    "https://dveri-lord.ru/wp-content/uploads/2021/10/elegant-slajd1.jpg",
+    "https://dveri-lord.ru/wp-content/uploads/2021/10/elegant-slajd3.jpg",
+    "https://dveri-lord.ru/wp-content/uploads/2021/10/elegant-slajd2.jpg",
+    "https://dveri-lord.ru/wp-content/uploads/2024/12/elegant-1.png",
+    "https://dveri-lord.ru/wp-content/uploads/2024/12/elegant-2.png",
+    "https://dveri-lord.ru/wp-content/uploads/2024/12/elegant-3.png",
+    "https://dveri-lord.ru/wp-content/uploads/2024/12/elegant-4.png",
+    "https://dveri-lord.ru/wp-content/uploads/2024/12/elegant-5.png",
+    "https://dveri-lord.ru/wp-content/uploads/2024/12/elegant-6.png",
+    "https://dveri-lord.ru/wp-content/uploads/2024/12/elegant-7.png",
+    "https://dveri-lord.ru/wp-content/uploads/2024/12/elegant-8.png"
+  ],
+  "local_images": [
+    "data\\lord\\Неоклассика\\Элегант\\images\\01.jpg",
+    "data\\lord\\Неоклассика\\Элегант\\images\\02.jpg",
+    "data\\lord\\Неоклассика\\Элегант\\images\\03.jpg",
+    "data\\lord\\Неоклассика\\Элегант\\images\\04.png",
+    "data\\lord\\Неоклассика\\Элегант\\images\\05.png",
+    "data\\lord\\Неоклассика\\Элегант\\images\\06.png",
+    "data\\lord\\Неоклассика\\Элегант\\images\\07.png",
+    "data\\lord\\Неоклассика\\Элегант\\images\\08.png",
+    "data\\lord\\Неоклассика\\Элегант\\images\\09.png",
+    "data\\lord\\Неоклассика\\Элегант\\images\\10.png",
+    "data\\lord\\Неоклассика\\Элегант\\images\\11.png"
+  ]
+}

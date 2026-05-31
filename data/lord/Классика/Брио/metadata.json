@@ -1,0 +1,41 @@
+{
+  "category": "Классика",
+  "name": "Брио",
+  "slug": "novita-brio",
+  "source_url": "https://dveri-lord.ru/product/novita-brio/",
+  "details_text": "Межкомнатная дверь с багетом, фрезеровкой и остеклением\nВарианты остекления:\nРефлекторное стекло.\nПрозрачное стекло, Прозрачное бронза, Прозрачное графит.\nСатинат белый, Сатинат Графит, Сатинат бронза.\nВарианты покрытия:\nПВХ\nЭмаль\nВарианты оформления проёма двери:\nКороб Telescope\nКомпланарная система\nСтандартные размеры:\nШирина двери: 400/500/600/700/800/900 мм\nВысота двери: 1900/2000 мм\nТолщина двери: 38 мм\nНестандартные размеры:\nШирина двери: до 1100 мм (с шагом 10 мм)\nВысота двери: до 2300 мм (с шагом 10 мм)",
+  "image_urls": [
+    "https://dveri-lord.ru/wp-content/uploads/2021/10/novita-slajd1.jpg",
+    "https://dveri-lord.ru/wp-content/uploads/2021/11/novita-slajd6.jpg",
+    "https://dveri-lord.ru/wp-content/uploads/2021/10/novita-slajd5.jpg",
+    "https://dveri-lord.ru/wp-content/uploads/2021/11/novita-1-1.png",
+    "https://dveri-lord.ru/wp-content/uploads/2021/11/novita-1-glass-1.png",
+    "https://dveri-lord.ru/wp-content/uploads/2021/10/novita-3.png",
+    "https://dveri-lord.ru/wp-content/uploads/2021/10/novita-3-glass.png",
+    "https://dveri-lord.ru/wp-content/uploads/2021/10/novita-4.png",
+    "https://dveri-lord.ru/wp-content/uploads/2021/10/novita-4-glass.png",
+    "https://dveri-lord.ru/wp-content/uploads/2021/10/novita-6.png",
+    "https://dveri-lord.ru/wp-content/uploads/2021/10/novita-6-glass.png",
+    "https://dveri-lord.ru/wp-content/uploads/2021/10/novita-5.png",
+    "https://dveri-lord.ru/wp-content/uploads/2021/10/novita-5-glass.png",
+    "https://dveri-lord.ru/wp-content/uploads/2021/10/novita-2.png",
+    "https://dveri-lord.ru/wp-content/uploads/2021/10/novita-2-glass.png"
+  ],
+  "local_images": [
+    "data\\lord\\Классика\\Брио\\images\\01.jpg",
+    "data\\lord\\Классика\\Брио\\images\\02.jpg",
+    "data\\lord\\Классика\\Брио\\images\\03.jpg",
+    "data\\lord\\Классика\\Брио\\images\\04.png",
+    "data\\lord\\Классика\\Брио\\images\\05.png",
+    "data\\lord\\Классика\\Брио\\images\\06.png",
+    "data\\lord\\Классика\\Брио\\images\\07.png",
+    "data\\lord\\Классика\\Брио\\images\\08.png",
+    "data\\lord\\Классика\\Брио\\images\\09.png",
+    "data\\lord\\Классика\\Брио\\images\\10.png",
+    "data\\lord\\Классика\\Брио\\images\\11.png",
+    "data\\lord\\Классика\\Брио\\images\\12.png",
+    "data\\lord\\Классика\\Брио\\images\\13.png",
+    "data\\lord\\Классика\\Брио\\images\\14.png",
+    "data\\lord\\Классика\\Брио\\images\\15.png"
+  ]
+}

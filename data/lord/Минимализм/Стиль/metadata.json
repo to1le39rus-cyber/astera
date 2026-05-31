@@ -1,0 +1,23 @@
+{
+  "category": "Минимализм",
+  "name": "Стиль",
+  "slug": "style",
+  "source_url": "https://dveri-lord.ru/product/style/",
+  "details_text": "Межкомнатная дверь остекленная с триплексом\nВарианты покрытия:\nПВХ\nВарианты остекления:\nТриплекс Прозрачный\nТриплекс Молочный\nТриплекс Белый\nТриплекс Бронза\nТриплекс Графит\nТриплекс Черный\nВарианты оформления проёма двери:\nКороб Telescope\nКомпланарная система\nСтандартные размеры:\nШирина двери: 500/600/700/800/900 мм\nВысота двери: 1900/2000 мм\nТолщина двери: 38 мм\nНестандартные размеры:\nШирина двери: до 1100 мм (с шагом 10 мм)\nВысота двери: до 2300 мм (с шагом 10 мм)",
+  "image_urls": [
+    "https://dveri-lord.ru/wp-content/uploads/2021/10/style-slajd1.jpg",
+    "https://dveri-lord.ru/wp-content/uploads/2021/11/style-slajd5.jpg",
+    "https://dveri-lord.ru/wp-content/uploads/2024/12/style-1.png",
+    "https://dveri-lord.ru/wp-content/uploads/2024/12/style-4.png",
+    "https://dveri-lord.ru/wp-content/uploads/2024/12/new-style-1.png",
+    "https://dveri-lord.ru/wp-content/uploads/2024/12/new-style-2.png"
+  ],
+  "local_images": [
+    "data\\lord\\Минимализм\\Стиль\\images\\01.jpg",
+    "data\\lord\\Минимализм\\Стиль\\images\\02.jpg",
+    "data\\lord\\Минимализм\\Стиль\\images\\03.png",
+    "data\\lord\\Минимализм\\Стиль\\images\\04.png",
+    "data\\lord\\Минимализм\\Стиль\\images\\05.png",
+    "data\\lord\\Минимализм\\Стиль\\images\\06.png"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "category": "Дизайн",
+  "name": "Пунта",
+  "slug": "punta",
+  "source_url": "https://dveri-lord.ru/product/punta/",
+  "details_text": "",
+  "image_urls": [
+    "https://dveri-lord.ru/wp-content/uploads/2026/01/punta_promo1.jpg",
+    "https://dveri-lord.ru/wp-content/uploads/2026/01/punta_promo3.jpg",
+    "https://dveri-lord.ru/wp-content/uploads/2026/01/punta_promo2.jpg",
+    "https://dveri-lord.ru/wp-content/uploads/2026/01/punta-1-nalichnik-komplanarnyj-ncs-s-7005-b80g.png",
+    "https://dveri-lord.ru/wp-content/uploads/2026/01/punta-2-nalichnik-komplanarnyj-ncs-s-7005-b80g.png",
+    "https://dveri-lord.ru/wp-content/uploads/2026/01/punta-3-nalichnik-komplanarnyj-ncs-s-7005-b80g.png",
+    "https://dveri-lord.ru/wp-content/uploads/2026/01/punta-4-nalichnik-komplanarnyj-ncs-s-7005-b80g.png"
+  ],
+  "local_images": [
+    "data\\lord\\Дизайн\\Пунта\\images\\01.jpg",
+    "data\\lord\\Дизайн\\Пунта\\images\\02.jpg",
+    "data\\lord\\Дизайн\\Пунта\\images\\03.jpg",
+    "data\\lord\\Дизайн\\Пунта\\images\\04.png",
+    "data\\lord\\Дизайн\\Пунта\\images\\05.png",
+    "data\\lord\\Дизайн\\Пунта\\images\\06.png",
+    "data\\lord\\Дизайн\\Пунта\\images\\07.png"
+  ]
+}
