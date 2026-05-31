@@ -1,0 +1,19 @@
+{
+  "category": "Дизайн",
+  "name": "Зенит",
+  "slug": "zenit",
+  "source_url": "https://dveri-lord.ru/product/zenit/",
+  "details_text": "",
+  "image_urls": [
+    "https://dveri-lord.ru/wp-content/uploads/2026/01/zenit-1-nalichnik-komplanarnyj-ncs-s-6010-r90b-800h2000.png",
+    "https://dveri-lord.ru/wp-content/uploads/2026/01/zenit-2-nalichnik-komplanarnyj-ncs-s-6010-r90b-800h2000.png",
+    "https://dveri-lord.ru/wp-content/uploads/2026/01/zenit-3-nalichnik-komplanarnyj-ncs-s-6010-r90b-800h2000.png",
+    "https://dveri-lord.ru/wp-content/uploads/2026/01/zenit-4-nalichnik-komplanarnyj-ncs-s-6010-r90b-800h2000.png"
+  ],
+  "local_images": [
+    "data\\lord\\Дизайн\\Зенит\\images\\01.png",
+    "data\\lord\\Дизайн\\Зенит\\images\\02.png",
+    "data\\lord\\Дизайн\\Зенит\\images\\03.png",
+    "data\\lord\\Дизайн\\Зенит\\images\\04.png"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "category": "Дизайн",
+  "name": "Арея",
+  "slug": "area",
+  "source_url": "https://dveri-lord.ru/product/area/",
+  "details_text": "Коллекция межкомнатных дверей с радиусными элементами на гладком полотне.\nВарианты покрытия:\nПВХ\nЭмаль\nВарианты оформления проёма двери:\nКороб Telescope\nКомпланарная система\nСтандартные размеры:\nШирина двери: 500/600/700/800/900 мм\nВысота двери: 1900/2000 мм\nТолщина двери: 38 мм\nНестандартные размеры:\nШирина двери: до 1100 мм (с шагом 10 мм)\nВысота двери: до 2300 мм (с шагом 10 мм)",
+  "image_urls": [
+    "https://dveri-lord.ru/wp-content/uploads/2025/04/area1.png",
+    "https://dveri-lord.ru/wp-content/uploads/2025/04/area2.png",
+    "https://dveri-lord.ru/wp-content/uploads/2025/04/area3.png",
+    "https://dveri-lord.ru/wp-content/uploads/2025/04/area4.png",
+    "https://dveri-lord.ru/wp-content/uploads/2025/04/area5.png",
+    "https://dveri-lord.ru/wp-content/uploads/2025/04/area6.png"
+  ],
+  "local_images": [
+    "data\\lord\\Дизайн\\Арея\\images\\01.png",
+    "data\\lord\\Дизайн\\Арея\\images\\02.png",
+    "data\\lord\\Дизайн\\Арея\\images\\03.png",
+    "data\\lord\\Дизайн\\Арея\\images\\04.png",
+    "data\\lord\\Дизайн\\Арея\\images\\05.png",
+    "data\\lord\\Дизайн\\Арея\\images\\06.png"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "category": "Дизайн",
+  "name": "Рилиево",
+  "slug": "rilievo",
+  "source_url": "https://dveri-lord.ru/product/rilievo/",
+  "details_text": "",
+  "image_urls": [
+    "https://dveri-lord.ru/wp-content/uploads/2024/09/rilievo-slajd2.jpg",
+    "https://dveri-lord.ru/wp-content/uploads/2024/09/rilievo-slajd1.jpg",
+    "https://dveri-lord.ru/wp-content/uploads/2024/10/rilievo-slajd.jpg",
+    "https://dveri-lord.ru/wp-content/uploads/2025/06/rilievo-1.png",
+    "https://dveri-lord.ru/wp-content/uploads/2025/06/rilievo-2.png",
+    "https://dveri-lord.ru/wp-content/uploads/2025/06/rilievo-3.png",
+    "https://dveri-lord.ru/wp-content/uploads/2025/06/rilievo-4.png",
+    "https://dveri-lord.ru/wp-content/uploads/2025/06/rilievo-5.png",
+    "https://dveri-lord.ru/wp-content/uploads/2025/06/rilievo-6.png",
+    "https://dveri-lord.ru/wp-content/uploads/2025/06/rilievo-7.png",
+    "https://dveri-lord.ru/wp-content/uploads/2025/06/rilievo-8.png"
+  ],
+  "local_images": [
+    "data\\lord\\Дизайн\\Рилиево\\images\\01.jpg",
+    "data\\lord\\Дизайн\\Рилиево\\images\\02.jpg",
+    "data\\lord\\Дизайн\\Рилиево\\images\\03.jpg",
+    "data\\lord\\Дизайн\\Рилиево\\images\\04.png",
+    "data\\lord\\Дизайн\\Рилиево\\images\\05.png",
+    "data\\lord\\Дизайн\\Рилиево\\images\\06.png",
+    "data\\lord\\Дизайн\\Рилиево\\images\\07.png",
+    "data\\lord\\Дизайн\\Рилиево\\images\\08.png",
+    "data\\lord\\Дизайн\\Рилиево\\images\\09.png",
+    "data\\lord\\Дизайн\\Рилиево\\images\\10.png",
+    "data\\lord\\Дизайн\\Рилиево\\images\\11.png"
+  ]
+}

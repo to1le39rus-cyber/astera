@@ -1,0 +1,33 @@
+{
+  "category": "Дизайн",
+  "name": "Баухаус",
+  "slug": "bauhaus",
+  "source_url": "https://dveri-lord.ru/product/bauhaus/",
+  "details_text": "Межкомнатная дверь с алюминиевым молдингом и вставкой из стекла\nВарианты остекления\nЗеркало:\nСеребро, Графит, Бронза.\nЛакобель:\nУльтрабелый, Бежевый, Шамуа, Коричневый,\nЧерный, Серый, Пурпурный, Корал, Персиковый,\nСолнечный, Фарфор, Свежая мята, Азурит,\nНебесный, Индиго, Лаванда, Вечернее небо, Эвкалипт.\nВарианты оформления проёма двери:\nКороб Telescope,\nКомпланарная система,\nСкрытый короб.\nСтандартные размеры:\nШирина двери: 500/600/700/800/900 мм\nВысота двери: 1900/2000 мм\nТолщина двери: 38 мм\nНестандартные размеры:\nШирина двери: до 1100 мм (с шагом 10 мм)\nВысота двери: до 2300 мм (с шагом 10 мм)",
+  "image_urls": [
+    "https://dveri-lord.ru/wp-content/uploads/2024/06/bauhaus.jpg",
+    "https://dveri-lord.ru/wp-content/uploads/2024/06/bauhaus-2.jpg",
+    "https://dveri-lord.ru/wp-content/uploads/2024/06/bauhaus-1.jpg",
+    "https://dveri-lord.ru/wp-content/uploads/2024/06/bauhaus-1.png",
+    "https://dveri-lord.ru/wp-content/uploads/2024/06/bauhaus-2.png",
+    "https://dveri-lord.ru/wp-content/uploads/2024/06/bauhaus-3.png",
+    "https://dveri-lord.ru/wp-content/uploads/2024/06/bauhaus-4.png",
+    "https://dveri-lord.ru/wp-content/uploads/2024/06/bauhaus-5.png",
+    "https://dveri-lord.ru/wp-content/uploads/2024/06/bauhaus-6.png",
+    "https://dveri-lord.ru/wp-content/uploads/2024/06/bauhaus-7.png",
+    "https://dveri-lord.ru/wp-content/uploads/2024/06/bauhaus-8.png"
+  ],
+  "local_images": [
+    "data\\lord\\Дизайн\\Баухаус\\images\\01.jpg",
+    "data\\lord\\Дизайн\\Баухаус\\images\\02.jpg",
+    "data\\lord\\Дизайн\\Баухаус\\images\\03.jpg",
+    "data\\lord\\Дизайн\\Баухаус\\images\\04.png",
+    "data\\lord\\Дизайн\\Баухаус\\images\\05.png",
+    "data\\lord\\Дизайн\\Баухаус\\images\\06.png",
+    "data\\lord\\Дизайн\\Баухаус\\images\\07.png",
+    "data\\lord\\Дизайн\\Баухаус\\images\\08.png",
+    "data\\lord\\Дизайн\\Баухаус\\images\\09.png",
+    "data\\lord\\Дизайн\\Баухаус\\images\\10.png",
+    "data\\lord\\Дизайн\\Баухаус\\images\\11.png"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "category": "Минимализм",
+  "name": "Соло",
+  "slug": "solo",
+  "source_url": "https://dveri-lord.ru/product/solo/",
+  "details_text": "Гладкая межкомнатная дверь\nВарианты покрытия:\nПВХ\nПолипропилен\nЭмаль\nВарианты оформления проёма двери:\nКороб Telescope\nКомпланарная система\nСтандартные размеры:\nШирина двери: 400/500/600/700/800/900 мм\nВысота двери: 2000 мм\nТолщина двери: 38 мм\nНестандартные размеры:\nШирина двери: от 400 до 1100 мм\nВысота двери: от 1500 до 2300 мм",
+  "image_urls": [
+    "https://dveri-lord.ru/wp-content/uploads/2022/10/dub-sedan-belyj.png",
+    "https://dveri-lord.ru/wp-content/uploads/2022/10/oreh-amerikanskij-belenyj.png",
+    "https://dveri-lord.ru/wp-content/uploads/2022/10/oreh-amerikanskij-naturalnyj.png",
+    "https://dveri-lord.ru/wp-content/uploads/2022/10/shvejczarskij-kedr-naturalnyj.png",
+    "https://dveri-lord.ru/wp-content/uploads/2022/10/shvejczarskij-kedr-sedoj.png",
+    "https://dveri-lord.ru/wp-content/uploads/2022/10/shpon-oreh-morenyj.png",
+    "https://dveri-lord.ru/wp-content/uploads/2022/10/shpon-oreh-naturalnyj.png",
+    "https://dveri-lord.ru/wp-content/uploads/2022/10/shpon-oreh-svetlyj.png",
+    "https://dveri-lord.ru/wp-content/uploads/2022/03/sliding-350x260.jpg",
+    "https://dveri-lord.ru/wp-content/uploads/2022/03/sliding-telescope-350x260.jpg",
+    "https://dveri-lord.ru/wp-content/uploads/2022/03/invisible-1-350x260.jpg",
+    "https://dveri-lord.ru/wp-content/uploads/2022/03/3-350x260.jpg",
+    "https://dveri-lord.ru/wp-content/uploads/2022/03/2-350x260.jpg",
+    "https://dveri-lord.ru/wp-content/uploads/2022/03/1-350x260.jpg"
+  ],
+  "local_images": [
+    "data\\lord\\Минимализм\\Соло\\images\\01.png",
+    "data\\lord\\Минимализм\\Соло\\images\\02.png",
+    "data\\lord\\Минимализм\\Соло\\images\\03.png",
+    "data\\lord\\Минимализм\\Соло\\images\\04.png",
+    "data\\lord\\Минимализм\\Соло\\images\\05.png",
+    "data\\lord\\Минимализм\\Соло\\images\\06.png",
+    "data\\lord\\Минимализм\\Соло\\images\\07.png",
+    "data\\lord\\Минимализм\\Соло\\images\\08.png",
+    "data\\lord\\Минимализм\\Соло\\images\\09.jpg",
+    "data\\lord\\Минимализм\\Соло\\images\\10.jpg",
+    "data\\lord\\Минимализм\\Соло\\images\\11.jpg",
+    "data\\lord\\Минимализм\\Соло\\images\\12.jpg",
+    "data\\lord\\Минимализм\\Соло\\images\\13.jpg",
+    "data\\lord\\Минимализм\\Соло\\images\\14.jpg"
+  ]
+}

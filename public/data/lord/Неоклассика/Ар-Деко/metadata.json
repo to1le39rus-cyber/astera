@@ -1,0 +1,35 @@
+{
+  "category": "Неоклассика",
+  "name": "Ар-Деко",
+  "slug": "deco",
+  "source_url": "https://dveri-lord.ru/product/deco/",
+  "details_text": "",
+  "image_urls": [
+    "https://dveri-lord.ru/wp-content/uploads/2024/09/deco-1.png",
+    "https://dveri-lord.ru/wp-content/uploads/2024/09/deco-1-floods.png",
+    "https://dveri-lord.ru/wp-content/uploads/2024/09/deco-2.png",
+    "https://dveri-lord.ru/wp-content/uploads/2024/09/deco-2-floods.png",
+    "https://dveri-lord.ru/wp-content/uploads/2024/09/deco-3.png",
+    "https://dveri-lord.ru/wp-content/uploads/2024/09/deco-3-floods.png",
+    "https://dveri-lord.ru/wp-content/uploads/2024/09/deco-4.png",
+    "https://dveri-lord.ru/wp-content/uploads/2024/09/deco-4-floods.png",
+    "https://dveri-lord.ru/wp-content/uploads/2024/09/deco-5.png",
+    "https://dveri-lord.ru/wp-content/uploads/2024/09/deco-5-floods.png",
+    "https://dveri-lord.ru/wp-content/uploads/2024/09/deco-6.png",
+    "https://dveri-lord.ru/wp-content/uploads/2024/09/deco-6-floods.png"
+  ],
+  "local_images": [
+    "data\\lord\\Неоклассика\\Ар-Деко\\images\\01.png",
+    "data\\lord\\Неоклассика\\Ар-Деко\\images\\02.png",
+    "data\\lord\\Неоклассика\\Ар-Деко\\images\\03.png",
+    "data\\lord\\Неоклассика\\Ар-Деко\\images\\04.png",
+    "data\\lord\\Неоклассика\\Ар-Деко\\images\\05.png",
+    "data\\lord\\Неоклассика\\Ар-Деко\\images\\06.png",
+    "data\\lord\\Неоклассика\\Ар-Деко\\images\\07.png",
+    "data\\lord\\Неоклассика\\Ар-Деко\\images\\08.png",
+    "data\\lord\\Неоклассика\\Ар-Деко\\images\\09.png",
+    "data\\lord\\Неоклассика\\Ар-Деко\\images\\10.png",
+    "data\\lord\\Неоклассика\\Ар-Деко\\images\\11.png",
+    "data\\lord\\Неоклассика\\Ар-Деко\\images\\12.png"
+  ]
+}

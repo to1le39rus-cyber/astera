@@ -1,0 +1,357 @@
+{
+  "source": "https://dveri-lord.ru/product-category/door/",
+  "categories": [
+    {
+      "name": "Классика",
+      "url": "https://dveri-lord.ru/product-category/door/klassika/",
+      "models": [
+        {
+          "name": "Фелиция",
+          "slug": "novita-felicia",
+          "url": "https://dveri-lord.ru/product/novita-felicia/",
+          "model_dir": "data\\lord\\Классика\\Фелиция",
+          "images_count": 18,
+          "details_chars": 516
+        },
+        {
+          "name": "Кантри Вилла",
+          "slug": "kantri-villa",
+          "url": "https://dveri-lord.ru/product/kantri-villa/",
+          "model_dir": "data\\lord\\Классика\\Кантри Вилла",
+          "images_count": 24,
+          "details_chars": 348
+        },
+        {
+          "name": "Молле",
+          "slug": "molle",
+          "url": "https://dveri-lord.ru/product/molle/",
+          "model_dir": "data\\lord\\Классика\\Молле",
+          "images_count": 6,
+          "details_chars": 370
+        },
+        {
+          "name": "Мия Мария",
+          "slug": "novita-mia-maria",
+          "url": "https://dveri-lord.ru/product/novita-mia-maria/",
+          "model_dir": "data\\lord\\Классика\\Мия Мария",
+          "images_count": 12,
+          "details_chars": 516
+        },
+        {
+          "name": "Брио",
+          "slug": "novita-brio",
+          "url": "https://dveri-lord.ru/product/novita-brio/",
+          "model_dir": "data\\lord\\Классика\\Брио",
+          "images_count": 15,
+          "details_chars": 516
+        },
+        {
+          "name": "Прима",
+          "slug": "prima",
+          "url": "https://dveri-lord.ru/product/prima/",
+          "model_dir": "data\\lord\\Классика\\Прима",
+          "images_count": 13,
+          "details_chars": 583
+        },
+        {
+          "name": "Кантри",
+          "slug": "kantri",
+          "url": "https://dveri-lord.ru/product/kantri/",
+          "model_dir": "data\\lord\\Классика\\Кантри",
+          "images_count": 33,
+          "details_chars": 494
+        },
+        {
+          "name": "Ренессанс",
+          "slug": "renaissance",
+          "url": "https://dveri-lord.ru/product/renaissance/",
+          "model_dir": "data\\lord\\Классика\\Ренессанс",
+          "images_count": 27,
+          "details_chars": 507
+        },
+        {
+          "name": "Милетти",
+          "slug": "miletti",
+          "url": "https://dveri-lord.ru/product/miletti/",
+          "model_dir": "data\\lord\\Классика\\Милетти",
+          "images_count": 19,
+          "details_chars": 579
+        },
+        {
+          "name": "Дольче",
+          "slug": "dolce",
+          "url": "https://dveri-lord.ru/product/dolce/",
+          "model_dir": "data\\lord\\Классика\\Дольче",
+          "images_count": 43,
+          "details_chars": 589
+        }
+      ]
+    },
+    {
+      "name": "Неоклассика",
+      "url": "https://dveri-lord.ru/product-category/door/neoklassika/",
+      "models": [
+        {
+          "name": "Бриз",
+          "slug": "brezza",
+          "url": "https://dveri-lord.ru/product/brezza/",
+          "model_dir": "data\\lord\\Неоклассика\\Бриз",
+          "images_count": 16,
+          "details_chars": 0
+        },
+        {
+          "name": "Аванти",
+          "slug": "avavnti",
+          "url": "https://dveri-lord.ru/product/avavnti/",
+          "model_dir": "data\\lord\\Неоклассика\\Аванти",
+          "images_count": 10,
+          "details_chars": 565
+        },
+        {
+          "name": "Ар-Деко",
+          "slug": "deco",
+          "url": "https://dveri-lord.ru/product/deco/",
+          "model_dir": "data\\lord\\Неоклассика\\Ар-Деко",
+          "images_count": 12,
+          "details_chars": 0
+        },
+        {
+          "name": "Элегант",
+          "slug": "elegant",
+          "url": "https://dveri-lord.ru/product/elegant/",
+          "model_dir": "data\\lord\\Неоклассика\\Элегант",
+          "images_count": 11,
+          "details_chars": 494
+        },
+        {
+          "name": "Астория",
+          "slug": "astoria",
+          "url": "https://dveri-lord.ru/product/astoria/",
+          "model_dir": "data\\lord\\Неоклассика\\Астория",
+          "images_count": 17,
+          "details_chars": 503
+        },
+        {
+          "name": "Асти",
+          "slug": "asti",
+          "url": "https://dveri-lord.ru/product/asti/",
+          "model_dir": "data\\lord\\Неоклассика\\Асти",
+          "images_count": 11,
+          "details_chars": 486
+        },
+        {
+          "name": "Италия",
+          "slug": "italy",
+          "url": "https://dveri-lord.ru/product/italy/",
+          "model_dir": "data\\lord\\Неоклассика\\Италия",
+          "images_count": 15,
+          "details_chars": 507
+        },
+        {
+          "name": "Корона",
+          "slug": "corona",
+          "url": "https://dveri-lord.ru/product/corona/",
+          "model_dir": "data\\lord\\Неоклассика\\Корона",
+          "images_count": 13,
+          "details_chars": 507
+        },
+        {
+          "name": "Белла",
+          "slug": "bella",
+          "url": "https://dveri-lord.ru/product/bella/",
+          "model_dir": "data\\lord\\Неоклассика\\Белла",
+          "images_count": 23,
+          "details_chars": 489
+        }
+      ]
+    },
+    {
+      "name": "Минимализм",
+      "url": "https://dveri-lord.ru/product-category/door/minimalizm/",
+      "models": [
+        {
+          "name": "Соло",
+          "slug": "solo",
+          "url": "https://dveri-lord.ru/product/solo/",
+          "model_dir": "data\\lord\\Минимализм\\Соло",
+          "images_count": 14,
+          "details_chars": 332
+        },
+        {
+          "name": "Техно",
+          "slug": "techno",
+          "url": "https://dveri-lord.ru/product/techno/",
+          "model_dir": "data\\lord\\Минимализм\\Техно",
+          "images_count": 12,
+          "details_chars": 408
+        },
+        {
+          "name": "Мелфорд",
+          "slug": "melford",
+          "url": "https://dveri-lord.ru/product/melford/",
+          "model_dir": "data\\lord\\Минимализм\\Мелфорд",
+          "images_count": 14,
+          "details_chars": 523
+        },
+        {
+          "name": "Стиль",
+          "slug": "style",
+          "url": "https://dveri-lord.ru/product/style/",
+          "model_dir": "data\\lord\\Минимализм\\Стиль",
+          "images_count": 6,
+          "details_chars": 470
+        },
+        {
+          "name": "Модерн",
+          "slug": "modern",
+          "url": "https://dveri-lord.ru/product/modern/",
+          "model_dir": "data\\lord\\Минимализм\\Модерн",
+          "images_count": 28,
+          "details_chars": 348
+        },
+        {
+          "name": "Альфа",
+          "slug": "alfa",
+          "url": "https://dveri-lord.ru/product/alfa/",
+          "model_dir": "data\\lord\\Минимализм\\Альфа",
+          "images_count": 10,
+          "details_chars": 466
+        },
+        {
+          "name": "Атриум",
+          "slug": "atrium",
+          "url": "https://dveri-lord.ru/product/atrium/",
+          "model_dir": "data\\lord\\Минимализм\\Атриум",
+          "images_count": 19,
+          "details_chars": 540
+        }
+      ]
+    },
+    {
+      "name": "Дизайн",
+      "url": "https://dveri-lord.ru/product-category/door/dizajn/",
+      "models": [
+        {
+          "name": "Пунта",
+          "slug": "punta",
+          "url": "https://dveri-lord.ru/product/punta/",
+          "model_dir": "data\\lord\\Дизайн\\Пунта",
+          "images_count": 7,
+          "details_chars": 0
+        },
+        {
+          "name": "Луна",
+          "slug": "moon",
+          "url": "https://dveri-lord.ru/product/moon/",
+          "model_dir": "data\\lord\\Дизайн\\Луна",
+          "images_count": 4,
+          "details_chars": 0
+        },
+        {
+          "name": "Зенит",
+          "slug": "zenit",
+          "url": "https://dveri-lord.ru/product/zenit/",
+          "model_dir": "data\\lord\\Дизайн\\Зенит",
+          "images_count": 4,
+          "details_chars": 0
+        },
+        {
+          "name": "Арея",
+          "slug": "area",
+          "url": "https://dveri-lord.ru/product/area/",
+          "model_dir": "data\\lord\\Дизайн\\Арея",
+          "images_count": 6,
+          "details_chars": 384
+        },
+        {
+          "name": "Рилиево",
+          "slug": "rilievo",
+          "url": "https://dveri-lord.ru/product/rilievo/",
+          "model_dir": "data\\lord\\Дизайн\\Рилиево",
+          "images_count": 11,
+          "details_chars": 0
+        },
+        {
+          "name": "Баухаус",
+          "slug": "bauhaus",
+          "url": "https://dveri-lord.ru/product/bauhaus/",
+          "model_dir": "data\\lord\\Дизайн\\Баухаус",
+          "images_count": 11,
+          "details_chars": 604
+        },
+        {
+          "name": "Альтро СФ",
+          "slug": "altro-sf",
+          "url": "https://dveri-lord.ru/product/altro-sf/",
+          "model_dir": "data\\lord\\Дизайн\\Альтро СФ",
+          "images_count": 20,
+          "details_chars": 486
+        },
+        {
+          "name": "Альтро МФ",
+          "slug": "altro-mf",
+          "url": "https://dveri-lord.ru/product/altro-mf/",
+          "model_dir": "data\\lord\\Дизайн\\Альтро МФ",
+          "images_count": 20,
+          "details_chars": 421
+        },
+        {
+          "name": "Альтро Ф",
+          "slug": "altro",
+          "url": "https://dveri-lord.ru/product/altro/",
+          "model_dir": "data\\lord\\Дизайн\\Альтро Ф",
+          "images_count": 20,
+          "details_chars": 343
+        },
+        {
+          "name": "Токко",
+          "slug": "tocco",
+          "url": "https://dveri-lord.ru/product/tocco/",
+          "model_dir": "data\\lord\\Дизайн\\Токко",
+          "images_count": 8,
+          "details_chars": 486
+        },
+        {
+          "name": "Фигура",
+          "slug": "figura",
+          "url": "https://dveri-lord.ru/product/figura/",
+          "model_dir": "data\\lord\\Дизайн\\Фигура",
+          "images_count": 27,
+          "details_chars": 486
+        },
+        {
+          "name": "Италия Арте",
+          "slug": "italy-grafica",
+          "url": "https://dveri-lord.ru/product/italy-grafica/",
+          "model_dir": "data\\lord\\Дизайн\\Италия Арте",
+          "images_count": 34,
+          "details_chars": 343
+        },
+        {
+          "name": "Люми Лайн",
+          "slug": "lumi-linee",
+          "url": "https://dveri-lord.ru/product/lumi-linee/",
+          "model_dir": "data\\lord\\Дизайн\\Люми Лайн",
+          "images_count": 32,
+          "details_chars": 414
+        },
+        {
+          "name": "Футуристик",
+          "slug": "futuristic",
+          "url": "https://dveri-lord.ru/product/futuristic/",
+          "model_dir": "data\\lord\\Дизайн\\Футуристик",
+          "images_count": 40,
+          "details_chars": 472
+        },
+        {
+          "name": "Эклисси",
+          "slug": "eclissi",
+          "url": "https://dveri-lord.ru/product/eclissi/",
+          "model_dir": "data\\lord\\Дизайн\\Эклисси",
+          "images_count": 14,
+          "details_chars": 553
+        }
+      ]
+    }
+  ]
+}

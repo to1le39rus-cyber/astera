@@ -1,0 +1,35 @@
+{
+  "category": "Минимализм",
+  "name": "Техно",
+  "slug": "techno",
+  "source_url": "https://dveri-lord.ru/product/techno/",
+  "details_text": "Межкомнатная дверь с алюминиевым молдингом.\nВарианты покрытия:\nПВХ\nЭмаль\nВарианты цветов молдинга:\nЧерный\nБелый\nСеребро\nЗолото\nВарианты оформления проёма двери:\nКороб Telescope\nКомпланарная система\nСтандартные размеры:\nШирина двери: 500/600/700/800/900 мм\nВысота двери: 1900/2000 мм\nТолщина двери: 38 мм\nНестандартные размеры:\nШирина двери: до 1100 мм (с шагом 10 мм)\nВысота двери: до 2300 мм (с шагом 10 мм)",
+  "image_urls": [
+    "https://dveri-lord.ru/wp-content/uploads/2024/09/bezymyannyj-1.jpg",
+    "https://dveri-lord.ru/wp-content/uploads/2024/09/techno-1.png",
+    "https://dveri-lord.ru/wp-content/uploads/2024/09/techno-1-1.png",
+    "https://dveri-lord.ru/wp-content/uploads/2024/09/techno-2.png",
+    "https://dveri-lord.ru/wp-content/uploads/2024/09/techno-3.png",
+    "https://dveri-lord.ru/wp-content/uploads/2024/09/techno-4.png",
+    "https://dveri-lord.ru/wp-content/uploads/2024/09/techno-6.png",
+    "https://dveri-lord.ru/wp-content/uploads/2024/09/techno-6-1.png",
+    "https://dveri-lord.ru/wp-content/uploads/2024/09/techno-7.png",
+    "https://dveri-lord.ru/wp-content/uploads/2024/09/techno-7-1.png",
+    "https://dveri-lord.ru/wp-content/uploads/2024/09/techno-8.png",
+    "https://dveri-lord.ru/wp-content/uploads/2024/09/techno-8-1.png"
+  ],
+  "local_images": [
+    "data\\lord\\Минимализм\\Техно\\images\\01.jpg",
+    "data\\lord\\Минимализм\\Техно\\images\\02.png",
+    "data\\lord\\Минимализм\\Техно\\images\\03.png",
+    "data\\lord\\Минимализм\\Техно\\images\\04.png",
+    "data\\lord\\Минимализм\\Техно\\images\\05.png",
+    "data\\lord\\Минимализм\\Техно\\images\\06.png",
+    "data\\lord\\Минимализм\\Техно\\images\\07.png",
+    "data\\lord\\Минимализм\\Техно\\images\\08.png",
+    "data\\lord\\Минимализм\\Техно\\images\\09.png",
+    "data\\lord\\Минимализм\\Техно\\images\\10.png",
+    "data\\lord\\Минимализм\\Техно\\images\\11.png",
+    "data\\lord\\Минимализм\\Техно\\images\\12.png"
+  ]
+}
