@@ -1,7 +1,7 @@
 const CHECKLIST = [
   'Фото проема или стены',
   'План или визуализация',
-  'Двери, панели, рейки или вход',
+  'Что нужно: двери, панели или входная',
   'Желаемый срок',
 ];
 
@@ -11,15 +11,15 @@ export function renderContacts(main) {
       <section class="contacts-hero">
         <div>
           <span class="contacts-page__eyebrow">Салон в Калининграде</span>
-          <h1 class="contacts-page__title">Обсудите интерьер с Astera</h1>
-          <p class="contacts-page__lead">Пришлите фото, план или визуализацию. Мы предложим спокойное решение под пространство.</p>
+          <h1 class="contacts-page__title">Салон Astera в Калининграде</h1>
+          <p class="contacts-page__lead">Пришлите фото, план или визуализацию. Подберем двери, панели, рейки, перегородки или входную группу под ваш интерьер и проемы.</p>
           <div class="contacts-hero__actions">
             <a href="https://t.me/asteradoors" target="_blank" rel="noopener noreferrer" class="btn-primary"><span>Написать в Telegram</span></a>
             <a href="tel:+74012336555" class="btn-outline"><span>Позвонить</span></a>
           </div>
         </div>
         <aside class="contacts-panel">
-          <strong>Для начала</strong>
+          <strong>Что прислать</strong>
           ${CHECKLIST.map(item => `<span>${item}</span>`).join('')}
         </aside>
       </section>
@@ -41,11 +41,11 @@ export function renderContacts(main) {
             </div>
           </div>
           <div class="contacts-promise reveal">
-            <strong>После обращения</strong>
+            <strong>После заявки</strong>
             <span>подбор по интерьеру</span>
             <span>ориентир по стоимости</span>
             <span>состав комплектации</span>
-            <span>салон или замер</span>
+            <span>встреча в салоне или замер</span>
           </div>
         </div>
         <div class="contacts-map reveal">

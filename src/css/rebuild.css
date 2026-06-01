@@ -135,7 +135,8 @@
   gap:0;
   align-items:center;
 }
-.studio-hero__copy h1{
+.studio-hero__copy h1,
+.studio-hero__copy h2{
   max-width:880px;
   margin:28px 0 34px;
   color:#fff;
@@ -1301,7 +1302,8 @@
     padding-left:16px;
     padding-right:16px;
   }
-  .studio-hero__copy h1{
+  .studio-hero__copy h1,
+  .studio-hero__copy h2{
     margin:18px 0 22px;
     font-size:clamp(38px,11.2vw,58px);
     line-height:.92;

@@ -11,11 +11,40 @@ import { renderDesigners } from './page-designers.js';
 const app  = document.getElementById('app');
 const main = document.getElementById('main-content');
 const HOME_SECTIONS = new Set(['solutions', 'promos', 'lead']);
+const META = {
+  home: {
+    title: 'Astera — премиальные двери и интерьерные решения в Калининграде',
+    description: 'Astera — салон премиальных интерьерных решений в Калининграде: межкомнатные двери LORD, входные двери, перегородки, стеновые панели и рейки под проект.',
+  },
+  catalog: {
+    title: 'Каталог дверей и интерьерных решений Astera в Калининграде',
+    description: 'Каталог Astera: межкомнатные двери LORD, входные двери, стеновые панели, рейки и алюминиевые перегородки для квартир, домов и дизайн-проектов.',
+  },
+  doors: {
+    title: 'Межкомнатные двери LORD в Калининграде | Astera',
+    description: 'Коллекции межкомнатных дверей LORD для классических, современных и минималистичных интерьеров. Подбор модели, покрытия, короба и фурнитуры.',
+  },
+  designers: {
+    title: 'Дизайнерам и архитекторам — партнерские условия Astera',
+    description: 'Astera работает с дизайнерами и архитекторами в Калининграде: двери LORD, панели, перегородки, входные группы, спецификации, замер и монтаж.',
+  },
+  contacts: {
+    title: 'Контакты Astera — салон дверей в Калининграде',
+    description: 'Салон Astera в Калининграде: ул. Горького, 98. Подбор межкомнатных дверей, входных дверей, панелей, реек и перегородок под интерьер.',
+  },
+};
 
 // Init shell
 renderHeader();
 renderFooter();
 initLightbox();
+
+function setMeta(meta = META.home) {
+  document.title = meta.title;
+  document.querySelector('meta[name="description"]')?.setAttribute('content', meta.description);
+  document.querySelector('meta[property="og:title"]')?.setAttribute('content', meta.title);
+  document.querySelector('meta[property="og:description"]')?.setAttribute('content', meta.description);
+}
 
 // Reveal observer — handles both .reveal and .reveal-stagger
 const revealIO = new IntersectionObserver((entries) => {
@@ -60,6 +89,7 @@ function route() {
   window.scrollTo({ top: 0, behavior: 'instant' });
 
   if (!page || homeSection) {
+    setMeta(META.home);
     renderHome(main);
     setHeroHeader(!homeSection);
     setActiveNav(homeSection || '');
@@ -71,22 +101,27 @@ function route() {
       });
     }
   } else if (page === 'catalog') {
+    setMeta(sub ? META.doors : META.catalog);
     renderCatalog(main, sub || '');
     setHeroHeader(false);
     setActiveNav('catalog');
   } else if (page === 'designers') {
+    setMeta(META.designers);
     renderDesigners(main);
     setHeroHeader(false);
     setActiveNav('designers');
   } else if (page === 'product') {
+    setMeta(META.doors);
     renderProduct(main, sub);
     setHeroHeader(false);
     setActiveNav('catalog');
   } else if (page === 'contacts') {
+    setMeta(META.contacts);
     renderContacts(main);
     setHeroHeader(false);
     setActiveNav('contacts');
   } else {
+    setMeta(META.home);
     renderHome(main);
     setHeroHeader(true);
     setActiveNav('');
@@ -109,8 +144,8 @@ function initCookieConsent() {
     const banner = document.createElement('div');
     banner.className = 'cookie-note';
     banner.innerHTML = `
-      <p>Мы используем cookie для работы сайта и аналитики. Продолжая пользоваться сайтом, вы соглашаетесь с политикой конфиденциальности.</p>
-      <button type="button">Понятно</button>`;
+      <p>Используем cookie, чтобы сайт работал корректно и помогал нам улучшать сервис.</p>
+      <button type="button">Хорошо</button>`;
     banner.querySelector('button').addEventListener('click', () => {
       localStorage.setItem('astera_cookie_ok', '1');
       banner.remove();

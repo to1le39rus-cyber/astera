@@ -11,8 +11,8 @@ export function renderHeader(id = 'site-header') {
     </a>
     <nav class="header__nav" aria-label="Основная навигация">
       <a href="#/catalog" data-nav-link="catalog">Двери</a>
-      <a href="#/solutions" data-nav-link="solutions">Панели и рейки</a>
-      <a href="#/lead" data-nav-link="lead">Входные Astera</a>
+      <a href="#/solutions" data-nav-link="solutions">Панели</a>
+      <a href="#/lead" data-nav-link="lead">Входные двери</a>
       <a href="#/designers" data-nav-link="designers">Дизайнерам</a>
       <a href="#/contacts" data-nav-link="contacts">Контакты</a>
     </nav>
@@ -30,12 +30,12 @@ export function renderHeader(id = 'site-header') {
             <strong>+7 (4012) 33-65-55</strong>
           </a>
           <a href="https://t.me/asteradoors" target="_blank" rel="noopener noreferrer">
-            <span>Написать нам</span>
+            <span>Написать в Telegram</span>
             <strong>Telegram</strong>
           </a>
         </div>
       </div>
-      <a class="header__cta" href="https://t.me/asteradoors" target="_blank" rel="noopener noreferrer"><span>Обсудить</span></a>
+      <a class="header__cta" href="https://t.me/asteradoors" target="_blank" rel="noopener noreferrer"><span>Обсудить проект</span></a>
     </div>`;
 
   const contact = el.querySelector('[data-contact-menu]');
@@ -95,11 +95,11 @@ export function renderFooter(id = 'site-footer') {
             </div>
           </div>
           <div>
-            <div class="footer__col-title">Проект</div>
+            <div class="footer__col-title">Для проекта</div>
             <div class="footer__links">
               <a href="#/solutions">Панели и рейки</a>
               <a href="#/designers">Дизайнерам</a>
-              <a href="#/promos">Акции</a>
+              <a href="#/promos">Предложения</a>
               <a href="#/contacts">Контакты</a>
             </div>
           </div>
@@ -116,7 +116,7 @@ export function renderFooter(id = 'site-footer') {
         </div>
         <div class="footer__bottom">
           <span class="footer__copy">&copy; ${new Date().getFullYear()} ASTERA</span>
-          <span class="footer__partner">Информация на сайте носит справочный характер и не является публичной офертой. Цвета могут отличаться от образцов в салоне.</span>
+          <span class="footer__partner">Цены и оттенки уточняются в салоне. Сайт не является публичной офертой.</span>
         </div>
       </div>
     </footer>`;

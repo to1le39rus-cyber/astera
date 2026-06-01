@@ -4,14 +4,14 @@ import { assetPath } from './asset.js';
 
 export function renderProduct(main, slug) {
   const p = BY_SLUG[slug];
-  if (!p) { main.innerHTML = `<div style="padding:120px 40px;text-align:center;font-family:var(--f-serif);font-size:28px;color:var(--c-muted);font-weight:300">Модель не найдена</div>`; return; }
+  if (!p) { main.innerHTML = `<div style="padding:120px 40px;text-align:center;font-family:var(--f-serif);font-size:28px;color:var(--c-muted);font-weight:300">Такой модели нет в каталоге. Вернитесь в каталог или напишите нам — подберем похожее решение.</div>`; return; }
 
   const life = lifestyleImgs(p);
   const vars = variantImgs(p);
   const doorGallery = vars.length ? vars : p.images;
   const price = p.priceFrom ? `от ${fmt(p.priceFrom)} ₽` : null;
   const specs = parseSpecs(p.description || '');
-  const leadText = encodeURIComponent(`Здравствуйте! Хочу рассчитать дверь ${p.name}. Пришлю фото проема и интерьера.`);
+  const leadText = encodeURIComponent(`Здравствуйте! Хочу рассчитать модель ${p.name}. Пришлю размеры проема и фото интерьера.`);
 
   main.innerHTML = `
     <div class="prod-page">
@@ -38,20 +38,20 @@ export function renderProduct(main, slug) {
         <div class="prod-info">
           <p class="prod-info__cat">${p.category} · LORD</p>
           <h1 class="prod-info__name">${p.name}</h1>
-          <p class="prod-info__lead">Подберем эту модель под ваш интерьер и при необходимости дополним ее перегородками, стеновыми панелями, рейками и входной группой.</p>
+          <p class="prod-info__lead">Подберем модель ${p.name} под ваш интерьер: уточним проем, высоту полотна, покрытие, короб, фурнитуру и монтаж. При необходимости дополним решение стеновыми панелями, рейками или перегородками.</p>
           <div class="prod-info__quick">
-            <span>Проектный подбор</span>
-            <span>Замер на объекте</span>
-            <span>Официальный дилер</span>
+            <span>Подбор под интерьер</span>
+            <span>Замер перед заказом</span>
+            <span>Официальная поставка LORD</span>
           </div>
           ${price ? `
               <div style="margin-bottom:var(--sp-md)">
                 <div class="prod-info__price">${price}</div>
-                <p class="prod-info__underprice">Итоговая стоимость зависит от размера, покрытия, стекла, фурнитуры и монтажа.</p>
+                <p class="prod-info__underprice">Точная цена зависит от размера, отделки, фурнитуры и монтажа.</p>
               </div>` : ''}
           <div class="prod-fit">
-            <div><strong>Подойдет для</strong><span>квартир, домов и объектов с дизайнерским ремонтом</span></div>
-            <div><strong>Что уточним</strong><span>проем, открывание, короб, покрытие, панели, перегородки и сроки</span></div>
+            <div><strong>Подойдет для</strong><span>квартир, домов, таунхаусов и объектов с дизайн-проектом</span></div>
+            <div><strong>Для расчета уточним</strong><span>размер проема, открывание, короб, отделку, стекло, фурнитуру, панели и сроки</span></div>
           </div>
           <div class="prod-info__div"></div>
           <div class="specs" id="specs">
@@ -67,9 +67,9 @@ export function renderProduct(main, slug) {
           <div class="prod-cta">
             <a href="https://t.me/asteradoors?text=${leadText}" target="_blank" rel="noopener noreferrer" class="btn-primary">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="position:relative;z-index:1"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.8 19.8 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
-              <span>Рассчитать под мой проем</span>
+              <span>Рассчитать эту модель</span>
             </a>
-            <p class="prod-cta__note">Пришлите фото проема или интерьера — подскажем точную комплектацию и стоимость.</p>
+            <p class="prod-cta__note">Пришлите размеры проема, фото интерьера или план — уточним комплектацию и стоимость.</p>
             <div class="prod-cta__links">
               <a href="tel:+74012336555">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>Телефон
@@ -87,8 +87,8 @@ export function renderProduct(main, slug) {
       ${life.length ? `
         <section class="prod-interiors">
           <div class="prod-interiors__head">
-            <h2 class="prod-interiors__title">Дверь из этой коллекции в интерьере</h2>
-            <p class="prod-interiors__desc">Реальные интерьерные примеры, чтобы оценить как модель смотрится в пространстве.</p>
+            <h2 class="prod-interiors__title">${p.name} в интерьере</h2>
+            <p class="prod-interiors__desc">Примеры помогают оценить пропорции, оттенок и сочетание с отделкой.</p>
           </div>
           <div class="prod-interiors__grid">
             ${life.map((img, i) => `

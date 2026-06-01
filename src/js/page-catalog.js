@@ -3,10 +3,10 @@ import { cardHTML, bindCards, leadLink } from './page-home.js';
 import { assetPath } from './asset.js';
 
 const STYLE_LABELS = {
-  'Дизайн': 'акцентные модели',
-  'Классика': 'благородная классика',
-  'Минимализм': 'чистая геометрия',
-  'Неоклассика': 'мягкая современная классика',
+  'Дизайн': 'акцентные полотна',
+  'Классика': 'выразительная классика',
+  'Минимализм': 'чистая плоскость',
+  'Неоклассика': 'мягкая современная линия',
 };
 
 const ORDERED_CATEGORIES = ['Классика', 'Неоклассика', 'Минимализм', 'Дизайн'];
@@ -61,9 +61,9 @@ function directionCards() {
   return [
     {
       mod: 'catalog-direction--featured',
-      kicker: 'Главный выбор',
+      kicker: 'Основная коллекция',
       title: 'Межкомнатные двери',
-      text: 'Коллекции под классические, современные и минималистичные интерьеры.',
+      text: 'Классика, неоклассика, минимализм и акцентные модели для цельного интерьера.',
       image: doorImage,
       slides: doorCollectionSlides(),
       href: '#/catalog/doors',
@@ -74,18 +74,18 @@ function directionCards() {
     },
     {
       kicker: 'Astera на заказ',
-      title: 'Входные двери',
-      text: 'Индивидуальный размер, внутренняя отделка под холл, тепло, тишина и аккуратный монтаж.',
+      title: 'Входные двери Astera',
+      text: 'Индивидуальный размер, отделка под холл, тепло, тишина и аккуратное примыкание к интерьеру.',
       image: 'images/astera-entrance-door-burkovsky-inspired.png',
       href: leadLink('Здравствуйте! Хочу рассчитать входную дверь Astera под мой проем.'),
-      cta: 'Заказать расчет',
-      second: 'Как устроен заказ',
+      cta: 'Рассчитать дверь',
+      second: 'Как проходит заказ',
       secondHref: '#/lead',
     },
     {
-      kicker: 'Единая плоскость',
-      title: 'Стеновые панели',
-      text: 'Для прихожих, ТВ-зон, скрытых проходов и стен, которые должны звучать вместе с дверями.',
+      kicker: 'Единая отделка',
+      title: 'Стеновые панели и рейки',
+      text: 'Для прихожих, ТВ-зон, скрытых проходов и акцентных стен в одной логике с дверями.',
       image: panelImage,
       href: leadLink('Здравствуйте! Хочу обсудить стеновые панели и рейки для интерьера.'),
       cta: 'Обсудить панели',
@@ -134,7 +134,7 @@ function applyFilters(main) {
   if (grid) {
     grid.innerHTML = products.length
       ? products.map(cardHTML).join('')
-      : `<div class="catalog-empty"><strong>Ничего лишнего</strong><p>Напишите нам — подберем модель вручную.</p><a href="${leadLink('Здравствуйте! Помогите подобрать дверь под интерьер.')}" target="_blank" rel="noopener noreferrer">Подобрать</a></div>`;
+      : `<div class="catalog-empty"><strong>Не нашли подходящую модель</strong><p>Пришлите фото интерьера, и мы предложим варианты.</p><a href="${leadLink('Здравствуйте! Помогите подобрать дверь под интерьер.')}" target="_blank" rel="noopener noreferrer">Получить подбор</a></div>`;
     bindCards(main);
     grid.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
   }
@@ -149,11 +149,11 @@ export function renderCatalog(main, activeCategory) {
     <section class="catalog-studio">
       <div class="catalog-studio__hero">
         <span class="studio-kicker">Каталог Astera</span>
-        <h1>Выберите направление проекта</h1>
-        <p>Двери, входная группа, панели и перегородки собираются в одну спецификацию под интерьер, проемы и монтаж.</p>
+        <h1>Что подбираем для интерьера?</h1>
+        <p>Межкомнатные и входные двери, стеновые панели, рейки и алюминиевые перегородки подбираем в единую спецификацию: по проемам, отделке и сценарию монтажа.</p>
         <div class="catalog-studio__actions">
-          <a class="studio-btn studio-btn--dark" href="${leadLink('Здравствуйте! Хочу получить подбор Astera по проекту.')}" target="_blank" rel="noopener noreferrer">Получить подбор</a>
-          <a class="studio-btn studio-btn--outline" href="#/designers">Я дизайнер</a>
+          <a class="studio-btn studio-btn--dark" href="${leadLink('Здравствуйте! Хочу получить подбор Astera по проекту.')}" target="_blank" rel="noopener noreferrer">Получить подборку</a>
+          <a class="studio-btn studio-btn--outline" href="#/designers">Для дизайнеров</a>
         </div>
       </div>
 
@@ -198,21 +198,21 @@ export function renderCatalog(main, activeCategory) {
       <div class="catalog-filter reveal" id="door-collections">
         <div class="catalog-filter__top">
           <label>
-            <span>Модель</span>
-            <input data-filter-search placeholder="Eclissi, Bella, минимализм..." autocomplete="off">
+            <span>Поиск по модели</span>
+            <input data-filter-search placeholder="Модель, стиль или коллекция" autocomplete="off">
           </label>
           <label>
-            <span>Порядок</span>
+            <span>Сортировка</span>
             <select data-filter-sort>
-              <option value="popular">Astera choice</option>
-              <option value="price">По цене</option>
-              <option value="name">По названию</option>
+              <option value="popular">Рекомендуем</option>
+              <option value="price">Сначала дешевле</option>
+              <option value="name">По алфавиту</option>
             </select>
           </label>
         </div>
 
         <div class="catalog-filter__group" aria-label="Стиль">
-          <button class="is-active" data-filter-category data-value="">Все стили</button>
+          <button class="is-active" data-filter-category data-value="">Все коллекции</button>
           ${CATALOG.map(c => `
             <button class="${activeCategory === c.name ? 'is-active' : ''}" data-filter-category data-value="${c.name}">
               ${c.name}<small>${STYLE_LABELS[c.name] || ''}</small>
@@ -221,11 +221,11 @@ export function renderCatalog(main, activeCategory) {
         </div>
 
         <div class="catalog-filter__group catalog-filter__group--budget" aria-label="Бюджет">
-          <button class="is-active" data-filter-budget data-value="">Любой бюджет</button>
+          <button class="is-active" data-filter-budget data-value="">Любая стоимость</button>
           <button data-filter-budget data-value="mid">до 24 000 ₽</button>
           <button data-filter-budget data-value="premium">24 000-32 000 ₽</button>
           <button data-filter-budget data-value="signature">от 32 000 ₽</button>
-          <button data-filter-budget data-value="custom">по проекту</button>
+          <button data-filter-budget data-value="custom">индивидуально</button>
         </div>
       </div>
 
@@ -241,10 +241,10 @@ export function renderCatalog(main, activeCategory) {
       <section class="catalog-consult reveal">
         <div>
           <span class="studio-kicker">Подбор</span>
-          <h2>Покажите интерьер — предложим дверь</h2>
-          <p>Фото, план или визуализация. Остальное уточним в диалоге.</p>
+          <h2>Пришлите интерьер, подберем дверь</h2>
+          <p>Подойдет фото, план или визуализация. Мы уточним проемы, стиль, отделку и предложим спокойную комплектацию.</p>
         </div>
-        <a class="studio-btn studio-btn--light" href="${leadLink('Здравствуйте! Хочу подбор дверей под интерьер.')}" target="_blank" rel="noopener noreferrer">Написать</a>
+        <a class="studio-btn studio-btn--light" href="${leadLink('Здравствуйте! Хочу подбор дверей под интерьер.')}" target="_blank" rel="noopener noreferrer">Написать в Telegram</a>
       </section>
     </section>`;
 
@@ -260,8 +260,9 @@ export function renderCatalog(main, activeCategory) {
     <nav class="catalog-breadcrumbs" aria-label="Хлебные крошки">
       <a href="#/">Главная</a><span>/</span><a href="#/catalog">Каталог</a><span>/</span><strong>Межкомнатные двери</strong>
     </nav>
-    <span class="studio-kicker">Коллекции Astera</span>
-    <h1>Межкомнатные двери</h1>
+    <span class="studio-kicker">Коллекции дверей Astera</span>
+    <h1>Межкомнатные двери LORD в Калининграде</h1>
+    <p>Коллекции для классических, современных и минималистичных интерьеров. Подберем модель, покрытие, высоту полотна, короб и фурнитуру под ваши проемы.</p>
   `;
   main.querySelector('.catalog-filter__top')?.remove();
   main.querySelector('.catalog-filter__group--budget')?.remove();
@@ -278,7 +279,7 @@ export function renderCatalog(main, activeCategory) {
     `;
   }
   const summaryText = main.querySelector('.catalog-studio__summary span');
-  if (summaryText) summaryText.textContent = 'Случайная подборка моделей из разных коллекций. Обновляется при переходе и выборе категории.';
+  if (summaryText) summaryText.textContent = 'Подборка популярных моделей. Меняется при выборе стиля.';
   main.querySelector('.catalog-consult')?.remove();
 
   if (activeCategory && !isDoorCatalog) {
