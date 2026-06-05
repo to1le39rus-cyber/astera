@@ -1,4 +1,30 @@
 /* ===== Astera Rebuild: premium product experience ===== */
+html,
+body{
+  width:100%;
+  max-width:100%;
+  overflow-x:hidden;
+}
+body,
+.app,
+.main{
+  min-width:0;
+}
+.app,
+.main{
+  width:100%;
+  max-width:100%;
+  overflow-x:clip;
+}
+.main > *{
+  max-width:100%;
+}
+img,
+svg,
+video,
+canvas{
+  max-width:100%;
+}
 .studio-kicker{
   display:inline-flex;
   align-items:center;
@@ -1292,6 +1318,52 @@
   }
 }
 @media (max-width:760px){
+  html,
+  body,
+  .app,
+  .main{
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden;
+  }
+  .main > section,
+  .studio-hero,
+  .studio-facts-section,
+  .studio-products,
+  .studio-catalog-preview,
+  .studio-promos,
+  .studio-lead,
+  .catalog-studio,
+  .designer-page,
+  .catalog-directions,
+  .catalog-direction,
+  .catalog-filter,
+  .cat-bar,
+  .cat-bar__inner,
+  .cat-page,
+  .cat-page__hdr,
+  .catalog-assist,
+  .product-grid,
+  .door-grid,
+  .door-card,
+  .studio-product,
+  .studio-designers,
+  .catalog-consult{
+    width:100%;
+    max-width:100%;
+    min-width:0;
+    overflow-x:clip;
+  }
+  .studio-kicker{
+    max-width:100%;
+    flex-wrap:wrap;
+    gap:10px;
+    letter-spacing:.18em;
+    line-height:1.45;
+  }
+  .studio-kicker::before{
+    flex:0 0 34px;
+  }
   .studio-hero__inner,
   .studio-products,
   .studio-catalog-preview,
@@ -1321,6 +1393,7 @@
     left:16px;
     right:16px;
     bottom:clamp(72px,9svh,96px);
+    max-width:calc(100% - 32px);
     width:auto;
     transform:none;
     align-items:flex-start;
@@ -1334,7 +1407,10 @@
     overflow-x:auto;
     padding-bottom:4px;
     width:100%;
-  }
+    max-width:100%;
+    min-width:0;
+    overscroll-behavior-x:contain;
+    }
   .studio-hero__dots button{
     justify-content:center;
     flex:0 0 auto;
@@ -1388,8 +1464,11 @@
   .catalog-direction__chips{
     flex-wrap:nowrap;
     overflow-x:auto;
-    margin:0 -20px;
-    padding:0 20px 4px;
+    width:100%;
+    max-width:100%;
+    margin:0;
+    padding:0 0 4px;
+    overscroll-behavior-x:contain;
     scrollbar-width:none;
   }
   .catalog-direction__chips::-webkit-scrollbar{
@@ -1397,6 +1476,45 @@
   }
   .catalog-direction__chips a{
     flex:0 0 auto;
+    max-width:88vw;
+  }
+  .cat-bar{
+    overflow-x:clip;
+  }
+  .cat-bar__inner{
+    overflow-x:auto;
+    overscroll-behavior-x:contain;
+    scrollbar-width:none;
+  }
+  .cat-bar__inner::-webkit-scrollbar{
+    display:none;
+  }
+  .cat-bar__label,
+  .pill,
+  .catalog-assist a,
+  .pcard__price{
+    white-space:normal;
+  }
+  .cat-page{
+    padding-left:16px;
+    padding-right:16px;
+  }
+  .cat-page__hdr,
+  .catalog-assist,
+  .pcard__foot{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+  .cat-page__consult{
+    min-width:0;
+    width:100%;
+  }
+  .catalog-assist{
+    grid-template-columns:1fr;
+    margin-top:0;
+  }
+  .product-grid{
+    grid-template-columns:1fr;
   }
   .catalog-direction__actions{
     justify-content:space-between;
@@ -1409,10 +1527,13 @@
   }
   .door-collections-slider{
     gap:10px;
-    margin-left:-16px;
-    margin-right:-16px;
-    padding-left:16px;
-    padding-right:16px;
+    width:100%;
+    max-width:100%;
+    margin-left:0;
+    margin-right:0;
+    padding-left:0;
+    padding-right:0;
+    overscroll-behavior-x:contain;
   }
   .door-collections-slide{
     flex-basis:82vw;
@@ -1427,10 +1548,13 @@
     font-size:34px;
   }
   .door-collections-nav{
-    margin-left:-16px;
-    margin-right:-16px;
-    padding-left:16px;
-    padding-right:16px;
+    width:100%;
+    max-width:100%;
+    margin-left:0;
+    margin-right:0;
+    padding-left:0;
+    padding-right:0;
+    overscroll-behavior-x:contain;
   }
   .studio-hero__actions{
     gap:8px;
@@ -1499,35 +1623,33 @@
     line-height:1.35;
   }
   .studio-advantages{
-    display:flex;
-    grid-template-columns:none;
-    gap:12px;
-    margin:34px -16px 0;
-    padding:0 16px 8px;
-    overflow-x:auto;
-    scroll-snap-type:x mandatory;
-    scrollbar-width:none;
-  }
-  .studio-advantages::-webkit-scrollbar{
-    display:none;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:10px;
+    width:100%;
+    max-width:100%;
+    margin:28px 0 0;
+    padding:0;
+    overflow:visible;
+    scroll-snap-type:none;
   }
   .studio-advantage{
-    flex:0 0 min(82vw,340px);
-    min-height:218px;
-    padding:22px;
+    min-width:0;
+    min-height:0;
+    padding:18px;
     border:1px solid rgba(65,66,61,.12);
     border-radius:0;
     background:rgba(255,255,255,.52);
-    box-shadow:0 20px 54px rgba(39,42,36,.07);
-    scroll-snap-align:start;
+    box-shadow:0 16px 42px rgba(39,42,36,.06);
+    scroll-snap-align:none;
   }
   .studio-advantage span{
-    font-size:18px;
+    font-size:15px;
   }
   .studio-advantage h3{
-    margin:34px 0 14px;
-    font-size:28px;
-    line-height:1.05;
+    margin:18px 0 10px;
+    font-size:24px;
+    line-height:1.08;
   }
   .studio-advantage p{
     max-width:none;
@@ -1556,6 +1678,9 @@
   .catalog-studio__summary{
     align-items:flex-start;
     flex-direction:column;
+  }
+  .catalog-studio__summary strong{
+    white-space:normal;
   }
   .cookie-note{
     align-items:stretch;
