@@ -4,7 +4,7 @@ const ARR_SVG = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" str
 
 const SUPPORT = [
   ['20%', 'партнерское вознаграждение'],
-  ['24-48 ч', 'ответ по спецификации'],
+  ['24-48 ч', 'ответ по расчету'],
   ['1 окно', 'двери, панели, вход'],
   ['конфиденциально', 'условия только в диалоге'],
 ];
@@ -15,8 +15,8 @@ const NEEDS = [
     text: 'Модель, отделка, высота и фурнитура в логике проекта.',
   },
   {
-    title: 'Закрыть узлы',
-    text: 'Проемы, короба, панели, перегородки и монтаж до заказа.',
+    title: 'Продумать детали',
+    text: 'Проемы, короба, панели, перегородки и монтаж согласуем до заказа.',
   },
   {
     title: 'Снять операционные задачи',
@@ -43,7 +43,7 @@ export function renderDesigners(main) {
         <div class="designer-hero__copy">
           <span class="studio-kicker">Для дизайнеров</span>
           <h1>Дизайнерам и архитекторам</h1>
-          <p>Двери LORD, стеновые панели, перегородки и входные группы для проектов без визуального шума. Подготовим спецификацию, поможем с узлами, организуем замер, поставку и монтаж.</p>
+          <p>Двери LORD, стеновые панели, перегородки и входные группы под стиль проекта. Подготовим расчет, поможем с техническими деталями, организуем замер, поставку и монтаж.</p>
           <div class="studio-hero__actions">
             <a class="studio-btn studio-btn--light" href="${leadLink('Здравствуйте! Я дизайнер, хочу получить партнерские условия Astera.')}" target="_blank" rel="noopener noreferrer">Получить партнерские условия</a>
             <a class="studio-btn studio-btn--ghost" href="#designer-form">Передать проект ${ARR_SVG}</a>
@@ -58,7 +58,7 @@ export function renderDesigners(main) {
         <div class="studio-section-head reveal">
           <span class="studio-kicker">Чем помогаем</span>
           <h2>Сохраняем авторский замысел</h2>
-          <p>Astera берет на себя техническую часть, поставку, монтаж и сервис.</p>
+          <p>Берем на себя подбор, расчет, поставку, монтаж и сервис, чтобы решение на объекте выглядело так, как задумано в проекте.</p>
         </div>
         <div class="designer-needs__grid">
           ${NEEDS.map((item, i) => `
@@ -77,7 +77,7 @@ export function renderDesigners(main) {
           <h2>Что можно заложить в проект</h2>
         </div>
         <div class="designer-kit__list">
-          <span>межкомнатные двери разных стилистик</span>
+          <span>межкомнатные двери LORD разных стилистик</span>
           <span>высокие полотна и скрытые короба</span>
           <span>алюминиевые перегородки</span>
           <span>стеновые панели и декоративные рейки</span>
@@ -102,8 +102,8 @@ export function renderDesigners(main) {
       <section class="studio-lead reveal" id="designer-form">
         <div class="studio-lead__copy">
           <span class="studio-kicker">Расчет</span>
-          <h2>Передайте проект в работу</h2>
-          <p>План, визуализация или список проемов. Ответим по составу и условиям.</p>
+          <h2>Передайте проект на подбор</h2>
+          <p>Пришлите план, визуализацию или список проемов. Вернем варианты решений, ориентир по стоимости и партнерские условия.</p>
         </div>
         <form class="studio-form" data-lead-form>
           <label><span>Имя / студия</span><input name="name" autocomplete="organization" required></label>

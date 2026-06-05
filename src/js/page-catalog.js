@@ -75,7 +75,7 @@ function directionCards() {
     {
       kicker: 'Astera на заказ',
       title: 'Входные двери Astera',
-      text: 'Индивидуальный размер, отделка под холл, тепло, тишина и аккуратное примыкание к интерьеру.',
+      text: 'Индивидуальный размер, отделка под холл, тепло, тишина и аккуратное примыкание к стенам.',
       image: 'images/astera-entrance-door-burkovsky-inspired.png',
       href: leadLink('Здравствуйте! Хочу рассчитать входную дверь Astera под мой проем.'),
       cta: 'Рассчитать дверь',
@@ -149,11 +149,11 @@ export function renderCatalog(main, activeCategory) {
     <section class="catalog-studio">
       <div class="catalog-studio__hero">
         <span class="studio-kicker">Каталог Astera</span>
-        <h1>Что подбираем для интерьера?</h1>
-        <p>Межкомнатные и входные двери, стеновые панели, рейки и алюминиевые перегородки подбираем в единую спецификацию: по проемам, отделке и сценарию монтажа.</p>
+        <h1>Каталог Astera</h1>
+        <p>Межкомнатные и входные двери, стеновые панели, рейки и алюминиевые перегородки подбираем как единый комплект: по проемам, отделке и монтажу.</p>
         <div class="catalog-studio__actions">
           <a class="studio-btn studio-btn--dark" href="${leadLink('Здравствуйте! Хочу получить подбор Astera по проекту.')}" target="_blank" rel="noopener noreferrer">Получить подборку</a>
-          <a class="studio-btn studio-btn--outline" href="#/designers">Для дизайнеров</a>
+          <a class="studio-btn studio-btn--outline" href="#/catalog/doors">Смотреть двери</a>
         </div>
       </div>
 
@@ -231,7 +231,7 @@ export function renderCatalog(main, activeCategory) {
 
       <div class="catalog-studio__summary">
         <strong data-catalog-count>${ALL.length} моделей</strong>
-        <span>Коллекции для квартир, домов и проектных интерьеров.</span>
+        <span>Коллекции для квартир, домов и интерьеров по проекту.</span>
       </div>
 
       <div class="studio-door-grid catalog-door-grid" data-catalog-grid>
@@ -242,7 +242,7 @@ export function renderCatalog(main, activeCategory) {
         <div>
           <span class="studio-kicker">Подбор</span>
           <h2>Пришлите интерьер, подберем дверь</h2>
-          <p>Подойдет фото, план или визуализация. Мы уточним проемы, стиль, отделку и предложим спокойную комплектацию.</p>
+          <p>Подойдет фото, план или визуализация. Мы уточним проемы, стиль, отделку и предложим варианты для расчета.</p>
         </div>
         <a class="studio-btn studio-btn--light" href="${leadLink('Здравствуйте! Хочу подбор дверей под интерьер.')}" target="_blank" rel="noopener noreferrer">Написать в Telegram</a>
       </section>
@@ -279,7 +279,7 @@ export function renderCatalog(main, activeCategory) {
     `;
   }
   const summaryText = main.querySelector('.catalog-studio__summary span');
-  if (summaryText) summaryText.textContent = 'Подборка популярных моделей. Меняется при выборе стиля.';
+  if (summaryText) summaryText.textContent = 'Популярные модели из разных коллекций. Выберите стиль, чтобы сузить подборку.';
   main.querySelector('.catalog-consult')?.remove();
 
   if (activeCategory && !isDoorCatalog) {

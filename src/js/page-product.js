@@ -50,7 +50,7 @@ export function renderProduct(main, slug) {
                 <p class="prod-info__underprice">Точная цена зависит от размера, отделки, фурнитуры и монтажа.</p>
               </div>` : ''}
           <div class="prod-fit">
-            <div><strong>Подойдет для</strong><span>квартир, домов, таунхаусов и объектов с дизайн-проектом</span></div>
+            <div><strong>Подойдет для</strong><span>квартир, домов, таунхаусов и интерьеров по проекту</span></div>
             <div><strong>Для расчета уточним</strong><span>размер проема, открывание, короб, отделку, стекло, фурнитуру, панели и сроки</span></div>
           </div>
           <div class="prod-info__div"></div>
