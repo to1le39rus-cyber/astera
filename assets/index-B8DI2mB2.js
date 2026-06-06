@@ -749,7 +749,7 @@
       <div class="studio-interior__copy reveal">
         <span class="studio-kicker">Детали</span>
         <h2>Премиальный интерьер виден в деталях</h2>
-        <p>Высота полотна, оттенок, ручка, короб, примыкание и монтаж должны совпасть между собой. Тогда двери выглядят частью интерьера, а не отдельной покупкой.</p>
+        <p>Высота полотна, оттенок, ручка, короб, примыкание и монтаж работают вместе. Тогда двери выглядят частью интерьера, а не отдельной покупкой.</p>
         <div class="studio-scene-list">
           ${f0.map(e=>`<span>${e}</span>`).join("")}
         </div>
@@ -949,11 +949,11 @@
         <div class="prod-info">
           <p class="prod-info__cat">${a.category} · LORD</p>
           <h1 class="prod-info__name">${a.name}</h1>
-          <p class="prod-info__lead">Подберем модель ${a.name} под ваш интерьер: уточним проем, высоту полотна, покрытие, короб, фурнитуру и монтаж. При необходимости дополним решение стеновыми панелями, рейками или перегородками.</p>
+          <p class="prod-info__lead">Поможем понять, как ${a.name} будет смотреться именно в вашем интерьере: уточним проем, высоту полотна, покрытие, короб, фурнитуру и монтаж. При необходимости подберем к модели панели, рейки или перегородки.</p>
           <div class="prod-info__quick">
             <span>Подбор под интерьер</span>
             <span>Замер перед заказом</span>
-            <span>Официальная поставка LORD</span>
+            <span>Официальный партнер LORD</span>
           </div>
           ${e?`
               <div style="margin-bottom:var(--sp-md)">
@@ -962,7 +962,7 @@
               </div>`:""}
           <div class="prod-fit">
             <div><strong>Подойдет для</strong><span>квартир, домов, таунхаусов и интерьеров по проекту</span></div>
-            <div><strong>Для расчета уточним</strong><span>размер проема, открывание, короб, отделку, стекло, фурнитуру, панели и сроки</span></div>
+            <div><strong>Для расчета уточним</strong><span>размер проема, открывание, короб, покрытие, стекло, фурнитуру, панели и сроки</span></div>
           </div>
           <div class="prod-info__div"></div>
           <div class="specs" id="specs">
@@ -980,7 +980,7 @@
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="position:relative;z-index:1"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.8 19.8 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
               <span>Рассчитать эту модель</span>
             </a>
-            <p class="prod-cta__note">Пришлите размеры проема, фото интерьера или план — уточним комплектацию и стоимость.</p>
+            <p class="prod-cta__note">Пришлите размеры проема, фото интерьера или план. Мы уточним комплектацию и подскажем, что лучше смотреть в салоне.</p>
             <div class="prod-cta__links">
               <a href="tel:+74012336555">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>Телефон
@@ -1010,20 +1010,20 @@
           </div>
         </section>
       `:""}
-    </div>`;let p=0;const u=D.querySelector("#gal-main-img"),v=D.querySelectorAll(".gal__thumb");function E(d){var i;p=d,u.src=A(n[d]),u.alt=`${a.name} — фото двери ${d+1}`,v.forEach((g,o)=>g.classList.toggle("is-active",o===d)),(i=v[d])==null||i.scrollIntoView({block:"nearest",behavior:"smooth"})}v.forEach((d,i)=>{d.addEventListener("click",()=>E(i)),d.addEventListener("keydown",g=>{(g.key==="Enter"||g.key===" ")&&(g.preventDefault(),E(i))})}),D.querySelector("#gal-main").addEventListener("click",()=>M(n,p)),D.querySelector("#gal-main").addEventListener("keydown",d=>{d.key==="Enter"&&M(n,p)}),D.querySelectorAll(".prod-interior-card").forEach(d=>{d.addEventListener("click",()=>M(t,Number(d.dataset.lifeI)||0))}),D.querySelectorAll(".spec-toggle").forEach(d=>{d.addEventListener("click",()=>{const g=d.closest(".spec-group").classList.toggle("is-open");d.setAttribute("aria-expanded",g)})})}const I0=["Фото проема или стены","План или визуализация","Что нужно: двери, панели или входная","Желаемый срок"];function U0(D){D.innerHTML=`
+    </div>`;let p=0;const u=D.querySelector("#gal-main-img"),v=D.querySelectorAll(".gal__thumb");function E(d){var i;p=d,u.src=A(n[d]),u.alt=`${a.name} — фото двери ${d+1}`,v.forEach((g,o)=>g.classList.toggle("is-active",o===d)),(i=v[d])==null||i.scrollIntoView({block:"nearest",behavior:"smooth"})}v.forEach((d,i)=>{d.addEventListener("click",()=>E(i)),d.addEventListener("keydown",g=>{(g.key==="Enter"||g.key===" ")&&(g.preventDefault(),E(i))})}),D.querySelector("#gal-main").addEventListener("click",()=>M(n,p)),D.querySelector("#gal-main").addEventListener("keydown",d=>{d.key==="Enter"&&M(n,p)}),D.querySelectorAll(".prod-interior-card").forEach(d=>{d.addEventListener("click",()=>M(t,Number(d.dataset.lifeI)||0))}),D.querySelectorAll(".spec-toggle").forEach(d=>{d.addEventListener("click",()=>{const g=d.closest(".spec-group").classList.toggle("is-open");d.setAttribute("aria-expanded",g)})})}const I0=["Фото проема или стены","План или визуализация","Что нужно: двери, панели, входная","Желаемый срок"];function U0(D){D.innerHTML=`
     <div class="contacts-page contacts-page--premium">
       <section class="contacts-hero">
         <div>
           <span class="contacts-page__eyebrow">Салон в Калининграде</span>
           <h1 class="contacts-page__title">Салон Astera в Калининграде</h1>
-          <p class="contacts-page__lead">Пришлите фото, план или визуализацию. Подберем двери, панели, рейки, перегородки или входную группу под ваш интерьер и проемы.</p>
+          <p class="contacts-page__lead">Напишите или приезжайте в салон. Спокойно посмотрим ваш интерьер, проемы и задачи, подберем решения и дадим понятный ориентир по стоимости.</p>
           <div class="contacts-hero__actions">
             <a href="https://t.me/asteradoors" target="_blank" rel="noopener noreferrer" class="btn-primary"><span>Написать в Telegram</span></a>
             <a href="tel:+74012336555" class="btn-outline"><span>Позвонить</span></a>
           </div>
         </div>
         <aside class="contacts-panel">
-          <strong>Что прислать</strong>
+          <strong>Для быстрого расчета</strong>
           ${I0.map(B=>`<span>${B}</span>`).join("")}
         </aside>
       </section>
@@ -1045,11 +1045,11 @@
             </div>
           </div>
           <div class="contacts-promise reveal">
-            <strong>После заявки</strong>
-            <span>подбор по интерьеру</span>
-            <span>ориентир по стоимости</span>
-            <span>состав комплектации</span>
-            <span>встреча в салоне или замер</span>
+            <strong>Что сделаем</strong>
+            <span>подберем под интерьер</span>
+            <span>дадим ориентир по стоимости</span>
+            <span>соберем комплектацию</span>
+            <span>пригласим в салон или на замер</span>
           </div>
         </div>
         <div class="contacts-map reveal">
@@ -1060,13 +1060,13 @@
             allowfullscreen></iframe>
         </div>
       </div>
-    </div>`}const M0='<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>',H0=[["20%","партнерское вознаграждение"],["24-48 ч","ответ по расчету"],["1 окно","двери, панели, перегородки, вход"],["объект","комплектация для квартир и домов"]],z0=[{title:"Сохранить замысел",text:"Модель, отделка, высота и фурнитура в логике проекта."},{title:"Продумать детали",text:"Проемы, короба, панели, перегородки и монтаж согласуем до заказа."},{title:"Снять операционные задачи",text:"Замер, поставка, монтаж и сервис на стороне Astera."},{title:"Зафиксировать условия",text:"Проект закрепляется за дизайнером. Партнерское вознаграждение — до 20%."}],P0=["План или визуализация","Подбор решений","Спецификация","Замер","Монтаж и сервис"];function N0(D){D.innerHTML=`
+    </div>`}const M0='<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>',H0=[["до 20%","партнерские условия"],["24-48 ч","первый ориентир по расчету"],["1 салон","двери, панели, перегородки, вход"],["объект","комплектация квартир, домов и ЖК"]],z0=[{title:"Сохранить замысел",text:"Подбираем модель, отделку, высоту и фурнитуру так, чтобы решение не выбивалось из визуализации."},{title:"Продумать детали",text:"Проемы, короба, панели, перегородки и монтажные узлы согласуем до заказа."},{title:"Снять координацию",text:"Замер, поставка, монтаж и сервис остаются на стороне Astera."},{title:"Зафиксировать условия",text:"Проект закрепляется за дизайнером. Партнерское вознаграждение — до 20%."}],P0=["План или визуализация","Подбор решений","Спецификация","Замер","Монтаж и сервис"];function N0(D){D.innerHTML=`
     <section class="designer-page">
       <div class="designer-hero">
         <div class="designer-hero__copy">
-          <span class="studio-kicker">Для проектов</span>
+          <span class="studio-kicker">Для дизайнеров и объектов</span>
           <h1>Дизайнерам, архитекторам и застройщикам</h1>
-          <p>Двери LORD, стеновые панели, перегородки и входные группы под стиль проекта. Подготовим расчет, поможем с техническими деталями, организуем замер, поставку и монтаж. Дизайнерам — партнерские условия до 20%.</p>
+          <p>Помогаем закрыть двери, панели, перегородки и входные группы без потери авторской идеи. Подготовим подбор, расчет, технические детали, замер, поставку и монтаж. Для дизайнеров действуют партнерские условия до 20%.</p>
           <div class="studio-hero__actions">
             <a class="studio-btn studio-btn--light" href="${C("Здравствуйте! Я дизайнер/архитектор, хочу получить партнерские условия Astera.")}" target="_blank" rel="noopener noreferrer">Получить условия</a>
             <a class="studio-btn studio-btn--ghost" href="#designer-form">Передать проект ${M0}</a>
@@ -1080,8 +1080,8 @@
       <section class="designer-needs">
         <div class="studio-section-head reveal">
           <span class="studio-kicker">Чем помогаем</span>
-          <h2>Закрываем дверной блок проекта</h2>
-          <p>Берем на себя подбор, расчет, поставку, монтаж и сервис, чтобы дизайнеру не приходилось контролировать каждую дверную деталь, а застройщик получал понятную комплектацию объекта.</p>
+          <h2>Берем сложные узлы на себя</h2>
+          <p>Дизайнер сохраняет замысел и получает понятную спецификацию. Застройщик или клиент получает салон, который отвечает за подбор, расчет, поставку, монтаж и сервис.</p>
         </div>
         <div class="designer-needs__grid">
           ${z0.map((B,a)=>`
@@ -1097,7 +1097,7 @@
       <section class="designer-kit reveal">
         <div>
           <span class="studio-kicker">В проект</span>
-          <h2>Что можно заложить в проект</h2>
+          <h2>Что можно заложить в спецификацию</h2>
         </div>
         <div class="designer-kit__list">
           <span>межкомнатные двери LORD разных стилистик</span>
@@ -1125,8 +1125,8 @@
       <section class="studio-lead reveal" id="designer-form">
         <div class="studio-lead__copy">
           <span class="studio-kicker">Расчет</span>
-          <h2>Передайте проект на подбор</h2>
-          <p>Пришлите план, визуализацию или список проемов. Вернем варианты решений, ориентир по стоимости и условия для сотрудничества.</p>
+          <h2>Передайте проект на расчет</h2>
+          <p>Пришлите план, визуализацию или список проемов. Вернем аккуратный подбор, ориентир по стоимости и условия сотрудничества.</p>
         </div>
         <form class="studio-form" data-lead-form>
           <label><span>Имя / студия</span><input name="name" autocomplete="organization" required></label>
@@ -1136,7 +1136,7 @@
           <small>Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности. Партнерские условия обсуждаем лично.</small>
         </form>
       </section>
-    </section>`,I(D)}const G0='<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>',Y0=[["Размер под проем","Проектируем дверь под существующий или новый проем, фасад, холл и внутреннюю отделку."],["Тепло и тишина","Подбираем конструкцию, уплотнение, контур и отделку под квартиру, дом или таунхаус."],["Отделка под интерьер","Внутренняя сторона может поддерживать двери, панели, мебель и общий стиль пространства."],["Монтаж без случайностей","До заказа уточняем узлы примыкания, доборы, откосы, фурнитуру и сроки."]],V0=["Вы присылаете фото проема, фасада или холла","Мы уточняем размеры, задачи по теплу, тишине и отделке","Готовим ориентир по комплектации и стоимости","Делаем замер и фиксируем техническое решение","Изготавливаем, доставляем и устанавливаем дверь"];function W0(D){D.innerHTML=`
+    </section>`,I(D)}const G0='<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>',Y0=[["Размер под проем","Проектируем дверь под существующий или новый проем, фасад, холл и внутреннюю отделку."],["Тепло и тишина","Подбираем конструкцию, уплотнение, контур и отделку под квартиру, дом или таунхаус."],["Отделка под интерьер","Внутренняя сторона может поддерживать двери, панели, мебель и общий стиль пространства."],["Продуманный монтаж","До заказа уточняем узлы примыкания, доборы, откосы, фурнитуру и сроки."]],V0=["Вы присылаете фото проема, фасада или холла","Мы уточняем размеры, задачи по теплу, тишине и отделке","Готовим ориентир по комплектации и стоимости","Делаем замер и фиксируем техническое решение","Изготавливаем, доставляем и устанавливаем дверь"];function W0(D){D.innerHTML=`
     <section class="entrance-page">
       <div class="entrance-hero">
         <div class="entrance-hero__copy">
@@ -1159,9 +1159,9 @@
       <section class="entrance-precision reveal">
         <div>
           <span class="studio-kicker">Почему отдельно</span>
-          <h2>Входная дверь — это не просто покупка</h2>
+          <h2>Входная дверь задает ощущение дома</h2>
         </div>
-        <p>Она должна совпасть с архитектурой дома, интерьером прихожей, режимом эксплуатации и монтажным узлом. Поэтому мы не продаем “коробку со склада”, а собираем решение под ваш проем и задачу.</p>
+        <p>Она встречает гостей, держит тепло и тишину, продолжает фасад и интерьер прихожей. Поэтому мы собираем решение под ваш проем, отделку и сценарий эксплуатации.</p>
       </section>
 
       <section class="entrance-features">
