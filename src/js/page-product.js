@@ -38,11 +38,11 @@ export function renderProduct(main, slug) {
         <div class="prod-info">
           <p class="prod-info__cat">${p.category} · LORD</p>
           <h1 class="prod-info__name">${p.name}</h1>
-          <p class="prod-info__lead">Подберем модель ${p.name} под ваш интерьер: уточним проем, высоту полотна, покрытие, короб, фурнитуру и монтаж. При необходимости дополним решение стеновыми панелями, рейками или перегородками.</p>
+          <p class="prod-info__lead">Поможем понять, как ${p.name} будет смотреться именно в вашем интерьере: уточним проем, высоту полотна, покрытие, короб, фурнитуру и монтаж. При необходимости подберем к модели панели, рейки или перегородки.</p>
           <div class="prod-info__quick">
             <span>Подбор под интерьер</span>
             <span>Замер перед заказом</span>
-            <span>Официальная поставка LORD</span>
+            <span>Официальный партнер LORD</span>
           </div>
           ${price ? `
               <div style="margin-bottom:var(--sp-md)">
@@ -51,7 +51,7 @@ export function renderProduct(main, slug) {
               </div>` : ''}
           <div class="prod-fit">
             <div><strong>Подойдет для</strong><span>квартир, домов, таунхаусов и интерьеров по проекту</span></div>
-            <div><strong>Для расчета уточним</strong><span>размер проема, открывание, короб, отделку, стекло, фурнитуру, панели и сроки</span></div>
+            <div><strong>Для расчета уточним</strong><span>размер проема, открывание, короб, покрытие, стекло, фурнитуру, панели и сроки</span></div>
           </div>
           <div class="prod-info__div"></div>
           <div class="specs" id="specs">
@@ -69,7 +69,7 @@ export function renderProduct(main, slug) {
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="position:relative;z-index:1"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.8 19.8 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
               <span>Рассчитать эту модель</span>
             </a>
-            <p class="prod-cta__note">Пришлите размеры проема, фото интерьера или план — уточним комплектацию и стоимость.</p>
+            <p class="prod-cta__note">Пришлите размеры проема, фото интерьера или план. Мы уточним комплектацию и подскажем, что лучше смотреть в салоне.</p>
             <div class="prod-cta__links">
               <a href="tel:+74012336555">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>Телефон
