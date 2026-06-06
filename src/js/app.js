@@ -7,6 +7,8 @@ import { renderCatalog } from './page-catalog.js';
 import { renderProduct } from './page-product.js';
 import { renderContacts } from './page-contacts.js';
 import { renderDesigners } from './page-designers.js';
+import { renderEntrance } from './page-entrance.js';
+import { BY_SLUG } from './data.js';
 
 const app  = document.getElementById('app');
 const main = document.getElementById('main-content');
@@ -25,8 +27,12 @@ const META = {
     description: 'Коллекции межкомнатных дверей LORD для классических, современных и минималистичных интерьеров. Подбор модели, покрытия, короба и фурнитуры.',
   },
   designers: {
-    title: 'Дизайнерам и архитекторам — партнерские условия Astera',
-    description: 'Astera работает с дизайнерами и архитекторами в Калининграде: двери LORD, панели, перегородки, входные группы, спецификации, замер и монтаж.',
+    title: 'Дизайнерам, архитекторам и застройщикам — Astera',
+    description: 'Astera работает с дизайнерами, архитекторами и застройщиками в Калининграде: двери LORD, панели, перегородки, входные группы, спецификации, замер и монтаж. Партнерские условия до 20%.',
+  },
+  entrance: {
+    title: 'Входные двери Astera на заказ в Калининграде',
+    description: 'Входные двери Astera под размер, фасад и интерьер: расчет, замер, комплектация, отделка, доставка и монтаж в Калининграде.',
   },
   contacts: {
     title: 'Контакты Astera — салон дверей в Калининграде',
@@ -110,8 +116,17 @@ function route() {
     renderDesigners(main);
     setHeroHeader(false);
     setActiveNav('designers');
+  } else if (page === 'entrance') {
+    setMeta(META.entrance);
+    renderEntrance(main);
+    setHeroHeader(false);
+    setActiveNav('entrance');
   } else if (page === 'product') {
-    setMeta(META.doors);
+    const product = BY_SLUG[sub];
+    setMeta(product ? {
+      title: `${product.name} — межкомнатная дверь LORD в Калининграде | Astera`,
+      description: `Модель ${product.name}: подбор покрытия, размера, короба, фурнитуры и монтажа под интерьер. Расчет в салоне Astera, Калининград.`,
+    } : META.doors);
     renderProduct(main, sub);
     setHeroHeader(false);
     setActiveNav('catalog');

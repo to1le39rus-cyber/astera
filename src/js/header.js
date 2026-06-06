@@ -12,7 +12,7 @@ export function renderHeader(id = 'site-header') {
     <nav class="header__nav" aria-label="Основная навигация">
       <a href="#/catalog" data-nav-link="catalog">Двери</a>
       <a href="#/solutions" data-nav-link="solutions">Панели</a>
-      <a href="#/lead" data-nav-link="lead">Входные двери</a>
+      <a href="#/entrance" data-nav-link="entrance">Входные двери</a>
       <a href="#/designers" data-nav-link="designers">Дизайнерам</a>
       <a href="#/contacts" data-nav-link="contacts">Контакты</a>
     </nav>

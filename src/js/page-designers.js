@@ -5,8 +5,8 @@ const ARR_SVG = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" str
 const SUPPORT = [
   ['20%', 'партнерское вознаграждение'],
   ['24-48 ч', 'ответ по расчету'],
-  ['1 окно', 'двери, панели, вход'],
-  ['конфиденциально', 'условия только в диалоге'],
+  ['1 окно', 'двери, панели, перегородки, вход'],
+  ['объект', 'комплектация для квартир и домов'],
 ];
 
 const NEEDS = [
@@ -24,7 +24,7 @@ const NEEDS = [
   },
   {
     title: 'Зафиксировать условия',
-    text: 'Проект закрепляется за дизайнером. Вознаграждение — 20%.',
+    text: 'Проект закрепляется за дизайнером. Партнерское вознаграждение — до 20%.',
   },
 ];
 
@@ -41,11 +41,11 @@ export function renderDesigners(main) {
     <section class="designer-page">
       <div class="designer-hero">
         <div class="designer-hero__copy">
-          <span class="studio-kicker">Для дизайнеров</span>
-          <h1>Дизайнерам и архитекторам</h1>
-          <p>Двери LORD, стеновые панели, перегородки и входные группы под стиль проекта. Подготовим расчет, поможем с техническими деталями, организуем замер, поставку и монтаж.</p>
+          <span class="studio-kicker">Для проектов</span>
+          <h1>Дизайнерам, архитекторам и застройщикам</h1>
+          <p>Двери LORD, стеновые панели, перегородки и входные группы под стиль проекта. Подготовим расчет, поможем с техническими деталями, организуем замер, поставку и монтаж. Дизайнерам — партнерские условия до 20%.</p>
           <div class="studio-hero__actions">
-            <a class="studio-btn studio-btn--light" href="${leadLink('Здравствуйте! Я дизайнер, хочу получить партнерские условия Astera.')}" target="_blank" rel="noopener noreferrer">Получить партнерские условия</a>
+            <a class="studio-btn studio-btn--light" href="${leadLink('Здравствуйте! Я дизайнер/архитектор, хочу получить партнерские условия Astera.')}" target="_blank" rel="noopener noreferrer">Получить условия</a>
             <a class="studio-btn studio-btn--ghost" href="#designer-form">Передать проект ${ARR_SVG}</a>
           </div>
         </div>
@@ -57,8 +57,8 @@ export function renderDesigners(main) {
       <section class="designer-needs">
         <div class="studio-section-head reveal">
           <span class="studio-kicker">Чем помогаем</span>
-          <h2>Сохраняем авторский замысел</h2>
-          <p>Берем на себя подбор, расчет, поставку, монтаж и сервис, чтобы решение на объекте выглядело так, как задумано в проекте.</p>
+          <h2>Закрываем дверной блок проекта</h2>
+          <p>Берем на себя подбор, расчет, поставку, монтаж и сервис, чтобы дизайнеру не приходилось контролировать каждую дверную деталь, а застройщик получал понятную комплектацию объекта.</p>
         </div>
         <div class="designer-needs__grid">
           ${NEEDS.map((item, i) => `
@@ -103,7 +103,7 @@ export function renderDesigners(main) {
         <div class="studio-lead__copy">
           <span class="studio-kicker">Расчет</span>
           <h2>Передайте проект на подбор</h2>
-          <p>Пришлите план, визуализацию или список проемов. Вернем варианты решений, ориентир по стоимости и партнерские условия.</p>
+          <p>Пришлите план, визуализацию или список проемов. Вернем варианты решений, ориентир по стоимости и условия для сотрудничества.</p>
         </div>
         <form class="studio-form" data-lead-form>
           <label><span>Имя / студия</span><input name="name" autocomplete="organization" required></label>

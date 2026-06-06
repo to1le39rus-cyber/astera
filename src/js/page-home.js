@@ -21,8 +21,8 @@ const PRODUCT_STORY = [
     title: 'Межкомнатные двери',
     text: 'Начинаем с планировки, стиля интерьера и бюджета. Покажем коллекции, отделки, высоты, фурнитуру и сразу посчитаем комплект под ваши проемы.',
     result: 'Модель, отделка и расчет под проемы',
-    cta: 'Перейти в каталог',
-    href: '#/catalog',
+    cta: 'Смотреть двери',
+    href: '#/catalog/doors',
   },
   {
     kicker: 'Единая отделка',
@@ -37,8 +37,8 @@ const PRODUCT_STORY = [
     title: 'Входные двери Astera',
     text: 'Изготавливаем входные двери под ваш проем: размер, тепло, тишина, отделка снаружи и внутри, фурнитура и монтаж.',
     result: 'Расчет под размер и отделку',
-    cta: 'Рассчитать входную дверь',
-    href: 'https://t.me/asteradoors',
+    cta: 'Открыть флагман',
+    href: '#/entrance',
   },
 ];
 
@@ -239,8 +239,8 @@ export function renderHome(main) {
       title: 'Двери и интерьерные решения Astera',
       text: BRAND_DIRECTIONS,
       bg: heroImage,
-      href: '#/catalog',
-      cta: 'Открыть каталог',
+      href: '#/catalog/doors',
+      cta: 'Смотреть двери',
     },
     ...categoryHeroSlides(),
   ];
@@ -376,7 +376,7 @@ export function renderHome(main) {
       <div class="studio-lead__copy">
         <span class="studio-kicker">Контакт</span>
         <h2>Пришлите интерьер или размеры</h2>
-        <p>Подскажем модели, отделки и ориентир по стоимости.</p>
+        <p>Спокойно подскажем, какие модели подойдут, где можно сэкономить без потери вида и какой бюджет закладывать.</p>
       </div>
       <form class="studio-form" data-lead-form>
         <label><span>Имя</span><input name="name" autocomplete="name" required></label>
