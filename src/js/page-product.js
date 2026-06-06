@@ -66,8 +66,8 @@ export function renderProduct(main, slug) {
           <div class="prod-info__div"></div>
           <div class="prod-cta">
             <a href="https://t.me/asteradoors?text=${leadText}" target="_blank" rel="noopener noreferrer" class="btn-primary">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="position:relative;z-index:1"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.8 19.8 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
-              <span>Рассчитать эту модель</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" style="position:relative;z-index:1"><path d="M21 3L3 10l7 3M21 3l-5 18-6-8M21 3L10 13"/></svg>
+              <span>Рассчитать в Telegram</span>
             </a>
             <p class="prod-cta__note">Пришлите размеры проема, фото интерьера или план. Мы уточним комплектацию и подскажем, что лучше смотреть в салоне.</p>
             <div class="prod-cta__links">

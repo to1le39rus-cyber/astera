@@ -37,8 +37,80 @@ for (const category of data.catalog || []) {
       route: `product/${product.slug}`,
       title: `${product.name} — межкомнатная дверь LORD | Astera`,
       description: `Модель ${product.name}: подбор покрытия, размера, короба, фурнитуры и монтажа под интерьер в Калининграде.`,
+      product,
+      category: category.name,
     });
   }
+}
+
+function absoluteAsset(path = '') {
+  const encoded = String(path).replace(/^\/+/, '').split('/').map((segment) => {
+    try {
+      return encodeURIComponent(decodeURIComponent(segment));
+    } catch {
+      return encodeURIComponent(segment);
+    }
+  }).join('/');
+  return `${siteUrl}/${encoded}`;
+}
+
+function stripText(value = '') {
+  return String(value).replace(/\s+/g, ' ').trim().slice(0, 420);
+}
+
+function jsonLd(page, canonical) {
+  const crumbs = [
+    { '@type': 'ListItem', position: 1, name: 'Главная', item: `${siteUrl}/` },
+  ];
+  if (page.route?.startsWith('catalog')) {
+    crumbs.push({ '@type': 'ListItem', position: 2, name: 'Каталог', item: `${siteUrl}/catalog` });
+    if (page.route !== 'catalog') crumbs.push({ '@type': 'ListItem', position: 3, name: page.category || page.title, item: canonical });
+  }
+  if (page.route?.startsWith('product/') && page.product) {
+    crumbs.push({ '@type': 'ListItem', position: 2, name: 'Каталог', item: `${siteUrl}/catalog` });
+    crumbs.push({ '@type': 'ListItem', position: 3, name: page.category, item: `${siteUrl}/catalog/${encodeURIComponent(page.category)}` });
+    crumbs.push({ '@type': 'ListItem', position: 4, name: page.product.name, item: canonical });
+  }
+
+  const graph = [];
+  if (crumbs.length > 1) {
+    graph.push({
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: crumbs,
+    });
+  }
+
+  if (page.product) {
+    const product = page.product;
+    const image = product.images?.[0] ? absoluteAsset(product.images[0]) : `${siteUrl}/branding/logo-astera-hor-monochrome.png`;
+    const offer = product.priceFrom ? {
+      '@type': 'Offer',
+      priceCurrency: 'RUB',
+      price: Math.round(product.priceFrom),
+      availability: 'https://schema.org/InStock',
+      url: canonical,
+      seller: {
+        '@type': 'Store',
+        name: 'Astera',
+        telephone: '+74012336555',
+      },
+    } : undefined;
+
+    graph.push({
+      '@context': 'https://schema.org',
+      '@type': 'Product',
+      name: product.name,
+      brand: { '@type': 'Brand', name: 'LORD' },
+      category: page.category || 'Межкомнатные двери',
+      description: stripText(product.description) || page.description,
+      image,
+      url: canonical,
+      ...(offer ? { offers: offer } : {}),
+    });
+  }
+
+  return graph.map(item => `<script type="application/ld+json">${JSON.stringify(item)}</script>`).join('\n  ');
 }
 
 function pageHtml(page, forceBase = false) {
@@ -53,6 +125,8 @@ function pageHtml(page, forceBase = false) {
   html = html.replace(/<meta property="og:description" content="[^"]*">/u, `<meta property="og:description" content="${page.description}">`);
   html = html.replace(/<meta property="og:url" content="[^"]*">/u, `<meta property="og:url" content="${canonical}">`);
   html = html.replace(/<link rel="canonical" href="[^"]*">/u, `<link rel="canonical" href="${canonical}">`);
+  const structured = jsonLd(page, canonical);
+  if (structured) html = html.replace('</head>', `  ${structured}\n</head>`);
   return html;
 }
 
@@ -66,7 +140,7 @@ await writeFile(join(dist, '404.html'), pageHtml(staticPages[0], true), 'utf8');
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${staticPages.map(page => `  <url><loc>${siteUrl}${page.route ? `/${page.route}` : '/'}</loc><changefreq>${page.route.startsWith('product/') ? 'monthly' : 'weekly'}</changefreq><priority>${page.route ? '0.8' : '1.0'}</priority></url>`).join('\n')}
+${staticPages.map(page => `  <url><loc>${siteUrl}${page.route ? `/${page.route}` : '/'}</loc><lastmod>2026-06-06</lastmod><changefreq>${page.route.startsWith('product/') ? 'monthly' : 'weekly'}</changefreq><priority>${page.route ? '0.8' : '1.0'}</priority></url>`).join('\n')}
 </urlset>
 `;
 

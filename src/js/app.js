@@ -14,6 +14,7 @@ import { BY_SLUG } from './data.js';
 const app  = document.getElementById('app');
 const main = document.getElementById('main-content');
 const HOME_SECTIONS = new Set(['solutions', 'promos', 'lead']);
+const SITE_URL = 'https://to1le39rus-cyber.github.io/astera';
 const META = {
   home: {
     title: 'Astera — премиальные двери и интерьерные решения в Калининграде',
@@ -54,11 +55,19 @@ renderHeader();
 renderFooter();
 initLightbox();
 
-function setMeta(meta = META.home) {
+function canonicalForRoute(route = '') {
+  const clean = route.replace(/^\/+|\/+$/g, '');
+  return `${SITE_URL}${clean ? `/${clean}` : '/'}`;
+}
+
+function setMeta(meta = META.home, routePath = '') {
   document.title = meta.title;
   document.querySelector('meta[name="description"]')?.setAttribute('content', meta.description);
   document.querySelector('meta[property="og:title"]')?.setAttribute('content', meta.title);
   document.querySelector('meta[property="og:description"]')?.setAttribute('content', meta.description);
+  const canonical = canonicalForRoute(routePath);
+  document.querySelector('link[rel="canonical"]')?.setAttribute('href', canonical);
+  document.querySelector('meta[property="og:url"]')?.setAttribute('content', canonical);
 }
 
 // Reveal observer — handles both .reveal and .reveal-stagger
@@ -119,7 +128,7 @@ function route() {
   window.scrollTo({ top: 0, behavior: 'instant' });
 
   if (!page || homeSection) {
-    setMeta(META.home);
+    setMeta(META.home, '');
     renderHome(main);
     setHeroHeader(!homeSection);
     setActiveNav(homeSection || '');
@@ -131,27 +140,27 @@ function route() {
       });
     }
   } else if (page === 'catalog') {
-    setMeta(sub ? META.doors : META.catalog);
+    setMeta(sub ? META.doors : META.catalog, sub ? `catalog/${encodeURIComponent(sub)}` : 'catalog');
     renderCatalog(main, sub || '');
     setHeroHeader(false);
     setActiveNav('catalog');
   } else if (page === 'designers') {
-    setMeta(META.designers);
+    setMeta(META.designers, 'designers');
     renderDesigners(main);
     setHeroHeader(false);
     setActiveNav('designers');
   } else if (page === 'entrance') {
-    setMeta(META.entrance);
+    setMeta(META.entrance, 'entrance');
     renderEntrance(main);
     setHeroHeader(false);
     setActiveNav('entrance');
   } else if (page === 'panels') {
-    setMeta(META.panels);
+    setMeta(META.panels, 'panels');
     renderSolutions(main, 'panels');
     setHeroHeader(false);
     setActiveNav('panels');
   } else if (page === 'partitions') {
-    setMeta(META.partitions);
+    setMeta(META.partitions, 'partitions');
     renderSolutions(main, 'partitions');
     setHeroHeader(false);
     setActiveNav('catalog');
@@ -160,17 +169,17 @@ function route() {
     setMeta(product ? {
       title: `${product.name} — межкомнатная дверь LORD в Калининграде | Astera`,
       description: `Модель ${product.name}: подбор покрытия, размера, короба, фурнитуры и монтажа под интерьер. Расчет в салоне Astera, Калининград.`,
-    } : META.doors);
+    } : META.doors, product ? `product/${product.slug}` : 'catalog/doors');
     renderProduct(main, sub);
     setHeroHeader(false);
     setActiveNav('catalog');
   } else if (page === 'contacts') {
-    setMeta(META.contacts);
+    setMeta(META.contacts, 'contacts');
     renderContacts(main);
     setHeroHeader(false);
     setActiveNav('contacts');
   } else {
-    setMeta(META.home);
+    setMeta(META.home, '');
     renderHome(main);
     setHeroHeader(true);
     setActiveNav('');

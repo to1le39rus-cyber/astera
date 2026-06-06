@@ -72,6 +72,7 @@ const CATEGORY_COPY = {
 };
 
 const BRAND_DIRECTIONS = ['Межкомнатные двери', 'Входные двери Astera', 'Стеновые панели и рейки', 'Алюминиевые перегородки'];
+const HERO_TRUST = ['замер', 'расчет', 'монтаж'];
 
 function productBySlug(slug) {
   return ALL.find(p => p.slug === slug);
@@ -265,8 +266,11 @@ export function renderHome(main) {
                   ? `<div class="studio-hero__directions">${slide.text.map(item => `<span>${item}</span>`).join('')}</div>`
                   : `<p>${slide.text}</p>`}
                 <div class="studio-hero__actions">
-                  <a class="studio-btn studio-btn--light" href="${slide.href}">${slide.cta}</a>
-                  <a class="studio-btn studio-btn--ghost" href="${leadLink('Здравствуйте! Хочу обсудить двери Astera.')}" target="_blank" rel="noopener noreferrer">Получить подбор ${ARR_SVG}</a>
+                  <a class="studio-btn studio-btn--light" href="${leadLink('Здравствуйте! Хочу получить расчет Astera по интерьеру и проемам.')}" target="_blank" rel="noopener noreferrer">Получить расчет</a>
+                  <a class="studio-btn studio-btn--ghost" href="${slide.href}">${slide.cta} ${ARR_SVG}</a>
+                </div>
+                <div class="studio-hero__trust">
+                  ${HERO_TRUST.map(item => `<span>${item}</span>`).join('')}
                 </div>
               </div>
             </div>
