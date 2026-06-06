@@ -29,8 +29,8 @@ const PRODUCT_STORY = [
     title: 'Панели и рейки',
     text: 'Подберем панели и рейки под двери, мебель и отделку стен: для прихожей, ТВ-зоны, скрытых проходов и акцентных стен.',
     result: 'Единая отделка без случайных оттенков',
-    cta: 'Обсудить панели',
-    href: 'https://t.me/asteradoors',
+    cta: 'Смотреть решения',
+    href: '#/panels',
   },
   {
     kicker: 'Собственный бренд',
@@ -393,7 +393,7 @@ export function renderHome(main) {
         <h2>Для дизайнеров и архитекторов</h2>
         <p>Помогаем подобрать двери, панели, перегородки и входные группы под проект. Образцы, расчет, замер, поставка и монтаж — в одном месте.</p>
       </div>
-      <a class="studio-btn studio-btn--light" href="#/designers">Страница для дизайнеров ${ARR_SVG}</a>
+      <a class="studio-btn studio-btn--light" href="#/designers">Открыть презентацию ${ARR_SVG}</a>
     </section>`;
 
   bindCards(main);

@@ -15,7 +15,7 @@ const DOOR_CATEGORY_NAV = [
   { label: 'Неоклассика', href: categoryHref('Неоклассика') },
   { label: 'Минимализм', href: categoryHref('Минимализм') },
   { label: 'Скрытые двери', href: leadLink('Здравствуйте! Хочу обсудить скрытые двери под интерьер.') },
-  { label: 'Алюминиевые перегородки', href: leadLink('Здравствуйте! Хочу рассчитать алюминиевую перегородку.') },
+  { label: 'Алюминиевые перегородки', href: '#/partitions' },
 ];
 
 function categoryByName(name) {
@@ -58,12 +58,13 @@ function productsForCategory(category) {
 function directionCards() {
   const doorImage = lifestyleFromCategory('Дизайн') || lifestyleFromCategory('Неоклассика') || ALL[0]?.images?.[0] || '';
   const panelImage = lifestyleFromCategory('Минимализм') || doorImage;
+  const partitionImage = lifestyleFromCategory('Дизайн') || panelImage;
   return [
     {
       mod: 'catalog-direction--featured',
       kicker: 'Основная коллекция',
       title: 'Межкомнатные двери',
-      text: 'Классика, неоклассика, минимализм и акцентные модели для цельного интерьера.',
+      text: 'Главный выбор для квартиры, дома или дизайн-проекта: стиль, высота, отделка и фурнитура под ваши проемы.',
       image: doorImage,
       slides: doorCollectionSlides(),
       href: '#/catalog/doors',
@@ -75,7 +76,7 @@ function directionCards() {
     {
       kicker: 'Astera на заказ',
       title: 'Входные двери Astera',
-      text: 'Индивидуальный размер, отделка под холл, тепло, тишина и аккуратное примыкание к стенам.',
+      text: 'Индивидуальный размер, отделка под фасад и холл, тепло, тишина и аккуратное примыкание к стенам.',
       image: 'images/astera-entrance-door-burkovsky-inspired.png',
       href: '#/entrance',
       cta: 'Смотреть флагман',
@@ -87,8 +88,20 @@ function directionCards() {
       title: 'Стеновые панели и рейки',
       text: 'Для прихожих, ТВ-зон, скрытых проходов и акцентных стен в одной логике с дверями.',
       image: panelImage,
-      href: leadLink('Здравствуйте! Хочу обсудить стеновые панели и рейки для интерьера.'),
-      cta: 'Обсудить панели',
+      href: '#/panels',
+      cta: 'Смотреть решения',
+      second: 'Получить ориентир',
+      secondHref: leadLink('Здравствуйте! Хочу обсудить стеновые панели и рейки для интерьера.'),
+    },
+    {
+      kicker: 'Свет и зонирование',
+      title: 'Алюминиевые перегородки',
+      text: 'Для кабинета, гардеробной, кухни-гостиной и приватных зон, где важно сохранить свет и легкость.',
+      image: partitionImage,
+      href: '#/partitions',
+      cta: 'Смотреть перегородки',
+      second: 'Рассчитать',
+      secondHref: leadLink('Здравствуйте! Хочу рассчитать алюминиевую перегородку под интерьер.'),
     },
   ];
 }
@@ -150,7 +163,7 @@ export function renderCatalog(main, activeCategory) {
       <div class="catalog-studio__hero">
         <span class="studio-kicker">Каталог Astera</span>
         <h1>Каталог Astera</h1>
-        <p>Межкомнатные и входные двери, стеновые панели, рейки и алюминиевые перегородки подбираем как единый комплект: по проемам, отделке и монтажу.</p>
+        <p>Сначала выбираем двери, потом собираем вокруг них стены, входную группу и перегородки. Так интерьер выглядит цельно, а расчет остается понятным.</p>
         <div class="catalog-studio__actions">
           <a class="studio-btn studio-btn--dark" href="${leadLink('Здравствуйте! Хочу получить подбор Astera по проекту.')}" target="_blank" rel="noopener noreferrer">Получить подборку</a>
           <a class="studio-btn studio-btn--outline" href="#/catalog/doors">Смотреть двери</a>
@@ -262,7 +275,7 @@ export function renderCatalog(main, activeCategory) {
     </nav>
     <span class="studio-kicker">Коллекции дверей Astera</span>
     <h1>Межкомнатные двери LORD в Калининграде</h1>
-    <p>Коллекции для классических, современных и минималистичных интерьеров. Подберем модель, покрытие, высоту полотна, короб и фурнитуру под ваши проемы.</p>
+    <p>Классика, неоклассика, минимализм и дизайн. Подберем модель, покрытие, высоту полотна, короб и фурнитуру под ваши проемы.</p>
   `;
   main.querySelector('.catalog-filter__top')?.remove();
   main.querySelector('.catalog-filter__group--budget')?.remove();
@@ -275,7 +288,7 @@ export function renderCatalog(main, activeCategory) {
           ${c.name}
         </button>
       `).join('')}
-      <a class="catalog-filter__link" href="${leadLink('Здравствуйте! Хочу рассчитать алюминиевую перегородку.')}" target="_blank" rel="noopener noreferrer">Алюминиевые перегородки</a>
+      <a class="catalog-filter__link" href="#/partitions">Алюминиевые перегородки</a>
     `;
   }
   const summaryText = main.querySelector('.catalog-studio__summary span');

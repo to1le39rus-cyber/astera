@@ -370,6 +370,7 @@ canvas{
 .studio-promos,
 .catalog-studio,
 .entrance-page,
+.solution-page,
 .designer-page{
   max-width:var(--mw);
   margin:0 auto;
@@ -1117,6 +1118,9 @@ canvas{
 .entrance-page{
   padding-top:calc(var(--header-h) + var(--sp-xl));
 }
+.solution-page{
+  padding-top:calc(var(--header-h) + var(--sp-xl));
+}
 .entrance-hero{
   display:grid;
   grid-template-columns:minmax(0,.9fr) minmax(360px,.72fr);
@@ -1205,6 +1209,106 @@ canvas{
 .entrance-features p{
   color:var(--c-muted);
   line-height:1.65;
+}
+.solution-hero{
+  display:grid;
+  grid-template-columns:minmax(0,.92fr) minmax(360px,.68fr);
+  gap:clamp(34px,6vw,92px);
+  align-items:center;
+}
+.solution-hero__copy h1{
+  max-width:920px;
+  margin:22px 0 24px;
+  color:var(--c-char);
+  font-family:var(--f-serif);
+  font-size:clamp(52px,6.8vw,104px);
+  font-weight:500;
+  line-height:.92;
+}
+.solution-hero__copy p{
+  max-width:760px;
+  color:var(--c-muted);
+  font-size:19px;
+  line-height:1.78;
+}
+.solution-hero__media{
+  min-height:560px;
+  overflow:hidden;
+  border-radius:8px;
+  background:#24251f;
+  box-shadow:0 34px 90px rgba(39,42,36,.12);
+}
+.solution-hero__media img{
+  width:100%;
+  height:100%;
+  min-height:560px;
+  display:block;
+  object-fit:cover;
+}
+.solution-cards{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+  padding:var(--sp-xl) 0 0;
+}
+.solution-cards article{
+  min-height:280px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  gap:16px;
+  padding:26px;
+  border:1px solid rgba(65,66,61,.1);
+  border-radius:8px;
+  background:#fff;
+}
+.solution-cards span{
+  color:#c1b37c;
+  font-family:var(--f-serif);
+  font-size:46px;
+  line-height:1;
+}
+.solution-cards h3{
+  color:var(--c-char);
+  font-family:var(--f-serif);
+  font-size:30px;
+  font-weight:500;
+  line-height:1;
+}
+.solution-cards p{
+  color:var(--c-muted);
+  line-height:1.65;
+}
+.solution-estimate{
+  display:grid;
+  grid-template-columns:minmax(0,.74fr) minmax(360px,.76fr);
+  gap:clamp(34px,6vw,92px);
+  align-items:start;
+  padding:var(--sp-2xl) 0 0;
+}
+.solution-estimate h2{
+  margin-top:16px;
+  color:var(--c-char);
+  font-family:var(--f-serif);
+  font-size:clamp(42px,5.2vw,78px);
+  font-weight:500;
+  line-height:.96;
+}
+.solution-estimate__list{
+  display:grid;
+  gap:10px;
+}
+.solution-estimate__list span{
+  min-height:72px;
+  display:flex;
+  align-items:center;
+  padding:18px 22px;
+  border:1px solid rgba(65,66,61,.1);
+  border-radius:8px;
+  background:#fff;
+  color:var(--c-char);
+  font-size:16px;
+  line-height:1.45;
 }
 .designer-hero{
   display:grid;
@@ -1364,6 +1468,7 @@ canvas{
     grid-column:2;
   }
   .studio-door-grid,
+  .solution-cards,
   .designer-needs__grid{
     grid-template-columns:repeat(2,1fr);
   }
@@ -1380,6 +1485,8 @@ canvas{
   .studio-lead,
   .entrance-hero,
   .entrance-precision,
+  .solution-hero,
+  .solution-estimate,
   .designer-hero,
   .designer-kit,
   .studio-designers,
@@ -1433,6 +1540,7 @@ canvas{
   .studio-lead,
   .catalog-studio,
   .entrance-page,
+  .solution-page,
   .designer-page,
   .catalog-directions,
   .catalog-direction,
@@ -1450,6 +1558,10 @@ canvas{
   .entrance-hero,
   .entrance-precision,
   .entrance-features,
+  .solution-hero,
+  .solution-hero__media,
+  .solution-cards,
+  .solution-estimate,
   .catalog-consult{
     width:100%;
     max-width:100%;
@@ -1473,6 +1585,7 @@ canvas{
   .studio-lead,
   .catalog-studio,
   .entrance-page,
+  .solution-page,
   .designer-page{
     padding-left:16px;
     padding-right:16px;
@@ -1686,6 +1799,7 @@ canvas{
   .studio-door-grid,
   .studio-promo-grid,
   .entrance-features,
+  .solution-cards,
   .designer-needs__grid,
   .designer-kit__list,
   .designer-process__rail{
@@ -1727,6 +1841,45 @@ canvas{
   }
   .entrance-features h3{
     font-size:25px;
+  }
+  .solution-hero__copy h1{
+    margin:18px 0 18px;
+    font-size:clamp(38px,10.8vw,58px);
+    line-height:.94;
+  }
+  .solution-hero__copy p{
+    font-size:15px;
+    line-height:1.72;
+  }
+  .solution-hero__media,
+  .solution-hero__media img{
+    min-height:350px;
+  }
+  .solution-cards{
+    gap:10px;
+    padding-top:30px;
+  }
+  .solution-cards article{
+    min-height:0;
+    padding:20px;
+  }
+  .solution-cards span{
+    font-size:32px;
+  }
+  .solution-cards h3{
+    font-size:25px;
+  }
+  .solution-estimate{
+    gap:18px;
+    padding-top:54px;
+  }
+  .solution-estimate h2{
+    font-size:clamp(34px,9.8vw,48px);
+  }
+  .solution-estimate__list span{
+    min-height:0;
+    padding:16px 18px;
+    font-size:14px;
   }
   .studio-facts-section{
     padding-top:58px;

@@ -8,6 +8,7 @@ import { renderProduct } from './page-product.js';
 import { renderContacts } from './page-contacts.js';
 import { renderDesigners } from './page-designers.js';
 import { renderEntrance } from './page-entrance.js';
+import { renderSolutions } from './page-solutions.js';
 import { BY_SLUG } from './data.js';
 
 const app  = document.getElementById('app');
@@ -33,6 +34,14 @@ const META = {
   entrance: {
     title: 'Входные двери Astera на заказ в Калининграде',
     description: 'Входные двери Astera под размер, фасад и интерьер: расчет, замер, комплектация, отделка, доставка и монтаж в Калининграде.',
+  },
+  panels: {
+    title: 'Стеновые панели и декоративные рейки в Калининграде | Astera',
+    description: 'Стеновые панели, декоративные рейки и скрытые проходы под интерьер: подбор оттенка, фактуры, узлов примыкания, замер и монтаж в Калининграде.',
+  },
+  partitions: {
+    title: 'Алюминиевые перегородки в Калининграде | Astera',
+    description: 'Алюминиевые перегородки под интерьер: профиль, стекло, открывание, расчет, замер и монтаж для квартир, домов и коммерческих пространств.',
   },
   contacts: {
     title: 'Контакты Astera — салон дверей в Калининграде',
@@ -85,8 +94,23 @@ function initScrollTop() {
 }
 
 // Router
+function currentRoute() {
+  const hashRoute = location.hash.replace(/^#\/?/, '');
+  if (hashRoute) return hashRoute;
+
+  const path = location.pathname.replace(/\\/g, '/');
+  const rootIndex = path.replace(/\/index\.html$/i, '/');
+  const marker = '/astera/';
+  let routePath = rootIndex.includes(marker)
+    ? rootIndex.slice(rootIndex.indexOf(marker) + marker.length)
+    : rootIndex.replace(/^\/+/, '');
+
+  routePath = routePath.replace(/\/+$/, '');
+  return routePath === 'astera' ? '' : routePath;
+}
+
 function route() {
-  const raw = location.hash.replace(/^#\/?/, '');
+  const raw = currentRoute();
   const parts = raw.split('/');
   const page = parts[0] || '';
   const sub  = parts[1] ? decodeURIComponent(parts[1]) : '';
@@ -121,6 +145,16 @@ function route() {
     renderEntrance(main);
     setHeroHeader(false);
     setActiveNav('entrance');
+  } else if (page === 'panels') {
+    setMeta(META.panels);
+    renderSolutions(main, 'panels');
+    setHeroHeader(false);
+    setActiveNav('panels');
+  } else if (page === 'partitions') {
+    setMeta(META.partitions);
+    renderSolutions(main, 'partitions');
+    setHeroHeader(false);
+    setActiveNav('catalog');
   } else if (page === 'product') {
     const product = BY_SLUG[sub];
     setMeta(product ? {

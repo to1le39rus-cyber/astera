@@ -11,7 +11,7 @@ export function renderHeader(id = 'site-header') {
     </a>
     <nav class="header__nav" aria-label="Основная навигация">
       <a href="#/catalog" data-nav-link="catalog">Двери</a>
-      <a href="#/solutions" data-nav-link="solutions">Панели</a>
+      <a href="#/panels" data-nav-link="panels">Панели</a>
       <a href="#/entrance" data-nav-link="entrance">Входные двери</a>
       <a href="#/designers" data-nav-link="designers">Дизайнерам</a>
       <a href="#/contacts" data-nav-link="contacts">Контакты</a>
@@ -97,7 +97,8 @@ export function renderFooter(id = 'site-footer') {
           <div>
             <div class="footer__col-title">Для проекта</div>
             <div class="footer__links">
-              <a href="#/solutions">Панели и рейки</a>
+              <a href="#/panels">Панели и рейки</a>
+              <a href="#/partitions">Перегородки</a>
               <a href="#/designers">Дизайнерам</a>
               <a href="#/promos">Предложения</a>
               <a href="#/contacts">Контакты</a>
