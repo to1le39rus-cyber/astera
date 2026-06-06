@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://to1le39rus-cyber.github.io/astera/sitemap.xml
