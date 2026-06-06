@@ -572,17 +572,17 @@
 Толщина двери: 38 мм
 Нестандартные размеры:
 Ширина двери: до 1100 мм (с шагом 10 мм)
-Высота двери: до 2300 мм (с шагом 10 мм)`,imageCount:11,images:["data/lord/%D0%9D%D0%B5%D0%BE%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B8%D0%BA%D0%B0/%D0%AD%D0%BB%D0%B5%D0%B3%D0%B0%D0%BD%D1%82/images/01.jpg","data/lord/%D0%9D%D0%B5%D0%BE%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B8%D0%BA%D0%B0/%D0%AD%D0%BB%D0%B5%D0%B3%D0%B0%D0%BD%D1%82/images/02.jpg","data/lord/%D0%9D%D0%B5%D0%BE%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B8%D0%BA%D0%B0/%D0%AD%D0%BB%D0%B5%D0%B3%D0%B0%D0%BD%D1%82/images/03.jpg","data/lord/%D0%9D%D0%B5%D0%BE%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B8%D0%BA%D0%B0/%D0%AD%D0%BB%D0%B5%D0%B3%D0%B0%D0%BD%D1%82/images/04.png","data/lord/%D0%9D%D0%B5%D0%BE%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B8%D0%BA%D0%B0/%D0%AD%D0%BB%D0%B5%D0%B3%D0%B0%D0%BD%D1%82/images/05.png","data/lord/%D0%9D%D0%B5%D0%BE%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B8%D0%BA%D0%B0/%D0%AD%D0%BB%D0%B5%D0%B3%D0%B0%D0%BD%D1%82/images/06.png","data/lord/%D0%9D%D0%B5%D0%BE%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B8%D0%BA%D0%B0/%D0%AD%D0%BB%D0%B5%D0%B3%D0%B0%D0%BD%D1%82/images/07.png","data/lord/%D0%9D%D0%B5%D0%BE%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B8%D0%BA%D0%B0/%D0%AD%D0%BB%D0%B5%D0%B3%D0%B0%D0%BD%D1%82/images/08.png","data/lord/%D0%9D%D0%B5%D0%BE%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B8%D0%BA%D0%B0/%D0%AD%D0%BB%D0%B5%D0%B3%D0%B0%D0%BD%D1%82/images/09.png","data/lord/%D0%9D%D0%B5%D0%BE%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B8%D0%BA%D0%B0/%D0%AD%D0%BB%D0%B5%D0%B3%D0%B0%D0%BD%D1%82/images/10.png","data/lord/%D0%9D%D0%B5%D0%BE%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B8%D0%BA%D0%B0/%D0%AD%D0%BB%D0%B5%D0%B3%D0%B0%D0%BD%D1%82/images/11.png"],sourceUrl:"https://dveri-lord.ru/product/elegant/",priceFrom:21475,priceTo:26985,madeToOrder:!0}]}],contacts:{source_url:"https://asteradoors.ru/",phones:["+7 (4012) 33-65-55","+7 (963) 738-65-55"],emails:[],addresses:["г. Калининград, ул. Горького 98 (2 этаж)"],social_links:["https://vk.com/asteradoors","https://www.youtube.com/@asteradoors","https://t.me/asteradoors","https://www.youtube.com/@asteradoors/shorts"]}};const Z=window.ASTERA_DATA,k=Z.catalog;Z.contacts;const f=k.flatMap(D=>D.products),G=Object.fromEntries(f.map(D=>[D.slug,D])),L=D=>{const B=G[D];return(B==null?void 0:B.images.find(a=>/\.jpg$/i.test(a)))||""},r0=L("bella"),D0={Дизайн:L("eclissi"),Классика:L("novita-felicia"),Минимализм:L("melford"),Неоклассика:L("astoria")},n0=L("eclissi");function B0(D){return Math.round(D).toLocaleString("ru-RU")}function o0(D){if(!D)return[];const B=["Варианты остекления","Варианты покрытия","Варианты оформления","Варианты цветов","Стандартные размеры","Нестандартные размеры"],a=D.split(`
-`).map(o=>o.trim()).filter(Boolean),t=[];let r=null,n=0,e=[];for(;n<a.length&&!B.some(o=>a[n].startsWith(o));)e.push(a[n++]);for(e.length&&t.push({title:"Описание",body:e.join(`
-`)});n<a.length;){const o=a[n];B.some(l=>o.startsWith(l))?(r={title:o.replace(/:\s*$/,""),body:""},t.push(r)):r&&(r.body+=(r.body?`
-`:"")+o),n++}return t.filter(o=>o.body.trim()||o.title==="Описание")}function q(D){return D.images.filter(B=>/\.png$/i.test(B))}function d0(D){return D.images.filter(B=>/\.(jpg|jpeg)$/i.test(B))}function A(D=""){return`./${String(D).replace(/^\/+/,"")}`}function s0(D="site-header"){const B=document.getElementById(D);B.className="header",B.innerHTML=`
+Высота двери: до 2300 мм (с шагом 10 мм)`,imageCount:11,images:["data/lord/%D0%9D%D0%B5%D0%BE%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B8%D0%BA%D0%B0/%D0%AD%D0%BB%D0%B5%D0%B3%D0%B0%D0%BD%D1%82/images/01.jpg","data/lord/%D0%9D%D0%B5%D0%BE%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B8%D0%BA%D0%B0/%D0%AD%D0%BB%D0%B5%D0%B3%D0%B0%D0%BD%D1%82/images/02.jpg","data/lord/%D0%9D%D0%B5%D0%BE%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B8%D0%BA%D0%B0/%D0%AD%D0%BB%D0%B5%D0%B3%D0%B0%D0%BD%D1%82/images/03.jpg","data/lord/%D0%9D%D0%B5%D0%BE%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B8%D0%BA%D0%B0/%D0%AD%D0%BB%D0%B5%D0%B3%D0%B0%D0%BD%D1%82/images/04.png","data/lord/%D0%9D%D0%B5%D0%BE%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B8%D0%BA%D0%B0/%D0%AD%D0%BB%D0%B5%D0%B3%D0%B0%D0%BD%D1%82/images/05.png","data/lord/%D0%9D%D0%B5%D0%BE%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B8%D0%BA%D0%B0/%D0%AD%D0%BB%D0%B5%D0%B3%D0%B0%D0%BD%D1%82/images/06.png","data/lord/%D0%9D%D0%B5%D0%BE%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B8%D0%BA%D0%B0/%D0%AD%D0%BB%D0%B5%D0%B3%D0%B0%D0%BD%D1%82/images/07.png","data/lord/%D0%9D%D0%B5%D0%BE%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B8%D0%BA%D0%B0/%D0%AD%D0%BB%D0%B5%D0%B3%D0%B0%D0%BD%D1%82/images/08.png","data/lord/%D0%9D%D0%B5%D0%BE%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B8%D0%BA%D0%B0/%D0%AD%D0%BB%D0%B5%D0%B3%D0%B0%D0%BD%D1%82/images/09.png","data/lord/%D0%9D%D0%B5%D0%BE%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B8%D0%BA%D0%B0/%D0%AD%D0%BB%D0%B5%D0%B3%D0%B0%D0%BD%D1%82/images/10.png","data/lord/%D0%9D%D0%B5%D0%BE%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B8%D0%BA%D0%B0/%D0%AD%D0%BB%D0%B5%D0%B3%D0%B0%D0%BD%D1%82/images/11.png"],sourceUrl:"https://dveri-lord.ru/product/elegant/",priceFrom:21475,priceTo:26985,madeToOrder:!0}]}],contacts:{source_url:"https://asteradoors.ru/",phones:["+7 (4012) 33-65-55","+7 (963) 738-65-55"],emails:[],addresses:["г. Калининград, ул. Горького 98 (2 этаж)"],social_links:["https://vk.com/asteradoors","https://www.youtube.com/@asteradoors","https://t.me/asteradoors","https://www.youtube.com/@asteradoors/shorts"]}};const s0=window.ASTERA_DATA,F=s0.catalog;s0.contacts;const k=F.flatMap(D=>D.products),V=Object.fromEntries(k.map(D=>[D.slug,D])),S=D=>{const B=V[D];return(B==null?void 0:B.images.find(a=>/\.jpg$/i.test(a)))||""},g0=S("bella"),j={Дизайн:S("eclissi"),Классика:S("novita-felicia"),Минимализм:S("melford"),Неоклассика:S("astoria")},p0=S("eclissi");function o0(D){return Math.round(D).toLocaleString("ru-RU")}function c0(D){if(!D)return[];const B=["Варианты остекления","Варианты покрытия","Варианты оформления","Варианты цветов","Стандартные размеры","Нестандартные размеры"],a=D.split(`
+`).map(s=>s.trim()).filter(Boolean),t=[];let r=null,n=0,e=[];for(;n<a.length&&!B.some(s=>a[n].startsWith(s));)e.push(a[n++]);for(e.length&&t.push({title:"Описание",body:e.join(`
+`)});n<a.length;){const s=a[n];B.some(l=>s.startsWith(l))?(r={title:s.replace(/:\s*$/,""),body:""},t.push(r)):r&&(r.body+=(r.body?`
+`:"")+s),n++}return t.filter(s=>s.body.trim()||s.title==="Описание")}function R(D){return D.images.filter(B=>/\.png$/i.test(B))}function m0(D){return D.images.filter(B=>/\.(jpg|jpeg)$/i.test(B))}function A(D=""){return`./${String(D).replace(/^\/+/,"")}`}function A0(D="site-header"){const B=document.getElementById(D);B.className="header",B.innerHTML=`
     <a href="#/" class="header__logo" aria-label="ASTERA — главная">
       <img class="header__logo-img" src="${A("branding/logo-astera-hor-charcoal.png")}" alt="Astera интерьерные решения" loading="eager" width="220" height="40">
       <img class="header__logo-img header__logo-img--hero" src="${A("branding/logo-astera-hor-monochrome.png")}" alt="Astera интерьерные решения" loading="eager" width="220" height="40">
     </a>
     <nav class="header__nav" aria-label="Основная навигация">
       <a href="#/catalog" data-nav-link="catalog">Двери</a>
-      <a href="#/solutions" data-nav-link="solutions">Панели</a>
+      <a href="#/panels" data-nav-link="panels">Панели</a>
       <a href="#/entrance" data-nav-link="entrance">Входные двери</a>
       <a href="#/designers" data-nav-link="designers">Дизайнерам</a>
       <a href="#/contacts" data-nav-link="contacts">Контакты</a>
@@ -607,7 +607,7 @@
         </div>
       </div>
       <a class="header__cta" href="https://t.me/asteradoors" target="_blank" rel="noopener noreferrer"><span>Обсудить проект</span></a>
-    </div>`;const a=B.querySelector("[data-contact-menu]"),t=B.querySelector("[data-contact-trigger]");t==null||t.addEventListener("click",n=>{n.stopPropagation();const e=!a.classList.contains("is-open");a.classList.toggle("is-open",e),t.setAttribute("aria-expanded",String(e))}),document.addEventListener("click",n=>{a!=null&&a.contains(n.target)||(a==null||a.classList.remove("is-open"),t==null||t.setAttribute("aria-expanded","false"))});const r=()=>{var e;const n=window.scrollY>60;B.classList.toggle("header--scrolled",n),(e=document.getElementById("mobile-nav"))==null||e.classList.toggle("is-visible",window.scrollY>90)};window.addEventListener("scroll",r,{passive:!0}),r()}function b(D){const B=document.getElementById("site-header");B==null||B.classList.toggle("header--on-hero",D)}function _(D){document.querySelectorAll(".header__nav a").forEach(B=>{const a=B.dataset.navLink||"";B.classList.toggle("is-active",a===D)}),document.querySelectorAll(".mobile-nav__item").forEach(B=>{const a=B.dataset.nav,t=D==="contacts"&&a==="estimate";B.classList.toggle("is-active",a===(D||"home")||t)})}function i0(D="site-footer"){document.getElementById(D).innerHTML=`
+    </div>`;const a=B.querySelector("[data-contact-menu]"),t=B.querySelector("[data-contact-trigger]");t==null||t.addEventListener("click",n=>{n.stopPropagation();const e=!a.classList.contains("is-open");a.classList.toggle("is-open",e),t.setAttribute("aria-expanded",String(e))}),document.addEventListener("click",n=>{a!=null&&a.contains(n.target)||(a==null||a.classList.remove("is-open"),t==null||t.setAttribute("aria-expanded","false"))});const r=()=>{var e;const n=window.scrollY>60;B.classList.toggle("header--scrolled",n),(e=document.getElementById("mobile-nav"))==null||e.classList.toggle("is-visible",window.scrollY>90)};window.addEventListener("scroll",r,{passive:!0}),r()}function f(D){const B=document.getElementById("site-header");B==null||B.classList.toggle("header--on-hero",D)}function b(D){document.querySelectorAll(".header__nav a").forEach(B=>{const a=B.dataset.navLink||"";B.classList.toggle("is-active",a===D)}),document.querySelectorAll(".mobile-nav__item").forEach(B=>{const a=B.dataset.nav,t=D==="contacts"&&a==="estimate";B.classList.toggle("is-active",a===(D||"home")||t)})}function u0(D="site-footer"){document.getElementById(D).innerHTML=`
     <footer class="footer">
       <div class="footer__inner">
         <div class="footer__top">
@@ -618,13 +618,14 @@
           <div>
             <div class="footer__col-title">Двери</div>
             <div class="footer__links">
-              ${k.map(B=>`<a href="#/catalog/${encodeURIComponent(B.name)}">${B.name}</a>`).join("")}
+              ${F.map(B=>`<a href="#/catalog/${encodeURIComponent(B.name)}">${B.name}</a>`).join("")}
             </div>
           </div>
           <div>
             <div class="footer__col-title">Для проекта</div>
             <div class="footer__links">
-              <a href="#/solutions">Панели и рейки</a>
+              <a href="#/panels">Панели и рейки</a>
+              <a href="#/partitions">Перегородки</a>
               <a href="#/designers">Дизайнерам</a>
               <a href="#/promos">Предложения</a>
               <a href="#/contacts">Контакты</a>
@@ -646,7 +647,7 @@
           <span class="footer__partner">Цены и оттенки уточняются в салоне. Сайт не является публичной офертой.</span>
         </div>
       </div>
-    </footer>`}let S=[],T=0;function U(D,B){S=D,T=B,Y(),document.getElementById("lightbox").hidden=!1,document.body.style.overflow="hidden"}function I(){document.getElementById("lightbox").hidden=!0,document.body.style.overflow=""}function Y(){const D=document.getElementById("lightbox");D.querySelector(".lightbox__img").src=A(S[T]),D.querySelector(".lightbox__counter").textContent=`${T+1} / ${S.length}`}function M(){T=(T-1+S.length)%S.length,Y()}function H(){T=(T+1)%S.length,Y()}function l0(){const D=document.getElementById("lightbox");D.querySelector(".lightbox__close").addEventListener("click",I),D.querySelector(".lightbox__prev").addEventListener("click",M),D.querySelector(".lightbox__next").addEventListener("click",H),D.addEventListener("click",a=>{(a.target===D||a.target===D.querySelector(".lightbox__img-wrap"))&&I()});let B=0;D.addEventListener("touchstart",a=>{B=a.changedTouches[0].clientX},{passive:!0}),D.addEventListener("touchend",a=>{const t=a.changedTouches[0].clientX-B;Math.abs(t)>50&&(t<0?H():M())},{passive:!0}),document.addEventListener("keydown",a=>{D.hidden||(a.key==="Escape"&&I(),a.key==="ArrowLeft"&&M(),a.key==="ArrowRight"&&H())})}const O='<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>',g0=[["2014","в Калининграде"],["9000+","установленных дверей"],["5.0","рейтинг на картах"]],p0=[["01","Подбираем под интерьер","Учитываем стиль, высоту полотен, покрытие, фурнитуру и соседние материалы."],["02","Собираем объект целиком","Двери, входная группа, панели, рейки и перегородки выглядят как единое решение."],["03","Доводим до монтажа","Замеряем проемы, согласуем комплектацию и устанавливаем аккуратно, без случайных решений на объекте."]],c0=[{kicker:"Главный выбор",title:"Межкомнатные двери",text:"Начинаем с планировки, стиля интерьера и бюджета. Покажем коллекции, отделки, высоты, фурнитуру и сразу посчитаем комплект под ваши проемы.",result:"Модель, отделка и расчет под проемы",cta:"Смотреть двери",href:"#/catalog/doors"},{kicker:"Единая отделка",title:"Панели и рейки",text:"Подберем панели и рейки под двери, мебель и отделку стен: для прихожей, ТВ-зоны, скрытых проходов и акцентных стен.",result:"Единая отделка без случайных оттенков",cta:"Обсудить панели",href:"https://t.me/asteradoors"},{kicker:"Собственный бренд",title:"Входные двери Astera",text:"Изготавливаем входные двери под ваш проем: размер, тепло, тишина, отделка снаружи и внутри, фурнитура и монтаж.",result:"Расчет под размер и отделку",cta:"Открыть флагман",href:"#/entrance"}],m0=["квартира после дизайн-проекта","частный дом или таунхаус","кабинет, ресторан, студия","объект дизайнера или архитектора"],A0=[{title:"Подбор по фото",text:"Пришлите план, визуализацию или фото проемов: предложим модели и отделки для первого расчета."},{title:"Комплект на объект",text:"Соберем в один комплект двери, панели, рейки, перегородки и входную группу."},{title:"Условия салона",text:"Актуальные предложения по коллекциям и комплектам уточним после подбора."}],u0={Классика:"Глубокие профили, мягкая пластика и спокойная парадность без лишнего декора.",Неоклассика:"Классическая линия в более легком, современном прочтении.",Минимализм:"Ровные плоскости, скрытые решения и точная геометрия проема.",Дизайн:"Акцентные полотна со стеклом, молдингами и выразительной фрезеровкой."},C0=["Межкомнатные двери","Входные двери Astera","Стеновые панели и рейки","Алюминиевые перегородки"];function P(D){return f.find(B=>B.slug===D)}function N(D,B="lifestyle"){return D?B==="product"?q(D)[0]||D.images[0]||"":D.images.find(a=>/\.(jpg|jpeg|webp)$/i.test(a))||D.images[0]||"":""}function E0(){return["eclissi","futuristic","altro-sf","bella","melford","dolce"].map(P).filter(Boolean)}function v0(){return k.map(D=>{var t;const B=(t=D.products)==null?void 0:t[0],a=D0[D.name]||N(B);return{type:"collection",kicker:"Коллекция",title:D.name,text:u0[D.name]||"Двери под архитектуру пространства.",bg:a,href:`#/catalog/${encodeURIComponent(D.name)}`,cta:"Смотреть коллекцию"}}).filter(D=>D.bg)}function C(D="Здравствуйте! Хочу обсудить проект Astera."){return`https://t.me/asteradoors?text=${encodeURIComponent(D)}`}function V(D){const B=q(D)[0]||D.images[0]||"",a=D.priceFrom?`от ${B0(D.priceFrom)} ₽`:"расчет по проекту",t=q(D).length;return`
+    </footer>`}let L=[],T=0;function M(D,B){L=D,T=B,W(),document.getElementById("lightbox").hidden=!1,document.body.style.overflow="hidden"}function H(){document.getElementById("lightbox").hidden=!0,document.body.style.overflow=""}function W(){const D=document.getElementById("lightbox");D.querySelector(".lightbox__img").src=A(L[T]),D.querySelector(".lightbox__counter").textContent=`${T+1} / ${L.length}`}function z(){T=(T-1+L.length)%L.length,W()}function P(){T=(T+1)%L.length,W()}function C0(){const D=document.getElementById("lightbox");D.querySelector(".lightbox__close").addEventListener("click",H),D.querySelector(".lightbox__prev").addEventListener("click",z),D.querySelector(".lightbox__next").addEventListener("click",P),D.addEventListener("click",a=>{(a.target===D||a.target===D.querySelector(".lightbox__img-wrap"))&&H()});let B=0;D.addEventListener("touchstart",a=>{B=a.changedTouches[0].clientX},{passive:!0}),D.addEventListener("touchend",a=>{const t=a.changedTouches[0].clientX-B;Math.abs(t)>50&&(t<0?P():z())},{passive:!0}),document.addEventListener("keydown",a=>{D.hidden||(a.key==="Escape"&&H(),a.key==="ArrowLeft"&&z(),a.key==="ArrowRight"&&P())})}const q='<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>',v0=[["2014","в Калининграде"],["9000+","установленных дверей"],["5.0","рейтинг на картах"]],E0=[["01","Подбираем под интерьер","Учитываем стиль, высоту полотен, покрытие, фурнитуру и соседние материалы."],["02","Собираем объект целиком","Двери, входная группа, панели, рейки и перегородки выглядят как единое решение."],["03","Доводим до монтажа","Замеряем проемы, согласуем комплектацию и устанавливаем аккуратно, без случайных решений на объекте."]],h0=[{kicker:"Главный выбор",title:"Межкомнатные двери",text:"Начинаем с планировки, стиля интерьера и бюджета. Покажем коллекции, отделки, высоты, фурнитуру и сразу посчитаем комплект под ваши проемы.",result:"Модель, отделка и расчет под проемы",cta:"Смотреть двери",href:"#/catalog/doors"},{kicker:"Единая отделка",title:"Панели и рейки",text:"Подберем панели и рейки под двери, мебель и отделку стен: для прихожей, ТВ-зоны, скрытых проходов и акцентных стен.",result:"Единая отделка без случайных оттенков",cta:"Смотреть решения",href:"#/panels"},{kicker:"Собственный бренд",title:"Входные двери Astera",text:"Изготавливаем входные двери под ваш проем: размер, тепло, тишина, отделка снаружи и внутри, фурнитура и монтаж.",result:"Расчет под размер и отделку",cta:"Открыть флагман",href:"#/entrance"}],f0=["квартира после дизайн-проекта","частный дом или таунхаус","кабинет, ресторан, студия","объект дизайнера или архитектора"],b0=[{title:"Подбор по фото",text:"Пришлите план, визуализацию или фото проемов: предложим модели и отделки для первого расчета."},{title:"Комплект на объект",text:"Соберем в один комплект двери, панели, рейки, перегородки и входную группу."},{title:"Условия салона",text:"Актуальные предложения по коллекциям и комплектам уточним после подбора."}],_0={Классика:"Глубокие профили, мягкая пластика и спокойная парадность без лишнего декора.",Неоклассика:"Классическая линия в более легком, современном прочтении.",Минимализм:"Ровные плоскости, скрытые решения и точная геометрия проема.",Дизайн:"Акцентные полотна со стеклом, молдингами и выразительной фрезеровкой."},y0=["Межкомнатные двери","Входные двери Astera","Стеновые панели и рейки","Алюминиевые перегородки"];function G(D){return k.find(B=>B.slug===D)}function Y(D,B="lifestyle"){return D?B==="product"?R(D)[0]||D.images[0]||"":D.images.find(a=>/\.(jpg|jpeg|webp)$/i.test(a))||D.images[0]||"":""}function $0(){return["eclissi","futuristic","altro-sf","bella","melford","dolce"].map(G).filter(Boolean)}function F0(){return F.map(D=>{var t;const B=(t=D.products)==null?void 0:t[0],a=j[D.name]||Y(B);return{type:"collection",kicker:"Коллекция",title:D.name,text:_0[D.name]||"Двери под архитектуру пространства.",bg:a,href:`#/catalog/${encodeURIComponent(D.name)}`,cta:"Смотреть коллекцию"}}).filter(D=>D.bg)}function C(D="Здравствуйте! Хочу обсудить проект Astera."){return`https://t.me/asteradoors?text=${encodeURIComponent(D)}`}function K(D){const B=R(D)[0]||D.images[0]||"",a=D.priceFrom?`от ${o0(D.priceFrom)} ₽`:"расчет по проекту",t=R(D).length;return`
     <article class="door-card reveal" data-slug="${D.slug}" role="button" tabindex="0">
       <div class="door-card__media">
         ${B?`<img src="${A(B)}" alt="${D.name}" loading="lazy">`:""}
@@ -659,27 +660,27 @@
         </div>
         <div class="door-card__foot">
           <strong>${a}</strong>
-          <span>Смотреть модель ${O}</span>
+          <span>Смотреть модель ${q}</span>
         </div>
       </div>
-    </article>`}function W(D){D.querySelectorAll(".door-card").forEach(B=>{const a=()=>{location.hash=`/product/${B.dataset.slug}`};B.addEventListener("click",a),B.addEventListener("keydown",t=>{(t.key==="Enter"||t.key===" ")&&(t.preventDefault(),a())})})}function K(D){D.querySelectorAll("[data-lead-form]").forEach(B=>{B.addEventListener("submit",a=>{a.preventDefault();const t=new FormData(B),r=t.get("name")||"Без имени",n=t.get("phone")||"",e=t.get("task")||"Хочу обсудить проект",o=`Здравствуйте! Меня зовут ${r}. ${e}. Телефон: ${n}`;window.open(C(o),"_blank","noopener,noreferrer")})})}function h0(D){const B=D.querySelectorAll("[data-parallax]"),a=()=>{const t=window.innerHeight||1;B.forEach(r=>{const n=r.getBoundingClientRect(),e=(n.top-t)/(n.height+t),o=Math.max(-42,Math.min(42,e*-58));r.style.setProperty("--py",`${o}px`)})};requestAnimationFrame(()=>{a(),window.addEventListener("scroll",a,{passive:!0})})}function f0(D){var E,v;const B=D.querySelector("[data-hero-slider]");if(!B)return;const a=[...B.querySelectorAll("[data-hero-slide]")],t=[...B.querySelectorAll("[data-hero-bg]")],r=[...B.querySelectorAll("[data-hero-dot]")],n=a.length;if(n<2)return;let e=0,o=!1,l=null;const p=s=>{e=(s+n)%n,o&&B.classList.add("has-transitioned"),a.forEach((i,g)=>i.classList.toggle("is-active",g===e)),t.forEach((i,g)=>i.classList.toggle("is-active",g===e)),r.forEach((i,g)=>i.classList.toggle("is-active",g===e))},u=()=>{window.clearInterval(l),l=window.setInterval(()=>{o=!0,p(e+1)},7e3)};r.forEach((s,i)=>{s.addEventListener("click",()=>{o=!0,p(i),u()})}),(E=B.querySelector("[data-hero-prev]"))==null||E.addEventListener("click",()=>{o=!0,p(e-1),u()}),(v=B.querySelector("[data-hero-next]"))==null||v.addEventListener("click",()=>{o=!0,p(e+1),u()}),p(0),window.setTimeout(u,1200)}function J(D){const B=P("eclissi")||f[0],a=r0||N(B),t=[{type:"brand",kicker:"Astera / Калининград",title:"Двери и интерьерные решения Astera",text:C0,bg:a,href:"#/catalog/doors",cta:"Смотреть двери"},...v0()],r=E0(),n=n0||N(P("futuristic"))||a;D.innerHTML=`
+    </article>`}function X(D){D.querySelectorAll(".door-card").forEach(B=>{const a=()=>{location.hash=`/product/${B.dataset.slug}`};B.addEventListener("click",a),B.addEventListener("keydown",t=>{(t.key==="Enter"||t.key===" ")&&(t.preventDefault(),a())})})}function I(D){D.querySelectorAll("[data-lead-form]").forEach(B=>{B.addEventListener("submit",a=>{a.preventDefault();const t=new FormData(B),r=t.get("name")||"Без имени",n=t.get("phone")||"",e=t.get("task")||"Хочу обсудить проект",s=`Здравствуйте! Меня зовут ${r}. ${e}. Телефон: ${n}`;window.open(C(s),"_blank","noopener,noreferrer")})})}function k0(D){const B=D.querySelectorAll("[data-parallax]"),a=()=>{const t=window.innerHeight||1;B.forEach(r=>{const n=r.getBoundingClientRect(),e=(n.top-t)/(n.height+t),s=Math.max(-42,Math.min(42,e*-58));r.style.setProperty("--py",`${s}px`)})};requestAnimationFrame(()=>{a(),window.addEventListener("scroll",a,{passive:!0})})}function T0(D){var v,E;const B=D.querySelector("[data-hero-slider]");if(!B)return;const a=[...B.querySelectorAll("[data-hero-slide]")],t=[...B.querySelectorAll("[data-hero-bg]")],r=[...B.querySelectorAll("[data-hero-dot]")],n=a.length;if(n<2)return;let e=0,s=!1,l=null;const p=d=>{e=(d+n)%n,s&&B.classList.add("has-transitioned"),a.forEach((i,g)=>i.classList.toggle("is-active",g===e)),t.forEach((i,g)=>i.classList.toggle("is-active",g===e)),r.forEach((i,g)=>i.classList.toggle("is-active",g===e))},u=()=>{window.clearInterval(l),l=window.setInterval(()=>{s=!0,p(e+1)},7e3)};r.forEach((d,i)=>{d.addEventListener("click",()=>{s=!0,p(i),u()})}),(v=B.querySelector("[data-hero-prev]"))==null||v.addEventListener("click",()=>{s=!0,p(e-1),u()}),(E=B.querySelector("[data-hero-next]"))==null||E.addEventListener("click",()=>{s=!0,p(e+1),u()}),p(0),window.setTimeout(u,1200)}function Q(D){const B=G("eclissi")||k[0],a=g0||Y(B),t=[{type:"brand",kicker:"Astera / Калининград",title:"Двери и интерьерные решения Astera",text:y0,bg:a,href:"#/catalog/doors",cta:"Смотреть двери"},...F0()],r=$0(),n=p0||Y(G("futuristic"))||a;D.innerHTML=`
     <section class="studio-hero" data-hero-slider>
       <div class="studio-hero__backgrounds" aria-hidden="true">
-        ${t.map((e,o)=>`
-          ${e.bg?`<div class="studio-hero__image${o===0?" is-active":""}" data-hero-bg data-parallax style="background-image:url('${A(e.bg)}')"></div>`:""}
+        ${t.map((e,s)=>`
+          ${e.bg?`<div class="studio-hero__image${s===0?" is-active":""}" data-hero-bg data-parallax style="background-image:url('${A(e.bg)}')"></div>`:""}
         `).join("")}
       </div>
       <div class="studio-hero__slides">
-        ${t.map((e,o)=>`
-          <article class="studio-hero__slide${o===0?" is-active":""}" data-hero-slide>
+        ${t.map((e,s)=>`
+          <article class="studio-hero__slide${s===0?" is-active":""}" data-hero-slide>
             <div class="studio-hero__inner">
               <div class="studio-hero__copy">
                 <span class="studio-kicker">${e.kicker}</span>
-                ${o===0?`<h1>${e.title}</h1>`:`<h2>${e.title}</h2>`}
+                ${s===0?`<h1>${e.title}</h1>`:`<h2>${e.title}</h2>`}
                 ${Array.isArray(e.text)?`<div class="studio-hero__directions">${e.text.map(l=>`<span>${l}</span>`).join("")}</div>`:`<p>${e.text}</p>`}
                 <div class="studio-hero__actions">
                   <a class="studio-btn studio-btn--light" href="${e.href}">${e.cta}</a>
-                  <a class="studio-btn studio-btn--ghost" href="${C("Здравствуйте! Хочу обсудить двери Astera.")}" target="_blank" rel="noopener noreferrer">Получить подбор ${O}</a>
+                  <a class="studio-btn studio-btn--ghost" href="${C("Здравствуйте! Хочу обсудить двери Astera.")}" target="_blank" rel="noopener noreferrer">Получить подбор ${q}</a>
                 </div>
               </div>
             </div>
@@ -690,9 +691,9 @@
       <div class="studio-hero__nav" aria-label="Слайды коллекций">
         <button type="button" data-hero-prev aria-label="Предыдущий слайд">←</button>
         <div class="studio-hero__dots">
-          ${t.map((e,o)=>`
-            <button type="button" class="${o===0?"is-active":""}" data-hero-dot aria-label="${e.title}">
-              <span>${o===0?"Astera":e.title}</span>
+          ${t.map((e,s)=>`
+            <button type="button" class="${s===0?"is-active":""}" data-hero-dot aria-label="${e.title}">
+              <span>${s===0?"Astera":e.title}</span>
             </button>
           `).join("")}
         </div>
@@ -706,13 +707,13 @@
         <p>С 2014 года Astera подбирает двери и интерьерные решения для квартир, домов и проектов в Калининграде: от межкомнатных дверей до панелей, реек и входной группы.</p>
       </div>
       <div class="studio-facts reveal">
-        ${g0.map(([e,o])=>`<div><strong>${e}</strong><span>${o}</span></div>`).join("")}
+        ${v0.map(([e,s])=>`<div><strong>${e}</strong><span>${s}</span></div>`).join("")}
       </div>
       <div class="studio-advantages">
-        ${p0.map(([e,o,l])=>`
+        ${E0.map(([e,s,l])=>`
           <article class="studio-advantage reveal">
             <span>${e}</span>
-            <h3>${o}</h3>
+            <h3>${s}</h3>
             <p>${l}</p>
           </article>
         `).join("")}
@@ -726,16 +727,16 @@
         <p>Межкомнатные двери сильнее всего влияют на первое ощущение от интерьера. Подберем модель, высоту, оттенок и фурнитуру под ваши проемы, а затем при необходимости добавим панели, рейки, перегородки и входную дверь в той же логике.</p>
       </div>
       <div class="studio-product-stack">
-        ${c0.map((e,o)=>`
+        ${h0.map((e,s)=>`
           <article class="studio-product reveal">
-            <div class="studio-product__index">${String(o+1).padStart(2,"0")}</div>
+            <div class="studio-product__index">${String(s+1).padStart(2,"0")}</div>
             <div>
               <span>${e.kicker}</span>
               <h3>${e.title}</h3>
             </div>
             <p>${e.text}</p>
             <div class="studio-product__result">${e.result}</div>
-            <a href="${e.href}" ${e.href.startsWith("http")?'target="_blank" rel="noopener noreferrer"':""}>${e.cta} ${O}</a>
+            <a href="${e.href}" ${e.href.startsWith("http")?'target="_blank" rel="noopener noreferrer"':""}>${e.cta} ${q}</a>
           </article>
         `).join("")}
       </div>
@@ -750,7 +751,7 @@
         <h2>Премиальный интерьер виден в деталях</h2>
         <p>Высота полотна, оттенок, ручка, короб, примыкание и монтаж должны совпасть между собой. Тогда двери выглядят частью интерьера, а не отдельной покупкой.</p>
         <div class="studio-scene-list">
-          ${m0.map(e=>`<span>${e}</span>`).join("")}
+          ${f0.map(e=>`<span>${e}</span>`).join("")}
         </div>
       </div>
     </section>
@@ -762,7 +763,7 @@
         <p>Начните с модели, которая близка по стилю. Размер, покрытие, короб и фурнитуру рассчитаем под ваши проемы.</p>
       </div>
       <div class="studio-door-grid">
-        ${r.map(V).join("")}
+        ${r.map(K).join("")}
       </div>
       <div class="studio-center">
         <a class="studio-btn studio-btn--dark" href="#/catalog">Смотреть коллекцию</a>
@@ -776,7 +777,7 @@
         <p>Акции и условия лучше считать после подбора: цена зависит от модели, размера, отделки, фурнитуры и монтажа.</p>
       </div>
       <div class="studio-promo-grid">
-        ${A0.map(e=>`
+        ${b0.map(e=>`
           <article>
             <strong>${e.title}</strong>
             <p>${e.text}</p>
@@ -806,13 +807,13 @@
         <h2>Для дизайнеров и архитекторов</h2>
         <p>Помогаем подобрать двери, панели, перегородки и входные группы под проект. Образцы, расчет, замер, поставка и монтаж — в одном месте.</p>
       </div>
-      <a class="studio-btn studio-btn--light" href="#/designers">Страница для дизайнеров ${O}</a>
-    </section>`,W(D),K(D),h0(D),f0(D)}const b0={Дизайн:"акцентные полотна",Классика:"выразительная классика",Минимализм:"чистая плоскость",Неоклассика:"мягкая современная линия"},_0=["Классика","Неоклассика","Минимализм","Дизайн"],y0=[{label:"Классика",href:z("Классика")},{label:"Неоклассика",href:z("Неоклассика")},{label:"Минимализм",href:z("Минимализм")},{label:"Скрытые двери",href:C("Здравствуйте! Хочу обсудить скрытые двери под интерьер.")},{label:"Алюминиевые перегородки",href:C("Здравствуйте! Хочу рассчитать алюминиевую перегородку.")}];function X(D){return k.find(B=>B.name===D)||k.find(B=>B.name.includes(D))}function z(D){const B=X(D);return B?`#/catalog/${encodeURIComponent(B.name)}`:"#/catalog"}function $(D){var a,t,r,n,e,o;const B=X(D);return B&&(D0[B.name]||((r=(t=(a=B.products)==null?void 0:a[0])==null?void 0:t.images)==null?void 0:r.find(l=>/\.(jpg|jpeg|webp)$/i.test(l)))||((o=(e=(n=B.products)==null?void 0:n[0])==null?void 0:e.images)==null?void 0:o[0]))||""}function F0(){return[["Классика",$("Классика")],["Неоклассика",$("Неоклассика")],["Минимализм",$("Минимализм")],["Дизайн",$("Дизайн")]].filter(([,D])=>D).map(([D,B])=>({label:D,image:B}))}function $0(D,B=9){return[...D].sort(()=>Math.random()-.5).slice(0,B)}function j(D=""){return String(D).trim().toLocaleLowerCase("ru-RU")}function Q(D){var a;if(!D)return f;const B=k.find(t=>j(t.name)===j(D));return(a=B==null?void 0:B.products)!=null&&a.length?B.products:f.filter(t=>j(t.category)===j(D))}function k0(){var a,t;const D=$("Дизайн")||$("Неоклассика")||((t=(a=f[0])==null?void 0:a.images)==null?void 0:t[0])||"",B=$("Минимализм")||D;return[{mod:"catalog-direction--featured",kicker:"Основная коллекция",title:"Межкомнатные двери",text:"Классика, неоклассика, минимализм и акцентные модели для цельного интерьера.",image:D,slides:F0(),href:"#/catalog/doors",cta:"Смотреть коллекции",second:"Подобрать по фото",secondHref:C("Здравствуйте! Хочу подобрать межкомнатные двери по фото интерьера."),chips:y0},{kicker:"Astera на заказ",title:"Входные двери Astera",text:"Индивидуальный размер, отделка под холл, тепло, тишина и аккуратное примыкание к стенам.",image:"images/astera-entrance-door-burkovsky-inspired.png",href:"#/entrance",cta:"Смотреть флагман",second:"Рассчитать дверь",secondHref:C("Здравствуйте! Хочу рассчитать входную дверь Astera под мой проем.")},{kicker:"Единая отделка",title:"Стеновые панели и рейки",text:"Для прихожих, ТВ-зон, скрытых проходов и акцентных стен в одной логике с дверями.",image:B,href:C("Здравствуйте! Хочу обсудить стеновые панели и рейки для интерьера."),cta:"Обсудить панели"}]}function x(D){var v,s,i,g,d;const B=((v=D.querySelector("[data-filter-search]"))==null?void 0:v.value.trim().toLowerCase())||"",a=((s=D.querySelector("[data-filter-category].is-active"))==null?void 0:s.dataset.value)||"",t=((i=D.querySelector("[data-filter-budget].is-active"))==null?void 0:i.dataset.value)||"",r=((g=D.querySelector("[data-filter-sort]"))==null?void 0:g.value)||"popular";let e=Q(a).filter(c=>{const m=`${c.name} ${c.category} ${c.description||""}`.toLowerCase(),R=!B||m.includes(B),w=c.priceFrom||0,t0=!t||t==="mid"&&w&&w<24e3||t==="premium"&&w>=24e3&&w<32e3||t==="signature"&&w>=32e3||t==="custom"&&!w;return R&&t0});const o=D.dataset.catalogMode==="doors";!e.length&&o&&a&&(e=Q(a)),o?e=$0(e):(r==="price"&&(e=e.sort((c,m)=>(c.priceFrom||999999)-(m.priceFrom||999999))),r==="name"&&(e=e.sort((c,m)=>c.name.localeCompare(m.name,"ru"))));const l=D.querySelector("[data-catalog-grid]"),p=D.querySelector("[data-catalog-count]"),u=((d=D.querySelector("[data-filter-category].is-active"))==null?void 0:d.dataset.value)||"",E=o?u?`Популярное: ${u}`:"Популярные модели":`${e.length} моделей`;p&&(p.textContent=`${e.length} моделей`),p&&(p.textContent=E),l&&(l.innerHTML=e.length?e.map(V).join(""):`<div class="catalog-empty"><strong>Не нашли подходящую модель</strong><p>Пришлите фото интерьера, и мы предложим варианты.</p><a href="${C("Здравствуйте! Помогите подобрать дверь под интерьер.")}" target="_blank" rel="noopener noreferrer">Получить подбор</a></div>`,W(D),l.querySelectorAll(".reveal").forEach(c=>c.classList.add("is-visible")))}function T0(D,B){var o,l,p,u,E,v,s,i,g;const a=k0(),t=B==="doors",r=!!B;if(D.dataset.catalogMode=r?"doors":"",D.innerHTML=`
+      <a class="studio-btn studio-btn--light" href="#/designers">Открыть презентацию ${q}</a>
+    </section>`,X(D),I(D),k0(D),T0(D)}const w0={Дизайн:"акцентные полотна",Классика:"выразительная классика",Минимализм:"чистая плоскость",Неоклассика:"мягкая современная линия"},S0=["Классика","Неоклассика","Минимализм","Дизайн"],L0=[{label:"Классика",href:N("Классика")},{label:"Неоклассика",href:N("Неоклассика")},{label:"Минимализм",href:N("Минимализм")},{label:"Скрытые двери",href:C("Здравствуйте! Хочу обсудить скрытые двери под интерьер.")},{label:"Алюминиевые перегородки",href:"#/partitions"}];function J(D){return F.find(B=>B.name===D)||F.find(B=>B.name.includes(D))}function N(D){const B=J(D);return B?`#/catalog/${encodeURIComponent(B.name)}`:"#/catalog"}function $(D){var a,t,r,n,e,s;const B=J(D);return B&&(j[B.name]||((r=(t=(a=B.products)==null?void 0:a[0])==null?void 0:t.images)==null?void 0:r.find(l=>/\.(jpg|jpeg|webp)$/i.test(l)))||((s=(e=(n=B.products)==null?void 0:n[0])==null?void 0:e.images)==null?void 0:s[0]))||""}function j0(){return[["Классика",$("Классика")],["Неоклассика",$("Неоклассика")],["Минимализм",$("Минимализм")],["Дизайн",$("Дизайн")]].filter(([,D])=>D).map(([D,B])=>({label:D,image:B}))}function x0(D,B=9){return[...D].sort(()=>Math.random()-.5).slice(0,B)}function x(D=""){return String(D).trim().toLocaleLowerCase("ru-RU")}function Z(D){var a;if(!D)return k;const B=F.find(t=>x(t.name)===x(D));return(a=B==null?void 0:B.products)!=null&&a.length?B.products:k.filter(t=>x(t.category)===x(D))}function O0(){var t,r;const D=$("Дизайн")||$("Неоклассика")||((r=(t=k[0])==null?void 0:t.images)==null?void 0:r[0])||"",B=$("Минимализм")||D,a=$("Дизайн")||B;return[{mod:"catalog-direction--featured",kicker:"Основная коллекция",title:"Межкомнатные двери",text:"Главный выбор для квартиры, дома или дизайн-проекта: стиль, высота, отделка и фурнитура под ваши проемы.",image:D,slides:j0(),href:"#/catalog/doors",cta:"Смотреть коллекции",second:"Подобрать по фото",secondHref:C("Здравствуйте! Хочу подобрать межкомнатные двери по фото интерьера."),chips:L0},{kicker:"Astera на заказ",title:"Входные двери Astera",text:"Индивидуальный размер, отделка под фасад и холл, тепло, тишина и аккуратное примыкание к стенам.",image:"images/astera-entrance-door-burkovsky-inspired.png",href:"#/entrance",cta:"Смотреть флагман",second:"Рассчитать дверь",secondHref:C("Здравствуйте! Хочу рассчитать входную дверь Astera под мой проем.")},{kicker:"Единая отделка",title:"Стеновые панели и рейки",text:"Для прихожих, ТВ-зон, скрытых проходов и акцентных стен в одной логике с дверями.",image:B,href:"#/panels",cta:"Смотреть решения",second:"Получить ориентир",secondHref:C("Здравствуйте! Хочу обсудить стеновые панели и рейки для интерьера.")},{kicker:"Свет и зонирование",title:"Алюминиевые перегородки",text:"Для кабинета, гардеробной, кухни-гостиной и приватных зон, где важно сохранить свет и легкость.",image:a,href:"#/partitions",cta:"Смотреть перегородки",second:"Рассчитать",secondHref:C("Здравствуйте! Хочу рассчитать алюминиевую перегородку под интерьер.")}]}function O(D){var E,d,i,g,o;const B=((E=D.querySelector("[data-filter-search]"))==null?void 0:E.value.trim().toLowerCase())||"",a=((d=D.querySelector("[data-filter-category].is-active"))==null?void 0:d.dataset.value)||"",t=((i=D.querySelector("[data-filter-budget].is-active"))==null?void 0:i.dataset.value)||"",r=((g=D.querySelector("[data-filter-sort]"))==null?void 0:g.value)||"popular";let e=Z(a).filter(c=>{const m=`${c.name} ${c.category} ${c.description||""}`.toLowerCase(),U=!B||m.includes(B),w=c.priceFrom||0,l0=!t||t==="mid"&&w&&w<24e3||t==="premium"&&w>=24e3&&w<32e3||t==="signature"&&w>=32e3||t==="custom"&&!w;return U&&l0});const s=D.dataset.catalogMode==="doors";!e.length&&s&&a&&(e=Z(a)),s?e=x0(e):(r==="price"&&(e=e.sort((c,m)=>(c.priceFrom||999999)-(m.priceFrom||999999))),r==="name"&&(e=e.sort((c,m)=>c.name.localeCompare(m.name,"ru"))));const l=D.querySelector("[data-catalog-grid]"),p=D.querySelector("[data-catalog-count]"),u=((o=D.querySelector("[data-filter-category].is-active"))==null?void 0:o.dataset.value)||"",v=s?u?`Популярное: ${u}`:"Популярные модели":`${e.length} моделей`;p&&(p.textContent=`${e.length} моделей`),p&&(p.textContent=v),l&&(l.innerHTML=e.length?e.map(K).join(""):`<div class="catalog-empty"><strong>Не нашли подходящую модель</strong><p>Пришлите фото интерьера, и мы предложим варианты.</p><a href="${C("Здравствуйте! Помогите подобрать дверь под интерьер.")}" target="_blank" rel="noopener noreferrer">Получить подбор</a></div>`,X(D),l.querySelectorAll(".reveal").forEach(c=>c.classList.add("is-visible")))}function q0(D,B){var s,l,p,u,v,E,d,i,g;const a=O0(),t=B==="doors",r=!!B;if(D.dataset.catalogMode=r?"doors":"",D.innerHTML=`
     <section class="catalog-studio">
       <div class="catalog-studio__hero">
         <span class="studio-kicker">Каталог Astera</span>
         <h1>Каталог Astera</h1>
-        <p>Межкомнатные и входные двери, стеновые панели, рейки и алюминиевые перегородки подбираем как единый комплект: по проемам, отделке и монтажу.</p>
+        <p>Сначала выбираем двери, потом собираем вокруг них стены, входную группу и перегородки. Так интерьер выглядит цельно, а расчет остается понятным.</p>
         <div class="catalog-studio__actions">
           <a class="studio-btn studio-btn--dark" href="${C("Здравствуйте! Хочу получить подбор Astera по проекту.")}" target="_blank" rel="noopener noreferrer">Получить подборку</a>
           <a class="studio-btn studio-btn--outline" href="#/catalog/doors">Смотреть двери</a>
@@ -821,35 +822,35 @@
 
       ${r?"":`
       <div class="catalog-directions reveal-stagger" aria-label="Направления каталога">
-        ${a.map(d=>{var c;return`
-          <article class="catalog-direction ${d.mod||""}">
-            <a class="catalog-direction__media" href="${d.href}" ${d.href.startsWith("http")?'target="_blank" rel="noopener noreferrer"':""}>
-              ${(c=d.slides)!=null&&c.length?`
+        ${a.map(o=>{var c;return`
+          <article class="catalog-direction ${o.mod||""}">
+            <a class="catalog-direction__media" href="${o.href}" ${o.href.startsWith("http")?'target="_blank" rel="noopener noreferrer"':""}>
+              ${(c=o.slides)!=null&&c.length?`
                 <div class="catalog-direction__slider" aria-label="Интерьеры межкомнатных дверей">
-                  ${d.slides.map(m=>`
+                  ${o.slides.map(m=>`
                     <figure>
                       <img src="${A(m.image)}" alt="${m.label}" loading="lazy">
                       <figcaption>${m.label}</figcaption>
                     </figure>
                   `).join("")}
                 </div>
-              `:d.image?`<img src="${A(d.image)}" alt="${d.title}" loading="lazy">`:""}
-              <span>${d.kicker}</span>
+              `:o.image?`<img src="${A(o.image)}" alt="${o.title}" loading="lazy">`:""}
+              <span>${o.kicker}</span>
             </a>
             <div class="catalog-direction__body">
               <div>
-                <h2>${d.title}</h2>
-                <p>${d.text}</p>
+                <h2>${o.title}</h2>
+                <p>${o.text}</p>
               </div>
-              ${d.chips?`
+              ${o.chips?`
                 <div class="catalog-direction__chips" aria-label="Стили межкомнатных дверей">
-                  ${d.chips.map(m=>`<a href="${m.href}">${m.label}</a>`).join("")}
+                  ${o.chips.map(m=>`<a href="${m.href}">${m.label}</a>`).join("")}
                 </div>
                 <div class="catalog-direction__scrollhint" aria-hidden="true"><span></span></div>
               `:""}
               <div class="catalog-direction__actions">
-                <a href="${d.href}" ${d.href.startsWith("http")?'target="_blank" rel="noopener noreferrer"':""}>${d.cta}</a>
-                ${d.second?`<a class="catalog-direction__muted" href="${d.secondHref}" ${d.secondHref.startsWith("http")?'target="_blank" rel="noopener noreferrer"':""}>${d.second}</a>`:""}
+                <a href="${o.href}" ${o.href.startsWith("http")?'target="_blank" rel="noopener noreferrer"':""}>${o.cta}</a>
+                ${o.second?`<a class="catalog-direction__muted" href="${o.secondHref}" ${o.secondHref.startsWith("http")?'target="_blank" rel="noopener noreferrer"':""}>${o.second}</a>`:""}
               </div>
             </div>
           </article>
@@ -875,9 +876,9 @@
 
         <div class="catalog-filter__group" aria-label="Стиль">
           <button class="is-active" data-filter-category data-value="">Все коллекции</button>
-          ${k.map(d=>`
-            <button class="${B===d.name?"is-active":""}" data-filter-category data-value="${d.name}">
-              ${d.name}<small>${b0[d.name]||""}</small>
+          ${F.map(o=>`
+            <button class="${B===o.name?"is-active":""}" data-filter-category data-value="${o.name}">
+              ${o.name}<small>${w0[o.name]||""}</small>
             </button>
           `).join("")}
         </div>
@@ -892,12 +893,12 @@
       </div>
 
       <div class="catalog-studio__summary">
-        <strong data-catalog-count>${f.length} моделей</strong>
+        <strong data-catalog-count>${k.length} моделей</strong>
         <span>Коллекции для квартир, домов и интерьеров по проекту.</span>
       </div>
 
       <div class="studio-door-grid catalog-door-grid" data-catalog-grid>
-        ${f.map(V).join("")}
+        ${k.map(K).join("")}
       </div>
 
       <section class="catalog-consult reveal">
@@ -908,22 +909,22 @@
         </div>
         <a class="studio-btn studio-btn--light" href="${C("Здравствуйте! Хочу подбор дверей под интерьер.")}" target="_blank" rel="noopener noreferrer">Написать в Telegram</a>
       </section>
-    </section>`,!r){(o=D.querySelector(".catalog-filter"))==null||o.remove(),(l=D.querySelector(".catalog-studio__summary"))==null||l.remove(),(p=D.querySelector(".catalog-door-grid"))==null||p.remove(),(u=D.querySelector(".catalog-consult"))==null||u.remove();return}D.querySelector(".catalog-studio__hero").innerHTML=`
+    </section>`,!r){(s=D.querySelector(".catalog-filter"))==null||s.remove(),(l=D.querySelector(".catalog-studio__summary"))==null||l.remove(),(p=D.querySelector(".catalog-door-grid"))==null||p.remove(),(u=D.querySelector(".catalog-consult"))==null||u.remove();return}D.querySelector(".catalog-studio__hero").innerHTML=`
     <nav class="catalog-breadcrumbs" aria-label="Хлебные крошки">
       <a href="#/">Главная</a><span>/</span><a href="#/catalog">Каталог</a><span>/</span><strong>Межкомнатные двери</strong>
     </nav>
     <span class="studio-kicker">Коллекции дверей Astera</span>
     <h1>Межкомнатные двери LORD в Калининграде</h1>
-    <p>Коллекции для классических, современных и минималистичных интерьеров. Подберем модель, покрытие, высоту полотна, короб и фурнитуру под ваши проемы.</p>
-  `,(E=D.querySelector(".catalog-filter__top"))==null||E.remove(),(v=D.querySelector(".catalog-filter__group--budget"))==null||v.remove();const n=D.querySelector(".catalog-filter__group");n&&(n.innerHTML=`
+    <p>Классика, неоклассика, минимализм и дизайн. Подберем модель, покрытие, высоту полотна, короб и фурнитуру под ваши проемы.</p>
+  `,(v=D.querySelector(".catalog-filter__top"))==null||v.remove(),(E=D.querySelector(".catalog-filter__group--budget"))==null||E.remove();const n=D.querySelector(".catalog-filter__group");n&&(n.innerHTML=`
       <button class="${t?"is-active":""}" data-filter-category data-value="">Все</button>
-      ${_0.map(d=>X(d)).filter(Boolean).map(d=>`
-        <button class="${B===d.name?"is-active":""}" data-filter-category data-value="${d.name}">
-          ${d.name}
+      ${S0.map(o=>J(o)).filter(Boolean).map(o=>`
+        <button class="${B===o.name?"is-active":""}" data-filter-category data-value="${o.name}">
+          ${o.name}
         </button>
       `).join("")}
-      <a class="catalog-filter__link" href="${C("Здравствуйте! Хочу рассчитать алюминиевую перегородку.")}" target="_blank" rel="noopener noreferrer">Алюминиевые перегородки</a>
-    `);const e=D.querySelector(".catalog-studio__summary span");e&&(e.textContent="Популярные модели из разных коллекций. Выберите стиль, чтобы сузить подборку."),(s=D.querySelector(".catalog-consult"))==null||s.remove(),B&&!t&&D.querySelectorAll("[data-filter-category]").forEach(d=>{d.classList.toggle("is-active",d.dataset.value===B)}),D.querySelectorAll("[data-filter-category], [data-filter-budget]").forEach(d=>{d.addEventListener("click",()=>{var m;const c=d.hasAttribute("data-filter-category")?"[data-filter-category]":"[data-filter-budget]";D.querySelectorAll(c).forEach(R=>R.classList.remove("is-active")),d.classList.add("is-active"),x(D),D.dataset.catalogMode==="doors"&&((m=D.querySelector(".catalog-studio__summary"))==null||m.scrollIntoView({behavior:"smooth",block:"start"}))})}),(i=D.querySelector("[data-filter-search]"))==null||i.addEventListener("input",()=>x(D)),(g=D.querySelector("[data-filter-sort]"))==null||g.addEventListener("change",()=>x(D)),W(D),x(D)}function w0(D,B){const a=G[B];if(!a){D.innerHTML='<div style="padding:120px 40px;text-align:center;font-family:var(--f-serif);font-size:28px;color:var(--c-muted);font-weight:300">Такой модели нет в каталоге. Вернитесь в каталог или напишите нам — подберем похожее решение.</div>';return}const t=d0(a),r=q(a),n=r.length?r:a.images,e=a.priceFrom?`от ${B0(a.priceFrom)} ₽`:null,o=o0(a.description||""),l=encodeURIComponent(`Здравствуйте! Хочу рассчитать модель ${a.name}. Пришлю размеры проема и фото интерьера.`);D.innerHTML=`
+      <a class="catalog-filter__link" href="#/partitions">Алюминиевые перегородки</a>
+    `);const e=D.querySelector(".catalog-studio__summary span");e&&(e.textContent="Популярные модели из разных коллекций. Выберите стиль, чтобы сузить подборку."),(d=D.querySelector(".catalog-consult"))==null||d.remove(),B&&!t&&D.querySelectorAll("[data-filter-category]").forEach(o=>{o.classList.toggle("is-active",o.dataset.value===B)}),D.querySelectorAll("[data-filter-category], [data-filter-budget]").forEach(o=>{o.addEventListener("click",()=>{var m;const c=o.hasAttribute("data-filter-category")?"[data-filter-category]":"[data-filter-budget]";D.querySelectorAll(c).forEach(U=>U.classList.remove("is-active")),o.classList.add("is-active"),O(D),D.dataset.catalogMode==="doors"&&((m=D.querySelector(".catalog-studio__summary"))==null||m.scrollIntoView({behavior:"smooth",block:"start"}))})}),(i=D.querySelector("[data-filter-search]"))==null||i.addEventListener("input",()=>O(D)),(g=D.querySelector("[data-filter-sort]"))==null||g.addEventListener("change",()=>O(D)),X(D),O(D)}function R0(D,B){const a=V[B];if(!a){D.innerHTML='<div style="padding:120px 40px;text-align:center;font-family:var(--f-serif);font-size:28px;color:var(--c-muted);font-weight:300">Такой модели нет в каталоге. Вернитесь в каталог или напишите нам — подберем похожее решение.</div>';return}const t=m0(a),r=R(a),n=r.length?r:a.images,e=a.priceFrom?`от ${o0(a.priceFrom)} ₽`:null,s=c0(a.description||""),l=encodeURIComponent(`Здравствуйте! Хочу рассчитать модель ${a.name}. Пришлю размеры проема и фото интерьера.`);D.innerHTML=`
     <div class="prod-page">
       <nav class="breadcrumbs" aria-label="Хлебные крошки">
         <a href="#/">Главная</a><span class="breadcrumbs__sep">/</span>
@@ -938,10 +939,10 @@
               src="${n[0]?A(n[0]):""}" alt="${a.name}" loading="eager">
           </div>
           <div class="gal__thumbs" id="gal-thumbs">
-            ${n.map((s,i)=>`
+            ${n.map((d,i)=>`
               <div class="gal__thumb${i===0?" is-active":""}" data-i="${i}"
                 role="button" tabindex="0" aria-label="Фото двери ${i+1}">
-                <img src="${A(s)}" alt="${a.name} фото двери ${i+1}" loading="lazy">
+                <img src="${A(d)}" alt="${a.name} фото двери ${i+1}" loading="lazy">
               </div>`).join("")}
           </div>
         </div>
@@ -965,12 +966,12 @@
           </div>
           <div class="prod-info__div"></div>
           <div class="specs" id="specs">
-            ${o.map((s,i)=>`
+            ${s.map((d,i)=>`
               <div class="spec-group${i===0?" is-open":""}">
                 <button class="spec-toggle" aria-expanded="${i===0}">
-                  <span>${s.title}</span><span class="spec-icon">+</span>
+                  <span>${d.title}</span><span class="spec-icon">+</span>
                 </button>
-                <div class="spec-body-wrap"><div class="spec-body">${s.body}</div></div>
+                <div class="spec-body-wrap"><div class="spec-body">${d.body}</div></div>
               </div>`).join("")}
           </div>
           <div class="prod-info__div"></div>
@@ -1001,15 +1002,15 @@
             <p class="prod-interiors__desc">Примеры помогают оценить пропорции, оттенок и сочетание с отделкой.</p>
           </div>
           <div class="prod-interiors__grid">
-            ${t.map((s,i)=>`
+            ${t.map((d,i)=>`
               <button class="prod-interior-card" data-life-i="${i}" aria-label="Открыть интерьерное фото ${i+1}">
-                <img src="${A(s)}" alt="${a.name} в интерьере ${i+1}" loading="lazy">
+                <img src="${A(d)}" alt="${a.name} в интерьере ${i+1}" loading="lazy">
               </button>
             `).join("")}
           </div>
         </section>
       `:""}
-    </div>`;let p=0;const u=D.querySelector("#gal-main-img"),E=D.querySelectorAll(".gal__thumb");function v(s){var i;p=s,u.src=A(n[s]),u.alt=`${a.name} — фото двери ${s+1}`,E.forEach((g,d)=>g.classList.toggle("is-active",d===s)),(i=E[s])==null||i.scrollIntoView({block:"nearest",behavior:"smooth"})}E.forEach((s,i)=>{s.addEventListener("click",()=>v(i)),s.addEventListener("keydown",g=>{(g.key==="Enter"||g.key===" ")&&(g.preventDefault(),v(i))})}),D.querySelector("#gal-main").addEventListener("click",()=>U(n,p)),D.querySelector("#gal-main").addEventListener("keydown",s=>{s.key==="Enter"&&U(n,p)}),D.querySelectorAll(".prod-interior-card").forEach(s=>{s.addEventListener("click",()=>U(t,Number(s.dataset.lifeI)||0))}),D.querySelectorAll(".spec-toggle").forEach(s=>{s.addEventListener("click",()=>{const g=s.closest(".spec-group").classList.toggle("is-open");s.setAttribute("aria-expanded",g)})})}const L0=["Фото проема или стены","План или визуализация","Что нужно: двери, панели или входная","Желаемый срок"];function S0(D){D.innerHTML=`
+    </div>`;let p=0;const u=D.querySelector("#gal-main-img"),v=D.querySelectorAll(".gal__thumb");function E(d){var i;p=d,u.src=A(n[d]),u.alt=`${a.name} — фото двери ${d+1}`,v.forEach((g,o)=>g.classList.toggle("is-active",o===d)),(i=v[d])==null||i.scrollIntoView({block:"nearest",behavior:"smooth"})}v.forEach((d,i)=>{d.addEventListener("click",()=>E(i)),d.addEventListener("keydown",g=>{(g.key==="Enter"||g.key===" ")&&(g.preventDefault(),E(i))})}),D.querySelector("#gal-main").addEventListener("click",()=>M(n,p)),D.querySelector("#gal-main").addEventListener("keydown",d=>{d.key==="Enter"&&M(n,p)}),D.querySelectorAll(".prod-interior-card").forEach(d=>{d.addEventListener("click",()=>M(t,Number(d.dataset.lifeI)||0))}),D.querySelectorAll(".spec-toggle").forEach(d=>{d.addEventListener("click",()=>{const g=d.closest(".spec-group").classList.toggle("is-open");d.setAttribute("aria-expanded",g)})})}const I0=["Фото проема или стены","План или визуализация","Что нужно: двери, панели или входная","Желаемый срок"];function U0(D){D.innerHTML=`
     <div class="contacts-page contacts-page--premium">
       <section class="contacts-hero">
         <div>
@@ -1023,7 +1024,7 @@
         </div>
         <aside class="contacts-panel">
           <strong>Что прислать</strong>
-          ${L0.map(B=>`<span>${B}</span>`).join("")}
+          ${I0.map(B=>`<span>${B}</span>`).join("")}
         </aside>
       </section>
 
@@ -1059,7 +1060,7 @@
             allowfullscreen></iframe>
         </div>
       </div>
-    </div>`}const j0='<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>',x0=[["20%","партнерское вознаграждение"],["24-48 ч","ответ по расчету"],["1 окно","двери, панели, перегородки, вход"],["объект","комплектация для квартир и домов"]],O0=[{title:"Сохранить замысел",text:"Модель, отделка, высота и фурнитура в логике проекта."},{title:"Продумать детали",text:"Проемы, короба, панели, перегородки и монтаж согласуем до заказа."},{title:"Снять операционные задачи",text:"Замер, поставка, монтаж и сервис на стороне Astera."},{title:"Зафиксировать условия",text:"Проект закрепляется за дизайнером. Партнерское вознаграждение — до 20%."}],q0=["План или визуализация","Подбор решений","Спецификация","Замер","Монтаж и сервис"];function R0(D){D.innerHTML=`
+    </div>`}const M0='<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>',H0=[["20%","партнерское вознаграждение"],["24-48 ч","ответ по расчету"],["1 окно","двери, панели, перегородки, вход"],["объект","комплектация для квартир и домов"]],z0=[{title:"Сохранить замысел",text:"Модель, отделка, высота и фурнитура в логике проекта."},{title:"Продумать детали",text:"Проемы, короба, панели, перегородки и монтаж согласуем до заказа."},{title:"Снять операционные задачи",text:"Замер, поставка, монтаж и сервис на стороне Astera."},{title:"Зафиксировать условия",text:"Проект закрепляется за дизайнером. Партнерское вознаграждение — до 20%."}],P0=["План или визуализация","Подбор решений","Спецификация","Замер","Монтаж и сервис"];function N0(D){D.innerHTML=`
     <section class="designer-page">
       <div class="designer-hero">
         <div class="designer-hero__copy">
@@ -1068,11 +1069,11 @@
           <p>Двери LORD, стеновые панели, перегородки и входные группы под стиль проекта. Подготовим расчет, поможем с техническими деталями, организуем замер, поставку и монтаж. Дизайнерам — партнерские условия до 20%.</p>
           <div class="studio-hero__actions">
             <a class="studio-btn studio-btn--light" href="${C("Здравствуйте! Я дизайнер/архитектор, хочу получить партнерские условия Astera.")}" target="_blank" rel="noopener noreferrer">Получить условия</a>
-            <a class="studio-btn studio-btn--ghost" href="#designer-form">Передать проект ${j0}</a>
+            <a class="studio-btn studio-btn--ghost" href="#designer-form">Передать проект ${M0}</a>
           </div>
         </div>
         <div class="designer-hero__panel">
-          ${x0.map(([B,a])=>`<div><strong>${B}</strong><span>${a}</span></div>`).join("")}
+          ${H0.map(([B,a])=>`<div><strong>${B}</strong><span>${a}</span></div>`).join("")}
         </div>
       </div>
 
@@ -1083,7 +1084,7 @@
           <p>Берем на себя подбор, расчет, поставку, монтаж и сервис, чтобы дизайнеру не приходилось контролировать каждую дверную деталь, а застройщик получал понятную комплектацию объекта.</p>
         </div>
         <div class="designer-needs__grid">
-          ${O0.map((B,a)=>`
+          ${z0.map((B,a)=>`
             <article class="reveal">
               <span>${String(a+1).padStart(2,"0")}</span>
               <strong>${B.title}</strong>
@@ -1112,7 +1113,7 @@
         <span class="studio-kicker">Процесс</span>
         <h2>Как проходит работа</h2>
         <div class="designer-process__rail">
-          ${q0.map((B,a)=>`
+          ${P0.map((B,a)=>`
             <div>
               <span>${String(a+1).padStart(2,"0")}</span>
               <p>${B}</p>
@@ -1135,7 +1136,7 @@
           <small>Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности. Партнерские условия обсуждаем лично.</small>
         </form>
       </section>
-    </section>`,K(D)}const U0='<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>',I0=[["Размер под проем","Проектируем дверь под существующий или новый проем, фасад, холл и внутреннюю отделку."],["Тепло и тишина","Подбираем конструкцию, уплотнение, контур и отделку под квартиру, дом или таунхаус."],["Отделка под интерьер","Внутренняя сторона может поддерживать двери, панели, мебель и общий стиль пространства."],["Монтаж без случайностей","До заказа уточняем узлы примыкания, доборы, откосы, фурнитуру и сроки."]],M0=["Вы присылаете фото проема, фасада или холла","Мы уточняем размеры, задачи по теплу, тишине и отделке","Готовим ориентир по комплектации и стоимости","Делаем замер и фиксируем техническое решение","Изготавливаем, доставляем и устанавливаем дверь"];function H0(D){D.innerHTML=`
+    </section>`,I(D)}const G0='<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>',Y0=[["Размер под проем","Проектируем дверь под существующий или новый проем, фасад, холл и внутреннюю отделку."],["Тепло и тишина","Подбираем конструкцию, уплотнение, контур и отделку под квартиру, дом или таунхаус."],["Отделка под интерьер","Внутренняя сторона может поддерживать двери, панели, мебель и общий стиль пространства."],["Монтаж без случайностей","До заказа уточняем узлы примыкания, доборы, откосы, фурнитуру и сроки."]],V0=["Вы присылаете фото проема, фасада или холла","Мы уточняем размеры, задачи по теплу, тишине и отделке","Готовим ориентир по комплектации и стоимости","Делаем замер и фиксируем техническое решение","Изготавливаем, доставляем и устанавливаем дверь"];function W0(D){D.innerHTML=`
     <section class="entrance-page">
       <div class="entrance-hero">
         <div class="entrance-hero__copy">
@@ -1147,7 +1148,7 @@
           <p>Дверь, которая встречает дом первой: точный размер, спокойная геометрия, отделка под фасад и интерьер, профессиональный монтаж в Калининграде.</p>
           <div class="studio-hero__actions">
             <a class="studio-btn studio-btn--dark" href="${C("Здравствуйте! Хочу рассчитать входную дверь Astera под мой проем.")}" target="_blank" rel="noopener noreferrer">Рассчитать дверь</a>
-            <a class="studio-btn studio-btn--outline" href="#entrance-form">Передать размеры ${U0}</a>
+            <a class="studio-btn studio-btn--outline" href="#entrance-form">Передать размеры ${G0}</a>
           </div>
         </div>
         <div class="entrance-hero__media">
@@ -1164,7 +1165,7 @@
       </section>
 
       <section class="entrance-features">
-        ${I0.map(([B,a],t)=>`
+        ${Y0.map(([B,a],t)=>`
           <article class="reveal">
             <span>${String(t+1).padStart(2,"0")}</span>
             <h3>${B}</h3>
@@ -1177,7 +1178,7 @@
         <span class="studio-kicker">Как работаем</span>
         <h2>От идеи до установки</h2>
         <div class="designer-process__rail">
-          ${M0.map((B,a)=>`
+          ${V0.map((B,a)=>`
             <div>
               <span>${String(a+1).padStart(2,"0")}</span>
               <p>${B}</p>
@@ -1200,6 +1201,73 @@
           <small>Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности. Расчет уточняется после замера.</small>
         </form>
       </section>
-    </section>`,K(D)}const z0=document.getElementById("app"),y=document.getElementById("main-content"),P0=new Set(["solutions","promos","lead"]),h={home:{title:"Astera — премиальные двери и интерьерные решения в Калининграде",description:"Astera — салон премиальных интерьерных решений в Калининграде: межкомнатные двери LORD, входные двери, перегородки, стеновые панели и рейки под проект."},catalog:{title:"Каталог дверей и интерьерных решений Astera в Калининграде",description:"Каталог Astera: межкомнатные двери LORD, входные двери, стеновые панели, рейки и алюминиевые перегородки для квартир, домов и дизайн-проектов."},doors:{title:"Межкомнатные двери LORD в Калининграде | Astera",description:"Коллекции межкомнатных дверей LORD для классических, современных и минималистичных интерьеров. Подбор модели, покрытия, короба и фурнитуры."},designers:{title:"Дизайнерам, архитекторам и застройщикам — Astera",description:"Astera работает с дизайнерами, архитекторами и застройщиками в Калининграде: двери LORD, панели, перегородки, входные группы, спецификации, замер и монтаж. Партнерские условия до 20%."},entrance:{title:"Входные двери Astera на заказ в Калининграде",description:"Входные двери Astera под размер, фасад и интерьер: расчет, замер, комплектация, отделка, доставка и монтаж в Калининграде."},contacts:{title:"Контакты Astera — салон дверей в Калининграде",description:"Салон Astera в Калининграде: ул. Горького, 98. Подбор межкомнатных дверей, входных дверей, панелей, реек и перегородок под интерьер."}};s0();i0();l0();function F(D=h.home){var B,a,t;document.title=D.title,(B=document.querySelector('meta[name="description"]'))==null||B.setAttribute("content",D.description),(a=document.querySelector('meta[property="og:title"]'))==null||a.setAttribute("content",D.title),(t=document.querySelector('meta[property="og:description"]'))==null||t.setAttribute("content",D.description)}const a0=new IntersectionObserver(D=>{D.forEach(B=>{B.isIntersecting&&(B.target.classList.add("is-visible"),a0.unobserve(B.target))})},{threshold:.08,rootMargin:"0px 0px -40px 0px"});function N0(){document.querySelectorAll(".reveal:not(.is-visible), .reveal-stagger:not(.is-visible)").forEach(D=>a0.observe(D))}function G0(){const D=document.getElementById("scroll-top");if(!D)return;const B=()=>{const a=window.matchMedia("(max-width: 768px)").matches;D.classList.toggle("is-visible",a&&window.scrollY>560)};D.addEventListener("click",()=>{window.scrollTo({top:0,behavior:"smooth"})}),window.addEventListener("scroll",B,{passive:!0}),window.addEventListener("resize",B),B()}function e0(){var n;const B=location.hash.replace(/^#\/?/,"").split("/"),a=B[0]||"",t=B[1]?decodeURIComponent(B[1]):"",r=P0.has(a)?a:"";if(window.scrollTo({top:0,behavior:"instant"}),!a||r)F(h.home),J(y),b(!r),_(r||""),r&&requestAnimationFrame(()=>{var e,o;(e=document.getElementById(r))==null||e.scrollIntoView({behavior:"instant",block:"start"}),(o=document.getElementById("site-header"))==null||o.classList.toggle("header--scrolled",window.scrollY>60)});else if(a==="catalog")F(t?h.doors:h.catalog),T0(y,t||""),b(!1),_("catalog");else if(a==="designers")F(h.designers),R0(y),b(!1),_("designers");else if(a==="entrance")F(h.entrance),H0(y),b(!1),_("entrance");else if(a==="product"){const e=G[t];F(e?{title:`${e.name} — межкомнатная дверь LORD в Калининграде | Astera`,description:`Модель ${e.name}: подбор покрытия, размера, короба, фурнитуры и монтажа под интерьер. Расчет в салоне Astera, Калининград.`}:h.doors),w0(y,t),b(!1),_("catalog")}else a==="contacts"?(F(h.contacts),S0(y),b(!1),_("contacts")):(F(h.home),J(y),b(!0),_(""));(n=document.getElementById("site-header"))==null||n.classList.toggle("header--scrolled",window.scrollY>60),requestAnimationFrame(N0)}window.addEventListener("hashchange",e0);e0();function Y0(){if(localStorage.getItem("astera_cookie_ok")==="1")return;const D=()=>{if(document.querySelector(".cookie-note"))return;const B=document.createElement("div");B.className="cookie-note",B.innerHTML=`
+    </section>`,I(D)}const K0='<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';var e0,t0,r0,n0;const D0=j.Минимализм||j.Дизайн||((n0=(r0=(t0=(e0=F[0])==null?void 0:e0.products)==null?void 0:t0[0])==null?void 0:r0.images)==null?void 0:n0[0])||"",B0={panels:{crumb:"Панели и рейки",kicker:"Стены в той же логике",title:"Стеновые панели и декоративные рейки",lead:"Когда дверь, стена и мебель говорят на одном языке, интерьер выглядит собранным. Подберем панели, рейки, скрытые проходы и примыкания под двери, свет, мебель и реальные размеры стены.",image:D0,cta:"Обсудить панели",message:"Здравствуйте! Хочу обсудить стеновые панели и рейки под интерьер.",cards:[["Панели под двери","Оттенок, фактура и вертикали продолжают дверные полотна, а не спорят с ними."],["Декоративные рейки","Легкий ритм для прихожей, ТВ-зоны, кабинета или акцентной стены."],["Скрытые проходы","Помогаем сделать дверь менее заметной, если интерьеру нужна чистая плоскость."],["Монтажные узлы","Сразу думаем о стыках, плинтусах, доборах, розетках и примыканиях."]],specs:["площадь стены и высота потолка","желаемый ритм, цвет и фактура","стыки с дверями, мебелью и плинтусом","замер, доставка и монтаж"]},partitions:{crumb:"Алюминиевые перегородки",kicker:"Легкая архитектура",title:"Алюминиевые перегородки под интерьер",lead:"Перегородка помогает разделить пространство без тяжелой стены: сохранить свет, выделить кабинет, гардеробную, кухню или приватную зону. Подберем профиль, стекло, открывание и монтажный узел.",image:j.Дизайн||D0,cta:"Рассчитать перегородку",message:"Здравствуйте! Хочу рассчитать алюминиевую перегородку под интерьер.",cards:[["Зонирование без тяжести","Свет остается в помещении, а граница пространства становится аккуратной."],["Профиль и стекло","Подберем цвет профиля, прозрачность, рифление или матовое стекло под проект."],["Разные сценарии","Кухня-гостиная, кабинет, гардеробная, холл, спальня или коммерческое пространство."],["Замер и монтаж","Проверяем геометрию, крепления, пол, потолок и примыкания до заказа."]],specs:["ширина и высота проема","тип открывания и количество секций","цвет профиля и вид стекла","условия крепления и монтаж"]}};function X0(D){return["Вы присылаете фото, план или визуализацию","Мы уточняем размеры и желаемый визуальный эффект","Подбираем материалы и ориентир по стоимости","Делаем замер и фиксируем технические детали","Привозим и монтируем решение на объекте"].map((B,a)=>`
+    <div>
+      <span>${String(a+1).padStart(2,"0")}</span>
+      <p>${B}</p>
+    </div>
+  `).join("")}function a0(D,B="panels"){const a=B0[B]||B0.panels,t=C(a.message);D.innerHTML=`
+    <section class="solution-page">
+      <div class="solution-hero">
+        <div class="solution-hero__copy">
+          <nav class="catalog-breadcrumbs" aria-label="Хлебные крошки">
+            <a href="#/">Главная</a><span>/</span><a href="#/catalog">Каталог</a><span>/</span><strong>${a.crumb}</strong>
+          </nav>
+          <span class="studio-kicker">${a.kicker}</span>
+          <h1>${a.title}</h1>
+          <p>${a.lead}</p>
+          <div class="studio-hero__actions">
+            <a class="studio-btn studio-btn--dark" href="${t}" target="_blank" rel="noopener noreferrer">${a.cta}</a>
+            <a class="studio-btn studio-btn--outline" href="#solution-form">Передать задачу ${K0}</a>
+          </div>
+        </div>
+        <div class="solution-hero__media">
+          ${a.image?`<img src="${A(a.image)}" alt="${a.title}" loading="eager">`:""}
+        </div>
+      </div>
+
+      <section class="solution-cards" aria-label="Что подбираем">
+        ${a.cards.map(([r,n],e)=>`
+          <article class="reveal">
+            <span>${String(e+1).padStart(2,"0")}</span>
+            <h3>${r}</h3>
+            <p>${n}</p>
+          </article>
+        `).join("")}
+      </section>
+
+      <section class="solution-estimate reveal">
+        <div>
+          <span class="studio-kicker">Для расчета</span>
+          <h2>Что важно учесть сразу</h2>
+        </div>
+        <div class="solution-estimate__list">
+          ${a.specs.map(r=>`<span>${r}</span>`).join("")}
+        </div>
+      </section>
+
+      <section class="designer-process reveal">
+        <span class="studio-kicker">Как работаем</span>
+        <h2>От идеи до монтажа</h2>
+        <div class="designer-process__rail">
+          ${X0()}
+        </div>
+      </section>
+
+      <section class="studio-lead reveal" id="solution-form">
+        <div class="studio-lead__copy">
+          <span class="studio-kicker">Расчет</span>
+          <h2>Пришлите интерьер или размеры</h2>
+          <p>Можно начать с фото стены, проема или дизайн-проекта. Мы подскажем, какое решение будет выглядеть спокойно и сколько закладывать в бюджет.</p>
+        </div>
+        <form class="studio-form" data-lead-form>
+          <label><span>Имя</span><input name="name" autocomplete="name" required></label>
+          <label><span>Телефон</span><input name="phone" autocomplete="tel" inputmode="tel" required></label>
+          <label><span>Задача</span><textarea name="task" rows="3" placeholder="Что нужно: панели, рейки, перегородка, размеры, сроки, стиль"></textarea></label>
+          <button class="studio-btn studio-btn--dark" type="submit">Получить ориентир</button>
+          <small>Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности. Точную стоимость фиксируем после замера.</small>
+        </form>
+      </section>
+    </section>`,I(D)}const J0=document.getElementById("app"),_=document.getElementById("main-content"),Q0=new Set(["solutions","promos","lead"]),h={home:{title:"Astera — премиальные двери и интерьерные решения в Калининграде",description:"Astera — салон премиальных интерьерных решений в Калининграде: межкомнатные двери LORD, входные двери, перегородки, стеновые панели и рейки под проект."},catalog:{title:"Каталог дверей и интерьерных решений Astera в Калининграде",description:"Каталог Astera: межкомнатные двери LORD, входные двери, стеновые панели, рейки и алюминиевые перегородки для квартир, домов и дизайн-проектов."},doors:{title:"Межкомнатные двери LORD в Калининграде | Astera",description:"Коллекции межкомнатных дверей LORD для классических, современных и минималистичных интерьеров. Подбор модели, покрытия, короба и фурнитуры."},designers:{title:"Дизайнерам, архитекторам и застройщикам — Astera",description:"Astera работает с дизайнерами, архитекторами и застройщиками в Калининграде: двери LORD, панели, перегородки, входные группы, спецификации, замер и монтаж. Партнерские условия до 20%."},entrance:{title:"Входные двери Astera на заказ в Калининграде",description:"Входные двери Astera под размер, фасад и интерьер: расчет, замер, комплектация, отделка, доставка и монтаж в Калининграде."},panels:{title:"Стеновые панели и декоративные рейки в Калининграде | Astera",description:"Стеновые панели, декоративные рейки и скрытые проходы под интерьер: подбор оттенка, фактуры, узлов примыкания, замер и монтаж в Калининграде."},partitions:{title:"Алюминиевые перегородки в Калининграде | Astera",description:"Алюминиевые перегородки под интерьер: профиль, стекло, открывание, расчет, замер и монтаж для квартир, домов и коммерческих пространств."},contacts:{title:"Контакты Astera — салон дверей в Калининграде",description:"Салон Astera в Калининграде: ул. Горького, 98. Подбор межкомнатных дверей, входных дверей, панелей, реек и перегородок под интерьер."}};A0();u0();C0();function y(D=h.home){var B,a,t;document.title=D.title,(B=document.querySelector('meta[name="description"]'))==null||B.setAttribute("content",D.description),(a=document.querySelector('meta[property="og:title"]'))==null||a.setAttribute("content",D.title),(t=document.querySelector('meta[property="og:description"]'))==null||t.setAttribute("content",D.description)}const d0=new IntersectionObserver(D=>{D.forEach(B=>{B.isIntersecting&&(B.target.classList.add("is-visible"),d0.unobserve(B.target))})},{threshold:.08,rootMargin:"0px 0px -40px 0px"});function Z0(){document.querySelectorAll(".reveal:not(.is-visible), .reveal-stagger:not(.is-visible)").forEach(D=>d0.observe(D))}function DD(){const D=document.getElementById("scroll-top");if(!D)return;const B=()=>{const a=window.matchMedia("(max-width: 768px)").matches;D.classList.toggle("is-visible",a&&window.scrollY>560)};D.addEventListener("click",()=>{window.scrollTo({top:0,behavior:"smooth"})}),window.addEventListener("scroll",B,{passive:!0}),window.addEventListener("resize",B),B()}function BD(){const D=location.hash.replace(/^#\/?/,"");if(D)return D;const a=location.pathname.replace(/\\/g,"/").replace(/\/index\.html$/i,"/"),t="/astera/";let r=a.includes(t)?a.slice(a.indexOf(t)+t.length):a.replace(/^\/+/,"");return r=r.replace(/\/+$/,""),r==="astera"?"":r}function i0(){var n;const B=BD().split("/"),a=B[0]||"",t=B[1]?decodeURIComponent(B[1]):"",r=Q0.has(a)?a:"";if(window.scrollTo({top:0,behavior:"instant"}),!a||r)y(h.home),Q(_),f(!r),b(r||""),r&&requestAnimationFrame(()=>{var e,s;(e=document.getElementById(r))==null||e.scrollIntoView({behavior:"instant",block:"start"}),(s=document.getElementById("site-header"))==null||s.classList.toggle("header--scrolled",window.scrollY>60)});else if(a==="catalog")y(t?h.doors:h.catalog),q0(_,t||""),f(!1),b("catalog");else if(a==="designers")y(h.designers),N0(_),f(!1),b("designers");else if(a==="entrance")y(h.entrance),W0(_),f(!1),b("entrance");else if(a==="panels")y(h.panels),a0(_,"panels"),f(!1),b("panels");else if(a==="partitions")y(h.partitions),a0(_,"partitions"),f(!1),b("catalog");else if(a==="product"){const e=V[t];y(e?{title:`${e.name} — межкомнатная дверь LORD в Калининграде | Astera`,description:`Модель ${e.name}: подбор покрытия, размера, короба, фурнитуры и монтажа под интерьер. Расчет в салоне Astera, Калининград.`}:h.doors),R0(_,t),f(!1),b("catalog")}else a==="contacts"?(y(h.contacts),U0(_),f(!1),b("contacts")):(y(h.home),Q(_),f(!0),b(""));(n=document.getElementById("site-header"))==null||n.classList.toggle("header--scrolled",window.scrollY>60),requestAnimationFrame(Z0)}window.addEventListener("hashchange",i0);i0();function aD(){if(localStorage.getItem("astera_cookie_ok")==="1")return;const D=()=>{if(document.querySelector(".cookie-note"))return;const B=document.createElement("div");B.className="cookie-note",B.innerHTML=`
       <p>Используем cookie, чтобы сайт работал корректно и помогал нам улучшать сервис.</p>
-      <button type="button">Хорошо</button>`,B.querySelector("button").addEventListener("click",()=>{localStorage.setItem("astera_cookie_ok","1"),B.remove()}),document.body.appendChild(B)};if(window.matchMedia("(max-width: 768px)").matches){const B=()=>{window.scrollY<90||(window.removeEventListener("scroll",B),D())};window.addEventListener("scroll",B,{passive:!0});return}D()}Y0();G0();function V0(){const D=document.getElementById("loading-screen");D&&(D.classList.add("fade-out"),setTimeout(()=>D.remove(),600)),z0.classList.add("is-ready")}setTimeout(()=>{V0()},650);
+      <button type="button">Хорошо</button>`,B.querySelector("button").addEventListener("click",()=>{localStorage.setItem("astera_cookie_ok","1"),B.remove()}),document.body.appendChild(B)};if(window.matchMedia("(max-width: 768px)").matches){const B=()=>{window.scrollY<90||(window.removeEventListener("scroll",B),D())};window.addEventListener("scroll",B,{passive:!0});return}D()}aD();DD();function eD(){const D=document.getElementById("loading-screen");D&&(D.classList.add("fade-out"),setTimeout(()=>D.remove(),600)),J0.classList.add("is-ready")}setTimeout(()=>{eD()},650);
