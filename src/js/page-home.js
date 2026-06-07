@@ -412,7 +412,7 @@ export function renderHome(main) {
           <div class="astera-selector__result" data-scenario-result></div>
           <div class="astera-selector__actions">
             <a class="studio-btn studio-btn--dark" href="${PROJECT_SCENARIOS[0].route}" data-scenario-primary>${PROJECT_SCENARIOS[0].cta} ${ARR_SVG}</a>
-            <a class="studio-btn studio-btn--outline" href="${leadLink(PROJECT_SCENARIOS[0].message)}" target="_blank" rel="noopener noreferrer" data-scenario-secondary>Получить маршрут</a>
+            <a class="studio-btn studio-btn--outline" href="${leadLink(PROJECT_SCENARIOS[0].message)}" target="_blank" rel="noopener noreferrer" data-scenario-secondary>Получить расчет</a>
           </div>
         </article>
       </div>
