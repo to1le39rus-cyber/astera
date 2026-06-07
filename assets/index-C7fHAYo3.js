@@ -748,7 +748,7 @@
           <div class="astera-selector__result" data-scenario-result></div>
           <div class="astera-selector__actions">
             <a class="studio-btn studio-btn--dark" href="${j[0].route}" data-scenario-primary>${j[0].cta} ${k}</a>
-            <a class="studio-btn studio-btn--outline" href="${h(j[0].message)}" target="_blank" rel="noopener noreferrer" data-scenario-secondary>Получить маршрут</a>
+            <a class="studio-btn studio-btn--outline" href="${h(j[0].message)}" target="_blank" rel="noopener noreferrer" data-scenario-secondary>Получить расчет</a>
           </div>
         </article>
       </div>
