@@ -12,16 +12,16 @@ const FACTS = [
 
 const PROMOS = [
   {
-    title: 'Подбор по фото',
-    text: 'Пришлите план, визуализацию или фото проемов: предложим модели и отделки для первого расчета.',
+    title: '1. Смотрим задачу',
+    text: 'План, фото интерьера, визуализация или просто список проемов. Сначала понимаем объект и желаемый уровень решения.',
   },
   {
-    title: 'Комплект на объект',
-    text: 'Соберем в один комплект двери, панели, рейки, перегородки и входную группу.',
+    title: '2. Собираем подбор',
+    text: 'Предлагаем модели, покрытия, фурнитуру и смежные решения: панели, рейки, перегородки или входную дверь Astera.',
   },
   {
-    title: 'Условия салона',
-    text: 'Актуальные предложения по коллекциям и комплектам уточним после подбора.',
+    title: '3. Считаем и доводим',
+    text: 'Готовим ориентир по бюджету, уточняем замеры, комплектацию, сроки, поставку и монтаж.',
   },
 ];
 
@@ -370,46 +370,6 @@ export function renderHome(main) {
       </div>
     </section>
 
-    <section class="astera-selector reveal" data-scenario-selector>
-      <div class="astera-selector__head">
-        <span class="studio-kicker">Навигатор проекта</span>
-        <h2>Начните не с каталога, а со своей задачи</h2>
-      </div>
-      <div class="astera-selector__grid">
-        <div class="astera-selector__tabs" role="tablist" aria-label="Сценарии подбора Astera">
-          ${PROJECT_SCENARIOS.map((item, index) => `
-            <button type="button" class="${index === 0 ? 'is-active' : ''}" data-scenario-button="${item.id}">
-              <span>${String(index + 1).padStart(2, '0')}</span>
-              ${item.label}
-            </button>
-          `).join('')}
-        </div>
-        <article class="astera-selector__panel">
-          <div>
-            <p class="astera-selector__eyebrow">Astera собирает решение под объект</p>
-            <h3 data-scenario-title></h3>
-            <p data-scenario-lead></p>
-          </div>
-          <ol class="astera-selector__steps" data-scenario-steps></ol>
-          <div class="astera-selector__result" data-scenario-result></div>
-          <div class="astera-selector__actions">
-            <a class="studio-btn studio-btn--dark" href="${PROJECT_SCENARIOS[0].route}" data-scenario-primary>${PROJECT_SCENARIOS[0].cta} ${ARR_SVG}</a>
-            <a class="studio-btn studio-btn--outline" href="${leadLink(PROJECT_SCENARIOS[0].message)}" target="_blank" rel="noopener noreferrer" data-scenario-secondary>Получить маршрут</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="astera-proof reveal" aria-label="Опыт Astera">
-      <div class="astera-proof__copy">
-        <span class="studio-kicker">Салон Astera</span>
-        <p>Мы помогаем выбрать не “красивую дверь на картинке”, а спокойное решение под конкретный интерьер, проемы и бюджет.</p>
-      </div>
-      <div class="astera-proof__facts">
-        ${FACTS.map(([value, label]) => `<div><strong>${value}</strong><span>${label}</span></div>`).join('')}
-      </div>
-    </section>
-
     <section class="astera-diagnosis reveal">
       <div class="astera-diagnosis__copy">
         <span class="studio-kicker">Метод подбора</span>
@@ -428,10 +388,67 @@ export function renderHome(main) {
       </div>
     </section>
 
+    <section class="astera-selector reveal" data-scenario-selector>
+      <div class="astera-selector__head">
+        <span class="studio-kicker">Ситуации клиентов</span>
+        <h2>С чем к нам приходят</h2>
+      </div>
+      <div class="astera-selector__grid">
+        <div class="astera-selector__tabs" role="tablist" aria-label="Сценарии подбора Astera">
+          ${PROJECT_SCENARIOS.map((item, index) => `
+            <button type="button" class="${index === 0 ? 'is-active' : ''}" data-scenario-button="${item.id}">
+              <span>${String(index + 1).padStart(2, '0')}</span>
+              ${item.label}
+            </button>
+        `).join('')}
+        </div>
+        <article class="astera-selector__panel">
+          <div>
+            <p class="astera-selector__eyebrow">Astera собирает решение под объект</p>
+            <h3 data-scenario-title></h3>
+            <p data-scenario-lead></p>
+          </div>
+          <ol class="astera-selector__steps" data-scenario-steps></ol>
+          <div class="astera-selector__result" data-scenario-result></div>
+          <div class="astera-selector__actions">
+            <a class="studio-btn studio-btn--dark" href="${PROJECT_SCENARIOS[0].route}" data-scenario-primary>${PROJECT_SCENARIOS[0].cta} ${ARR_SVG}</a>
+            <a class="studio-btn studio-btn--outline" href="${leadLink(PROJECT_SCENARIOS[0].message)}" target="_blank" rel="noopener noreferrer" data-scenario-secondary>Получить маршрут</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="astera-flagship reveal">
+      <div class="astera-flagship__media">
+        ${heroImage ? `<img src="${assetPath(heroImage)}" alt="Входные двери Astera под заказ" loading="lazy">` : ''}
+      </div>
+      <div class="astera-flagship__copy">
+        <span class="studio-kicker">Флагман Astera</span>
+        <h2>Входная дверь под фасад и интерьер</h2>
+        <p>Собственное направление Astera: дверь проектируется под размер проема, улицу или подъезд, внутреннюю отделку, ручку, тепло, тишину и монтаж.</p>
+        <div class="astera-flagship__specs">
+          <span>размер под проем</span>
+          <span>внутренняя отделка</span>
+          <span>контрактное производство</span>
+        </div>
+        <a class="studio-btn studio-btn--light" href="${appHref('entrance')}">Собрать входную дверь ${ARR_SVG}</a>
+      </div>
+    </section>
+
+    <section class="astera-proof reveal" aria-label="Опыт Astera">
+      <div class="astera-proof__copy">
+        <span class="studio-kicker">Почему доверяют</span>
+        <p>Astera помогает выбрать решение, которое спокойно пройдет путь от салона до монтажа.</p>
+      </div>
+      <div class="astera-proof__facts">
+        ${FACTS.map(([value, label]) => `<div><strong>${value}</strong><span>${label}</span></div>`).join('')}
+      </div>
+    </section>
+
     <section class="astera-lines" id="solutions">
       <div class="astera-lines__head reveal">
-        <span class="studio-kicker">Что продаем</span>
-        <h2>Три линии, из которых собирается интерьер</h2>
+        <span class="studio-kicker">Слои интерьера</span>
+        <h2>Из чего собираем цельное пространство</h2>
       </div>
       <div class="astera-line-list">
         ${ASTERA_LANES.map((item) => `
@@ -450,23 +467,6 @@ export function renderHome(main) {
             </div>
           </article>
         `).join('')}
-      </div>
-    </section>
-
-    <section class="astera-flagship reveal">
-      <div class="astera-flagship__media">
-        ${heroImage ? `<img src="${assetPath(heroImage)}" alt="Входные двери Astera под заказ" loading="lazy">` : ''}
-      </div>
-      <div class="astera-flagship__copy">
-        <span class="studio-kicker">Флагман Astera</span>
-        <h2>Входная дверь под фасад и интерьер</h2>
-        <p>Собственное направление Astera: дверь проектируется под размер проема, улицу или подъезд, внутреннюю отделку, ручку, тепло, тишину и монтаж.</p>
-        <div class="astera-flagship__specs">
-          <span>размер под проем</span>
-          <span>внутренняя отделка</span>
-          <span>контрактное производство</span>
-        </div>
-        <a class="studio-btn studio-btn--light" href="${appHref('entrance')}">Собрать входную дверь ${ARR_SVG}</a>
       </div>
     </section>
 
@@ -494,7 +494,7 @@ export function renderHome(main) {
     </section>
 
     <section class="astera-offers reveal" id="promos">
-      <span class="studio-kicker">Предложения</span>
+      <span class="studio-kicker">Как проходит работа</span>
       <div class="astera-offers__grid">
         ${PROMOS.map(item => `
           <article>
