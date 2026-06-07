@@ -1,5 +1,6 @@
 import { CATALOG, ALL, fmt, variantImgs, HERO_IMG, CATEGORY_HEROES, EDITORIAL_IMG } from './data.js';
 import { assetPath } from './asset.js';
+import { appHref, categoryHref, navigateTo } from './routes.js';
 
 const ARR_SVG = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>`;
 
@@ -22,7 +23,7 @@ const PRODUCT_STORY = [
     text: 'Начинаем с планировки, стиля интерьера и бюджета. Покажем коллекции, отделки, высоты, фурнитуру и сразу посчитаем комплект под ваши проемы.',
     result: 'Модель, отделка и расчет под проемы',
     cta: 'Смотреть двери',
-    href: '#/catalog/doors',
+    href: appHref('catalog/doors'),
   },
   {
     kicker: 'Единая отделка',
@@ -30,7 +31,7 @@ const PRODUCT_STORY = [
     text: 'Подберем панели и рейки под двери, мебель и отделку стен: для прихожей, ТВ-зоны, скрытых проходов и акцентных стен.',
     result: 'Единая отделка без случайных оттенков',
     cta: 'Смотреть решения',
-    href: '#/panels',
+    href: appHref('panels'),
   },
   {
     kicker: 'Собственный бренд',
@@ -38,7 +39,7 @@ const PRODUCT_STORY = [
     text: 'Изготавливаем входные двери под ваш проем: размер, тепло, тишина, отделка снаружи и внутри, фурнитура и монтаж.',
     result: 'Расчет под размер и отделку',
     cta: 'Открыть флагман',
-    href: '#/entrance',
+    href: appHref('entrance'),
   },
 ];
 
@@ -74,6 +75,53 @@ const CATEGORY_COPY = {
 const BRAND_DIRECTIONS = ['Межкомнатные двери', 'Входные двери Astera', 'Стеновые панели и рейки', 'Алюминиевые перегородки'];
 const HERO_TRUST = ['замер', 'расчет', 'монтаж'];
 
+const PROJECT_SCENARIOS = [
+  {
+    id: 'flat',
+    label: 'Квартира',
+    title: 'Комплект дверей для квартиры',
+    lead: 'Подбираем межкомнатные двери под планировку, высоту проемов, покрытие пола, стены и бюджет. Сразу считаем комплект, а не одну случайную модель.',
+    result: 'На выходе: 3-5 подходящих моделей, ориентир по бюджету, список замеров и понятный следующий шаг.',
+    route: appHref('catalog/doors'),
+    cta: 'Смотреть двери',
+    message: 'Здравствуйте! Хочу подобрать комплект межкомнатных дверей для квартиры в Калининграде.',
+    steps: ['Планировка и количество проемов', 'Стиль и оттенки интерьера', 'Модели LORD и фурнитура', 'Расчет комплекта и монтаж'],
+  },
+  {
+    id: 'house',
+    label: 'Дом',
+    title: 'Двери, вход и стены в одной логике',
+    lead: 'Для дома важно собрать интерьер целиком: межкомнатные двери, входную группу, панели, рейки и перегородки без разнобоя в оттенках.',
+    result: 'На выходе: единая спецификация по зонам дома, приоритеты закупки и расчет под реальные проемы.',
+    route: appHref('entrance'),
+    cta: 'Собрать дом',
+    message: 'Здравствуйте! Хочу собрать двери, входную группу и панели для дома.',
+    steps: ['Зоны дома и фасад', 'Входная дверь Astera', 'Межкомнатные двери', 'Панели, рейки и перегородки'],
+  },
+  {
+    id: 'designer',
+    label: 'Дизайнер',
+    title: 'Закрываем дверные узлы в проекте',
+    lead: 'Помогаем дизайнеру не терять авторскую идею: подбираем модели, отделки, высоты, скрытые решения, панели и монтажные узлы.',
+    result: 'На выходе: подбор под визуализацию, расчет, спецификация и партнерские условия до 20%.',
+    route: appHref('designers'),
+    cta: 'Для дизайнеров',
+    message: 'Здравствуйте! Я дизайнер/архитектор, хочу обсудить проект с Astera.',
+    steps: ['Визуализация или план', 'Подбор под концепцию', 'Спецификация и расчет', 'Замер, поставка, монтаж'],
+  },
+  {
+    id: 'entrance',
+    label: 'Вход',
+    title: 'Входная дверь Astera под ваш проем',
+    lead: 'Флагманское направление: входные двери под размер, фасад и интерьер. Считаем конструкцию, отделку, тепло, тишину и монтаж.',
+    result: 'На выходе: техническое решение, ориентир по цене и список данных для точного расчета.',
+    route: appHref('entrance'),
+    cta: 'Рассчитать вход',
+    message: 'Здравствуйте! Хочу рассчитать входную дверь Astera под мой проем.',
+    steps: ['Фото проема и фасада', 'Размер и сценарий эксплуатации', 'Отделка снаружи и внутри', 'Замер и производство'],
+  },
+];
+
 function productBySlug(slug) {
   return ALL.find(p => p.slug === slug);
 }
@@ -100,7 +148,7 @@ function categoryHeroSlides() {
       title: cat.name,
       text: CATEGORY_COPY[cat.name] || 'Двери под архитектуру пространства.',
       bg,
-      href: `#/catalog/${encodeURIComponent(cat.name)}`,
+      href: categoryHref(cat.name),
       cta: 'Смотреть коллекцию',
     };
   }).filter(slide => slide.bg);
@@ -136,7 +184,7 @@ function cardHTML(p) {
 
 function bindCards(container) {
   container.querySelectorAll('.door-card').forEach(el => {
-    const go = () => { location.hash = `/product/${el.dataset.slug}`; };
+    const go = () => navigateTo(`product/${el.dataset.slug}`);
     el.addEventListener('click', go);
     el.addEventListener('keydown', e => {
       if (e.key === 'Enter' || e.key === ' ') {
@@ -230,6 +278,40 @@ function bindHeroSlider(container) {
   window.setTimeout(start, 1200);
 }
 
+function bindScenarioSelector(container) {
+  const section = container.querySelector('[data-scenario-selector]');
+  if (!section) return;
+
+  const buttons = [...section.querySelectorAll('[data-scenario-button]')];
+  const title = section.querySelector('[data-scenario-title]');
+  const lead = section.querySelector('[data-scenario-lead]');
+  const result = section.querySelector('[data-scenario-result]');
+  const steps = section.querySelector('[data-scenario-steps]');
+  const primary = section.querySelector('[data-scenario-primary]');
+  const secondary = section.querySelector('[data-scenario-secondary]');
+
+  const render = (id) => {
+    const scenario = PROJECT_SCENARIOS.find(item => item.id === id) || PROJECT_SCENARIOS[0];
+    buttons.forEach(button => button.classList.toggle('is-active', button.dataset.scenarioButton === scenario.id));
+    if (title) title.textContent = scenario.title;
+    if (lead) lead.textContent = scenario.lead;
+    if (result) result.textContent = scenario.result;
+    if (steps) steps.innerHTML = scenario.steps.map((step, index) => `
+      <li><span>${String(index + 1).padStart(2, '0')}</span>${step}</li>
+    `).join('');
+    if (primary) {
+      primary.href = scenario.route;
+      primary.innerHTML = `${scenario.cta} ${ARR_SVG}`;
+    }
+    if (secondary) secondary.href = leadLink(scenario.message);
+  };
+
+  buttons.forEach(button => {
+    button.addEventListener('click', () => render(button.dataset.scenarioButton));
+  });
+  render(PROJECT_SCENARIOS[0].id);
+}
+
 export function renderHome(main) {
   const heroProduct = productBySlug('eclissi') || ALL[0];
   const heroImage = HERO_IMG || imageOf(heroProduct);
@@ -240,7 +322,7 @@ export function renderHome(main) {
       title: 'Двери и интерьерные решения Astera',
       text: BRAND_DIRECTIONS,
       bg: heroImage,
-      href: '#/catalog/doors',
+      href: appHref('catalog/doors'),
       cta: 'Смотреть двери',
     },
     ...categoryHeroSlides(),
@@ -288,6 +370,36 @@ export function renderHome(main) {
           `).join('')}
         </div>
         <button type="button" data-hero-next aria-label="Следующий слайд">→</button>
+      </div>
+    </section>
+
+    <section class="astera-selector reveal" data-scenario-selector>
+      <div class="astera-selector__head">
+        <span class="studio-kicker">Навигатор проекта</span>
+        <h2>Начните не с каталога, а со своей задачи</h2>
+      </div>
+      <div class="astera-selector__grid">
+        <div class="astera-selector__tabs" role="tablist" aria-label="Сценарии подбора Astera">
+          ${PROJECT_SCENARIOS.map((item, index) => `
+            <button type="button" class="${index === 0 ? 'is-active' : ''}" data-scenario-button="${item.id}">
+              <span>${String(index + 1).padStart(2, '0')}</span>
+              ${item.label}
+            </button>
+          `).join('')}
+        </div>
+        <article class="astera-selector__panel">
+          <div>
+            <p class="astera-selector__eyebrow">Astera собирает решение под объект</p>
+            <h3 data-scenario-title></h3>
+            <p data-scenario-lead></p>
+          </div>
+          <ol class="astera-selector__steps" data-scenario-steps></ol>
+          <div class="astera-selector__result" data-scenario-result></div>
+          <div class="astera-selector__actions">
+            <a class="studio-btn studio-btn--dark" href="${PROJECT_SCENARIOS[0].route}" data-scenario-primary>${PROJECT_SCENARIOS[0].cta} ${ARR_SVG}</a>
+            <a class="studio-btn studio-btn--outline" href="${leadLink(PROJECT_SCENARIOS[0].message)}" target="_blank" rel="noopener noreferrer" data-scenario-secondary>Получить маршрут</a>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -356,7 +468,7 @@ export function renderHome(main) {
         ${showcase.map(cardHTML).join('')}
       </div>
       <div class="studio-center">
-        <a class="studio-btn studio-btn--dark" href="#/catalog">Смотреть коллекцию</a>
+        <a class="studio-btn studio-btn--dark" href="${appHref('catalog')}">Смотреть коллекцию</a>
       </div>
     </section>
 
@@ -397,13 +509,14 @@ export function renderHome(main) {
         <h2>Для дизайнеров и архитекторов</h2>
         <p>Помогаем подобрать двери, панели, перегородки и входные группы под проект. Образцы, расчет, замер, поставка и монтаж — в одном месте.</p>
       </div>
-      <a class="studio-btn studio-btn--light" href="#/designers">Открыть презентацию ${ARR_SVG}</a>
+      <a class="studio-btn studio-btn--light" href="${appHref('designers')}">Открыть презентацию ${ARR_SVG}</a>
     </section>`;
 
   bindCards(main);
   bindLeadForms(main);
   initMotion(main);
   bindHeroSlider(main);
+  bindScenarioSelector(main);
 }
 
 export { cardHTML, bindCards, leadLink, bindLeadForms };

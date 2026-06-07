@@ -1,6 +1,7 @@
 import { CATALOG, ALL, CATEGORY_HEROES } from './data.js';
 import { cardHTML, bindCards, leadLink } from './page-home.js';
 import { assetPath } from './asset.js';
+import { appHref } from './routes.js';
 
 const STYLE_LABELS = {
   'Дизайн': 'акцентные полотна',
@@ -15,7 +16,7 @@ const DOOR_CATEGORY_NAV = [
   { label: 'Неоклассика', href: categoryHref('Неоклассика') },
   { label: 'Минимализм', href: categoryHref('Минимализм') },
   { label: 'Скрытые двери', href: leadLink('Здравствуйте! Хочу обсудить скрытые двери под интерьер.') },
-  { label: 'Алюминиевые перегородки', href: '#/partitions' },
+  { label: 'Алюминиевые перегородки', href: appHref('partitions') },
 ];
 
 function categoryByName(name) {
@@ -24,7 +25,7 @@ function categoryByName(name) {
 
 function categoryHref(name) {
   const found = categoryByName(name);
-  return found ? `#/catalog/${encodeURIComponent(found.name)}` : '#/catalog';
+  return found ? appHref(`catalog/${encodeURIComponent(found.name)}`) : appHref('catalog');
 }
 
 function lifestyleFromCategory(name) {
@@ -41,8 +42,15 @@ function doorCollectionSlides() {
   ].filter(([, image]) => image).map(([label, image]) => ({ label, image }));
 }
 
-function popularProducts(products, limit = 9) {
-  return [...products].sort(() => Math.random() - 0.5).slice(0, limit);
+const CURATED_ORDER = ['eclissi', 'bella', 'melford', 'dolce', 'futuristic', 'altro-sf', 'astoria', 'solo', 'tocco', 'deco', 'italy'];
+
+function popularProducts(products, limit = 12) {
+  return [...products].sort((a, b) => {
+    const ai = CURATED_ORDER.indexOf(a.slug);
+    const bi = CURATED_ORDER.indexOf(b.slug);
+    if (ai !== -1 || bi !== -1) return (ai === -1 ? 999 : ai) - (bi === -1 ? 999 : bi);
+    return a.name.localeCompare(b.name, 'ru');
+  }).slice(0, limit);
 }
 
 function normalizeText(value = '') {
@@ -67,7 +75,7 @@ function directionCards() {
       text: 'Главный выбор для квартиры, дома или дизайн-проекта: стиль, высота, отделка и фурнитура под ваши проемы.',
       image: doorImage,
       slides: doorCollectionSlides(),
-      href: '#/catalog/doors',
+      href: appHref('catalog/doors'),
       cta: 'Смотреть коллекции',
       second: 'Подобрать по фото',
       secondHref: leadLink('Здравствуйте! Хочу подобрать межкомнатные двери по фото интерьера.'),
@@ -78,7 +86,7 @@ function directionCards() {
       title: 'Входные двери Astera',
       text: 'Индивидуальный размер, отделка под фасад и холл, тепло, тишина и аккуратное примыкание к стенам.',
       image: 'images/astera-entrance-door-burkovsky-inspired.png',
-      href: '#/entrance',
+      href: appHref('entrance'),
       cta: 'Смотреть флагман',
       second: 'Рассчитать дверь',
       secondHref: leadLink('Здравствуйте! Хочу рассчитать входную дверь Astera под мой проем.'),
@@ -88,7 +96,7 @@ function directionCards() {
       title: 'Стеновые панели и рейки',
       text: 'Для прихожих, ТВ-зон, скрытых проходов и акцентных стен в одной логике с дверями.',
       image: panelImage,
-      href: '#/panels',
+      href: appHref('panels'),
       cta: 'Смотреть решения',
       second: 'Получить ориентир',
       secondHref: leadLink('Здравствуйте! Хочу обсудить стеновые панели и рейки для интерьера.'),
@@ -98,7 +106,7 @@ function directionCards() {
       title: 'Алюминиевые перегородки',
       text: 'Для кабинета, гардеробной, кухни-гостиной и приватных зон, где важно сохранить свет и легкость.',
       image: partitionImage,
-      href: '#/partitions',
+      href: appHref('partitions'),
       cta: 'Смотреть перегородки',
       second: 'Рассчитать',
       secondHref: leadLink('Здравствуйте! Хочу рассчитать алюминиевую перегородку под интерьер.'),
@@ -166,7 +174,7 @@ export function renderCatalog(main, activeCategory) {
         <p>Сначала выбираем двери, потом собираем вокруг них стены, входную группу и перегородки. Так интерьер выглядит цельно, а расчет остается понятным.</p>
         <div class="catalog-studio__actions">
           <a class="studio-btn studio-btn--dark" href="${leadLink('Здравствуйте! Хочу получить подбор Astera по проекту.')}" target="_blank" rel="noopener noreferrer">Получить подборку</a>
-          <a class="studio-btn studio-btn--outline" href="#/catalog/doors">Смотреть двери</a>
+          <a class="studio-btn studio-btn--outline" href="${appHref('catalog/doors')}">Смотреть двери</a>
         </div>
       </div>
 
@@ -271,7 +279,7 @@ export function renderCatalog(main, activeCategory) {
 
   main.querySelector('.catalog-studio__hero').innerHTML = `
     <nav class="catalog-breadcrumbs" aria-label="Хлебные крошки">
-      <a href="#/">Главная</a><span>/</span><a href="#/catalog">Каталог</a><span>/</span><strong>Межкомнатные двери</strong>
+      <a href="${appHref('')}">Главная</a><span>/</span><a href="${appHref('catalog')}">Каталог</a><span>/</span><strong>Межкомнатные двери</strong>
     </nav>
     <span class="studio-kicker">Коллекции дверей Astera</span>
     <h1>Межкомнатные двери LORD в Калининграде</h1>
@@ -288,7 +296,7 @@ export function renderCatalog(main, activeCategory) {
           ${c.name}
         </button>
       `).join('')}
-      <a class="catalog-filter__link" href="#/partitions">Алюминиевые перегородки</a>
+      <a class="catalog-filter__link" href="${appHref('partitions')}">Алюминиевые перегородки</a>
     `;
   }
   const summaryText = main.querySelector('.catalog-studio__summary span');

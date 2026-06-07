@@ -10,6 +10,7 @@ import { renderDesigners } from './page-designers.js';
 import { renderEntrance } from './page-entrance.js';
 import { renderSolutions } from './page-solutions.js';
 import { BY_SLUG } from './data.js';
+import { routeFromUrl } from './routes.js';
 
 const app  = document.getElementById('app');
 const main = document.getElementById('main-content');
@@ -104,19 +105,44 @@ function initScrollTop() {
 
 // Router
 function currentRoute() {
-  const hashRoute = location.hash.replace(/^#\/?/, '');
-  if (hashRoute) return hashRoute;
-
-  const path = location.pathname.replace(/\\/g, '/');
-  const rootIndex = path.replace(/\/index\.html$/i, '/');
-  const marker = '/astera/';
-  let routePath = rootIndex.includes(marker)
-    ? rootIndex.slice(rootIndex.indexOf(marker) + marker.length)
-    : rootIndex.replace(/^\/+/, '');
-
-  routePath = routePath.replace(/\/+$/, '');
-  return routePath === 'astera' ? '' : routePath;
+  return routeFromUrl(location.href);
 }
+
+function isInternalRoute(path = '') {
+  const page = path.split('/')[0] || '';
+  return !page || [
+    'catalog',
+    'contacts',
+    'designers',
+    'entrance',
+    'lead',
+    'panels',
+    'partitions',
+    'product',
+    'promos',
+    'solutions',
+  ].includes(page);
+}
+
+document.addEventListener('click', (event) => {
+  if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+
+  const link = event.target.closest('a[href]');
+  if (!link || link.target || link.hasAttribute('download')) return;
+
+  const rawHref = link.getAttribute('href') || '';
+  if (!rawHref || rawHref.startsWith('#') || /^(tel|mailto|sms):/i.test(rawHref)) return;
+
+  const url = new URL(rawHref, location.href);
+  if (url.origin !== location.origin) return;
+
+  const nextRoute = routeFromUrl(url.href);
+  if (!isInternalRoute(nextRoute)) return;
+
+  event.preventDefault();
+  history.pushState({}, '', `${url.pathname}${url.search}${url.hash}`);
+  route();
+});
 
 function route() {
   const raw = currentRoute();
@@ -193,6 +219,7 @@ function route() {
 }
 
 window.addEventListener('hashchange', route);
+window.addEventListener('popstate', route);
 route();
 
 function initCookieConsent() {

@@ -1,20 +1,21 @@
 import { CATALOG } from './data.js';
 import { assetPath } from './asset.js';
+import { appHref, categoryHref } from './routes.js';
 
 export function renderHeader(id = 'site-header') {
   const el = document.getElementById(id);
   el.className = 'header';
   el.innerHTML = `
-    <a href="#/" class="header__logo" aria-label="ASTERA — главная">
+    <a href="${appHref('')}" class="header__logo" aria-label="ASTERA — главная">
       <img class="header__logo-img" src="${assetPath('branding/logo-astera-hor-charcoal.png')}" alt="Astera интерьерные решения" loading="eager" width="220" height="40">
       <img class="header__logo-img header__logo-img--hero" src="${assetPath('branding/logo-astera-hor-monochrome.png')}" alt="Astera интерьерные решения" loading="eager" width="220" height="40">
     </a>
     <nav class="header__nav" aria-label="Основная навигация">
-      <a href="#/catalog" data-nav-link="catalog">Двери</a>
-      <a href="#/panels" data-nav-link="panels">Панели</a>
-      <a href="#/entrance" data-nav-link="entrance">Входные двери</a>
-      <a href="#/designers" data-nav-link="designers">Дизайнерам</a>
-      <a href="#/contacts" data-nav-link="contacts">Контакты</a>
+      <a href="${appHref('catalog')}" data-nav-link="catalog">Двери</a>
+      <a href="${appHref('panels')}" data-nav-link="panels">Панели</a>
+      <a href="${appHref('entrance')}" data-nav-link="entrance">Входные двери</a>
+      <a href="${appHref('designers')}" data-nav-link="designers">Дизайнерам</a>
+      <a href="${appHref('contacts')}" data-nav-link="contacts">Контакты</a>
     </nav>
     <div class="header__right">
       <div class="header__contact" data-contact-menu>
@@ -91,17 +92,17 @@ export function renderFooter(id = 'site-footer') {
           <div>
             <div class="footer__col-title">Двери</div>
             <div class="footer__links">
-              ${CATALOG.map(c=>`<a href="#/catalog/${encodeURIComponent(c.name)}">${c.name}</a>`).join('')}
+              ${CATALOG.map(c=>`<a href="${categoryHref(c.name)}">${c.name}</a>`).join('')}
             </div>
           </div>
           <div>
             <div class="footer__col-title">Для проекта</div>
             <div class="footer__links">
-              <a href="#/panels">Панели и рейки</a>
-              <a href="#/partitions">Перегородки</a>
-              <a href="#/designers">Дизайнерам</a>
-              <a href="#/promos">Предложения</a>
-              <a href="#/contacts">Контакты</a>
+              <a href="${appHref('panels')}">Панели и рейки</a>
+              <a href="${appHref('partitions')}">Перегородки</a>
+              <a href="${appHref('designers')}">Дизайнерам</a>
+              <a href="${appHref('promos')}">Предложения</a>
+              <a href="${appHref('contacts')}">Контакты</a>
             </div>
           </div>
           <div>

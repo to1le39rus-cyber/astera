@@ -1,5 +1,6 @@
 import { bindLeadForms, leadLink } from './page-home.js';
 import { assetPath } from './asset.js';
+import { appHref } from './routes.js';
 
 const ARR_SVG = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>`;
 
@@ -24,7 +25,7 @@ export function renderEntrance(main) {
       <div class="entrance-hero">
         <div class="entrance-hero__copy">
           <nav class="catalog-breadcrumbs" aria-label="Хлебные крошки">
-            <a href="#/">Главная</a><span>/</span><a href="#/catalog">Каталог</a><span>/</span><strong>Входные двери Astera</strong>
+            <a href="${appHref('')}">Главная</a><span>/</span><a href="${appHref('catalog')}">Каталог</a><span>/</span><strong>Входные двери Astera</strong>
           </nav>
           <span class="studio-kicker">Флагман Astera</span>
           <h1>Входные двери Astera на заказ</h1>

@@ -1,6 +1,7 @@
 import { CATALOG, CATEGORY_HEROES } from './data.js';
 import { bindLeadForms, leadLink } from './page-home.js';
 import { assetPath } from './asset.js';
+import { appHref } from './routes.js';
 
 const ARR_SVG = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>`;
 
@@ -75,7 +76,7 @@ export function renderSolutions(main, type = 'panels') {
       <div class="solution-hero">
         <div class="solution-hero__copy">
           <nav class="catalog-breadcrumbs" aria-label="Хлебные крошки">
-            <a href="#/">Главная</a><span>/</span><a href="#/catalog">Каталог</a><span>/</span><strong>${page.crumb}</strong>
+            <a href="${appHref('')}">Главная</a><span>/</span><a href="${appHref('catalog')}">Каталог</a><span>/</span><strong>${page.crumb}</strong>
           </nav>
           <span class="studio-kicker">${page.kicker}</span>
           <h1>${page.title}</h1>

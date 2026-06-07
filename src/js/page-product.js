@@ -1,6 +1,7 @@
 import { BY_SLUG, fmt, parseSpecs, variantImgs, lifestyleImgs } from './data.js';
 import { openLightbox } from './lightbox.js';
 import { assetPath } from './asset.js';
+import { appHref, categoryHref } from './routes.js';
 
 export function renderProduct(main, slug) {
   const p = BY_SLUG[slug];
@@ -16,9 +17,9 @@ export function renderProduct(main, slug) {
   main.innerHTML = `
     <div class="prod-page">
       <nav class="breadcrumbs" aria-label="Хлебные крошки">
-        <a href="#/">Главная</a><span class="breadcrumbs__sep">/</span>
-        <a href="#/catalog">Каталог</a><span class="breadcrumbs__sep">/</span>
-        <a href="#/catalog/${encodeURIComponent(p.category)}">${p.category}</a><span class="breadcrumbs__sep">/</span>
+        <a href="${appHref('')}">Главная</a><span class="breadcrumbs__sep">/</span>
+        <a href="${appHref('catalog')}">Каталог</a><span class="breadcrumbs__sep">/</span>
+        <a href="${categoryHref(p.category)}">${p.category}</a><span class="breadcrumbs__sep">/</span>
         <span aria-current="page">${p.name}</span>
       </nav>
       <div class="prod-layout">
@@ -52,6 +53,13 @@ export function renderProduct(main, slug) {
           <div class="prod-fit">
             <div><strong>Подойдет для</strong><span>квартир, домов, таунхаусов и интерьеров по проекту</span></div>
             <div><strong>Для расчета уточним</strong><span>размер проема, открывание, короб, покрытие, стекло, фурнитуру, панели и сроки</span></div>
+          </div>
+          <div class="prod-fast-cta">
+            <a href="https://t.me/asteradoors?text=${leadText}" target="_blank" rel="noopener noreferrer">
+              <span>Рассчитать под мой проем</span>
+              ${price ? `<strong>${price}</strong>` : '<strong>ориентир в салоне</strong>'}
+            </a>
+            <small>Пришлите размеры или фото. Мы подскажем комплектацию до визита в салон.</small>
           </div>
           <div class="prod-info__div"></div>
           <div class="specs" id="specs">
