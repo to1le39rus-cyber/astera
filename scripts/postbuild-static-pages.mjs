@@ -27,14 +27,6 @@ const staticPages = [
 ];
 
 for (const category of data.catalog || []) {
-  staticPages.push({
-    route: `catalog/${encodeURIComponent(category.name)}`,
-    title: `${category.name}: межкомнатные двери LORD в Калининграде | Astera`,
-    description: `Коллекция ${category.name}: подбор межкомнатных дверей LORD под интерьер, проемы, фурнитуру и монтаж в салоне Astera.`,
-    h1: `${category.name}: межкомнатные двери LORD`,
-    text: `Коллекция ${category.name} подходит для подбора межкомнатных дверей под интерьер, размеры проемов, короб, фурнитуру и монтаж в Калининграде.`,
-  });
-
   for (const product of category.products || []) {
     staticPages.push({
       route: `product/${product.slug}`,

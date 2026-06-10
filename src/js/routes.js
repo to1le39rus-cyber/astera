@@ -18,7 +18,7 @@ export function appHref(route = '') {
 }
 
 export function categoryHref(name = '') {
-  return appHref(`catalog/${encodeURIComponent(name)}`);
+  return appHref('catalog/doors');
 }
 
 export function productHref(slug = '') {

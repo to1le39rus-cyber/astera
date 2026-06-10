@@ -326,9 +326,7 @@ export function renderCatalog(main, activeCategory) {
       btn.classList.add('is-active');
       applyFilters(main);
       if (btn.hasAttribute('data-filter-category')) {
-        const value = btn.dataset.value || '';
-        const next = value ? `catalog/${encodeURIComponent(value)}` : 'catalog/doors';
-        window.history.replaceState({}, '', appHref(next));
+        window.history.replaceState({}, '', appHref('catalog/doors'));
       }
       if (main.dataset.catalogMode === 'doors') {
         main.querySelector('.catalog-studio__summary')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
