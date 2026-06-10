@@ -83,17 +83,19 @@
   .header{padding:0 16px;height:60px}
   .header__nav,.header__cta{display:none}
   .header__logo{
-    width:132px;
+    width:128px;
+    min-width:128px;
   }
   .header__logo-img{
-    width:132px;
+    width:128px;
     height:auto;
     max-height:46px;
     object-fit:contain;
   }
   .header--scrolled .header__logo,
   .header--scrolled .header__logo-img{
-    width:116px;
+    width:128px;
+    min-width:128px;
   }
   .header--on-hero .header__logo-img:not(.header__logo-img--hero){
     opacity:0;

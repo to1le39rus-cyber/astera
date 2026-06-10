@@ -56,8 +56,13 @@ export function renderHeader(id = 'site-header') {
 
   const syncScroll = () => {
     const isScrolled = window.scrollY > 60;
+    const mobileNav = document.getElementById('mobile-nav');
+    const hero = document.querySelector('.studio-hero, .catalog-studio__hero, .entrance-hero, .solution-hero, .designer-hero');
+    const heroBottom = hero ? hero.getBoundingClientRect().bottom : 0;
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+    const showMobileNav = isMobile && window.scrollY > 160 && heroBottom < window.innerHeight * 0.72;
     el.classList.toggle('header--scrolled', isScrolled);
-    document.getElementById('mobile-nav')?.classList.toggle('is-visible', window.scrollY > 90);
+    mobileNav?.classList.toggle('is-visible', showMobileNav);
   };
   window.addEventListener('scroll', syncScroll, { passive: true });
   syncScroll();

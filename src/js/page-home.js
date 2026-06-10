@@ -12,16 +12,16 @@ const FACTS = [
 
 const PROMOS = [
   {
-    title: '1. Смотрим задачу',
-    text: 'План, фото интерьера, визуализация или просто список проемов. Сначала понимаем объект и желаемый уровень решения.',
+    title: '1. Знакомимся с вашим интерьером',
+    text: 'Подойдет план, фото, визуализация или список проемов. Сначала понимаем стиль, размеры и задачу, а не предлагаем случайную модель.',
   },
   {
-    title: '2. Собираем подбор',
-    text: 'Предлагаем модели, покрытия, фурнитуру и смежные решения: панели, рейки, перегородки или входную дверь Astera.',
+    title: '2. Предлагаем подходящие варианты',
+    text: 'Подбираем модели, покрытия, фурнитуру и, если нужно, смежные решения: панели, рейки, перегородки или входную дверь Astera.',
   },
   {
-    title: '3. Считаем и доводим',
-    text: 'Готовим ориентир по бюджету, уточняем замеры, комплектацию, сроки, поставку и монтаж.',
+    title: '3. Рассчитываем и сопровождаем',
+    text: 'Готовим понятный расчет, уточняем замеры, сроки, поставку и монтаж. Вам не нужно собирать решение по частям.',
   },
 ];
 
@@ -36,7 +36,7 @@ const ASTERA_LANES = [
   {
     index: '01',
     title: 'Межкомнатные двери',
-    lead: 'Главная покупка. С нее начинается ощущение интерьера: высота, геометрия, покрытие, ручка и короб должны работать вместе.',
+    lead: 'Главный выбор для квартиры, дома или проекта. Двери задают ритм интерьеру: высоту, линии, оттенок и ощущение тишины.',
     href: appHref('catalog/doors'),
     cta: 'Перейти к дверям',
     image: CATEGORY_HEROES['Минимализм'] || CATEGORY_HEROES['Дизайн'] || HERO_IMG,
@@ -45,18 +45,18 @@ const ASTERA_LANES = [
   {
     index: '02',
     title: 'Панели, рейки, перегородки',
-    lead: 'Второй слой проекта. Закрываем стены, прихожие, ТВ-зоны, скрытые проходы и легкое зонирование в единой отделке.',
+    lead: 'Панели, рейки и перегородки помогают связать двери, стены и зоны комнаты в единый спокойный интерьер.',
     href: appHref('panels'),
-    cta: 'Собрать стены',
+    cta: 'Подобрать панели и рейки',
     image: EDITORIAL_IMG || CATEGORY_HEROES['Дизайн'] || HERO_IMG,
     points: ['стеновые панели', 'декоративные рейки', 'алюминиевые перегородки'],
   },
   {
     index: '03',
     title: 'Входные двери Astera',
-    lead: 'Флагман салона. Заказные входные двери под размер, фасад и интерьер: конструкция, тепло, тишина, отделка и монтаж.',
+    lead: 'Флагман салона. Заказная входная дверь под размер, фасад и интерьер: конструкция, тепло, тишина, отделка и монтаж.',
     href: appHref('entrance'),
-    cta: 'Рассчитать вход',
+    cta: 'Рассчитать входную дверь',
     image: imageOf(productBySlug('eclissi')) || HERO_IMG,
     points: ['свой бренд', 'контрактное производство', 'под ваш проем'],
   },
@@ -316,13 +316,12 @@ export function renderHome(main) {
     {
       type: 'brand',
       kicker: 'Astera / Калининград',
-      title: 'Двери и интерьерные решения Astera',
+      title: 'Межкомнатные двери под ваш интерьер',
       text: BRAND_DIRECTIONS,
       bg: heroImage,
       href: appHref('catalog/doors'),
       cta: 'Смотреть двери',
     },
-    ...categoryHeroSlides(),
   ];
   const showcase = featuredProducts();
   const editorial = EDITORIAL_IMG || imageOf(productBySlug('futuristic')) || heroImage;
@@ -357,28 +356,35 @@ export function renderHome(main) {
         `).join('')}
       </div>
       <div class="studio-hero__veil"></div>
-      <div class="studio-hero__nav" aria-label="Слайды коллекций">
-        <button type="button" data-hero-prev aria-label="Предыдущий слайд">←</button>
-        <div class="studio-hero__dots">
-          ${heroSlides.map((slide, i) => `
-            <button type="button" class="${i === 0 ? 'is-active' : ''}" data-hero-dot aria-label="${slide.title}">
-              <span>${i === 0 ? 'Astera' : slide.title}</span>
-            </button>
-          `).join('')}
+      ${heroSlides.length > 1 ? `
+        <div class="studio-hero__nav" aria-label="Слайды коллекций">
+          <button type="button" data-hero-prev aria-label="Предыдущий слайд">←</button>
+          <div class="studio-hero__dots">
+            ${heroSlides.map((slide, i) => `
+              <button type="button" class="${i === 0 ? 'is-active' : ''}" data-hero-dot aria-label="${slide.title}">
+                <span>${i === 0 ? 'Astera' : slide.title}</span>
+              </button>
+            `).join('')}
+          </div>
+          <button type="button" data-hero-next aria-label="Следующий слайд">→</button>
         </div>
-        <button type="button" data-hero-next aria-label="Следующий слайд">→</button>
-      </div>
+      ` : ''}
     </section>
 
     <section class="astera-diagnosis reveal">
       <div class="astera-diagnosis__copy">
-        <span class="studio-kicker">Метод подбора</span>
-        <h2>Сначала объект. Потом модель.</h2>
-        <p>Так клиент быстрее понимает бюджет, дизайнер получает аккуратную спецификацию, а интерьер не разваливается на случайные покупки.</p>
-        <a class="studio-btn studio-btn--light" href="${leadLink('Здравствуйте! Хочу начать с подбора решения Astera под мой объект.')}" target="_blank" rel="noopener noreferrer">Начать подбор ${ARR_SVG}</a>
+        <span class="studio-kicker">Главное направление</span>
+        <h2>Двери, с которых начинается интерьер</h2>
+        <p>Поможем выбрать межкомнатные двери под стиль, высоту проемов, оттенки стен, покрытие пола и фурнитуру. Можно начать с фото, плана или просто рассказа о ремонте.</p>
+        <a class="studio-btn studio-btn--light" href="${appHref('catalog/doors')}">Смотреть межкомнатные двери ${ARR_SVG}</a>
       </div>
       <div class="astera-diagnosis__grid">
-        ${OBJECT_CHECK.map(([title, text], index) => `
+        ${[
+          ['Стиль', 'классика, неоклассика, минимализм, дизайн и скрытые решения'],
+          ['Проемы', 'высота, ширина, короб, наличники, примыкания и плинтус'],
+          ['Отделка', 'цвет полотна, покрытие, стекло, ручка и единая линия с интерьером'],
+          ['Монтаж', 'замер, поставка, аккуратная установка и контроль результата'],
+        ].map(([title, text], index) => `
           <article>
             <span>${String(index + 1).padStart(2, '0')}</span>
             <strong>${title}</strong>
@@ -390,8 +396,8 @@ export function renderHome(main) {
 
     <section class="astera-selector reveal" data-scenario-selector>
       <div class="astera-selector__head">
-        <span class="studio-kicker">Ситуации клиентов</span>
-        <h2>С чем к нам приходят</h2>
+        <span class="studio-kicker">С чем поможем</span>
+        <h2>Подберем под квартиру, дом или проект</h2>
       </div>
       <div class="astera-selector__grid">
         <div class="astera-selector__tabs" role="tablist" aria-label="Сценарии подбора Astera">
@@ -404,7 +410,7 @@ export function renderHome(main) {
         </div>
         <article class="astera-selector__panel">
           <div>
-            <p class="astera-selector__eyebrow">Astera собирает решение под объект</p>
+            <p class="astera-selector__eyebrow">Подберем решение под ваш дом или квартиру</p>
             <h3 data-scenario-title></h3>
             <p data-scenario-lead></p>
           </div>
@@ -472,12 +478,21 @@ export function renderHome(main) {
 
     <section class="studio-catalog-preview reveal">
       <div class="studio-section-head">
-        <span class="studio-kicker">Каталог дверей</span>
-        <h2>Начните с модели, а расчет сделаем под проем</h2>
-        <p>В каталоге собраны популярные модели LORD. В карточке можно быстро перейти к расчету по размеру, отделке, коробу, фурнитуре и монтажу.</p>
+        <span class="studio-kicker">Коллекции дверей</span>
+        <h2>Выберите настроение интерьера</h2>
+        <p>Сначала выберите близкое направление. В салоне покажем образцы, оттенки, фурнитуру и рассчитаем комплект под ваши проемы.</p>
       </div>
-      <div class="studio-door-grid">
-        ${showcase.map(cardHTML).join('')}
+      <div class="astera-collection-grid">
+        ${categoryHeroSlides().map((slide, index) => `
+          <a class="astera-collection-card" href="${slide.href}">
+            ${slide.bg ? `<img src="${assetPath(slide.bg)}" alt="${slide.title}" loading="lazy">` : ''}
+            <span>${String(index + 1).padStart(2, '0')}</span>
+            <div>
+              <h3>${slide.title}</h3>
+              <p>${slide.text}</p>
+            </div>
+          </a>
+        `).join('')}
       </div>
       <div class="studio-center">
         <a class="studio-btn studio-btn--dark" href="${appHref('catalog/doors')}">Открыть межкомнатные двери</a>

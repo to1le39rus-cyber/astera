@@ -1,7 +1,7 @@
 import { CATALOG, ALL, CATEGORY_HEROES } from './data.js';
 import { cardHTML, bindCards, leadLink } from './page-home.js';
 import { assetPath } from './asset.js';
-import { appHref } from './routes.js';
+import { appHref, navigateTo } from './routes.js';
 
 const STYLE_LABELS = {
   'Дизайн': 'акцентные полотна',
@@ -12,20 +12,15 @@ const STYLE_LABELS = {
 
 const ORDERED_CATEGORIES = ['Классика', 'Неоклассика', 'Минимализм', 'Дизайн'];
 const DOOR_CATEGORY_NAV = [
-  { label: 'Классика', href: categoryHref('Классика') },
-  { label: 'Неоклассика', href: categoryHref('Неоклассика') },
-  { label: 'Минимализм', href: categoryHref('Минимализм') },
+  { label: 'Классика', href: appHref('catalog/doors'), category: 'Классика' },
+  { label: 'Неоклассика', href: appHref('catalog/doors'), category: 'Неоклассика' },
+  { label: 'Минимализм', href: appHref('catalog/doors'), category: 'Минимализм' },
   { label: 'Скрытые двери', href: leadLink('Здравствуйте! Хочу обсудить скрытые двери под интерьер.') },
   { label: 'Алюминиевые перегородки', href: appHref('partitions') },
 ];
 
 function categoryByName(name) {
   return CATALOG.find(c => c.name === name) || CATALOG.find(c => c.name.includes(name));
-}
-
-function categoryHref(name) {
-  const found = categoryByName(name);
-  return found ? appHref(`catalog/${encodeURIComponent(found.name)}`) : appHref('catalog');
 }
 
 function lifestyleFromCategory(name) {
@@ -163,17 +158,17 @@ function applyFilters(main) {
 
 export function renderCatalog(main, activeCategory) {
   const directions = directionCards();
-  const isDoorCatalog = activeCategory === 'doors';
-  const showDoorCollections = Boolean(activeCategory);
+  const selectedCategory = activeCategory === 'doors' ? '' : activeCategory;
+  const showDoorCollections = activeCategory === 'doors' || Boolean(categoryByName(activeCategory));
   main.dataset.catalogMode = showDoorCollections ? 'doors' : '';
   main.innerHTML = `
     <section class="catalog-studio">
       <div class="catalog-studio__hero">
-        <span class="studio-kicker">Каталог Astera</span>
-        <h1>Каталог Astera</h1>
-        <p>Сначала выбираем двери, потом собираем вокруг них стены, входную группу и перегородки. Так интерьер выглядит цельно, а расчет остается понятным.</p>
+        <span class="studio-kicker">Выбор направления</span>
+        <h1>С чего начнем интерьер?</h1>
+        <p>Выберите направление, а мы поможем связать двери, панели, входную группу и перегородки в цельный интерьер.</p>
         <div class="catalog-studio__actions">
-          <a class="studio-btn studio-btn--dark" href="${leadLink('Здравствуйте! Хочу получить подбор Astera по проекту.')}" target="_blank" rel="noopener noreferrer">Получить подборку</a>
+          <a class="studio-btn studio-btn--dark" href="${leadLink('Здравствуйте! Хочу обсудить подбор Astera по интерьеру.')}" target="_blank" rel="noopener noreferrer">Обсудить подбор</a>
           <a class="studio-btn studio-btn--outline" href="${appHref('catalog/doors')}">Смотреть двери</a>
         </div>
       </div>
@@ -202,7 +197,7 @@ export function renderCatalog(main, activeCategory) {
               </div>
               ${item.chips ? `
                 <div class="catalog-direction__chips" aria-label="Стили межкомнатных дверей">
-                  ${item.chips.map(chip => `<a href="${chip.href}">${chip.label}</a>`).join('')}
+                  ${item.chips.map(chip => `<a href="${chip.href}" ${chip.category ? `data-door-category="${chip.category}"` : ''}>${chip.label}</a>`).join('')}
                 </div>
                 <div class="catalog-direction__scrollhint" aria-hidden="true"><span></span></div>
               ` : ''}
@@ -270,6 +265,13 @@ export function renderCatalog(main, activeCategory) {
     </section>`;
 
   if (!showDoorCollections) {
+    main.querySelectorAll('[data-door-category]').forEach((link) => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        window.sessionStorage?.setItem('asteraDoorCategory', link.dataset.doorCategory || '');
+        navigateTo('catalog/doors');
+      });
+    });
     main.querySelector('.catalog-filter')?.remove();
     main.querySelector('.catalog-studio__summary')?.remove();
     main.querySelector('.catalog-door-grid')?.remove();
@@ -290,9 +292,9 @@ export function renderCatalog(main, activeCategory) {
   const categoryGroup = main.querySelector('.catalog-filter__group');
   if (categoryGroup) {
     categoryGroup.innerHTML = `
-      <button class="${isDoorCatalog ? 'is-active' : ''}" data-filter-category data-value="">Все</button>
+      <button class="${!selectedCategory ? 'is-active' : ''}" data-filter-category data-value="">Все</button>
       ${ORDERED_CATEGORIES.map(name => categoryByName(name)).filter(Boolean).map(c => `
-        <button class="${activeCategory === c.name ? 'is-active' : ''}" data-filter-category data-value="${c.name}">
+        <button class="${selectedCategory === c.name ? 'is-active' : ''}" data-filter-category data-value="${c.name}">
           ${c.name}
         </button>
       `).join('')}
@@ -303,9 +305,17 @@ export function renderCatalog(main, activeCategory) {
   if (summaryText) summaryText.textContent = 'Популярные модели из разных коллекций. Выберите стиль, чтобы сузить подборку.';
   main.querySelector('.catalog-consult')?.remove();
 
-  if (activeCategory && !isDoorCatalog) {
+  const storedCategory = window.sessionStorage?.getItem('asteraDoorCategory') || '';
+  if (!selectedCategory && storedCategory) {
+    window.sessionStorage?.removeItem('asteraDoorCategory');
+    const storedButton = main.querySelector(`[data-filter-category][data-value="${storedCategory}"]`);
+    if (storedButton) {
+      main.querySelectorAll('[data-filter-category]').forEach(btn => btn.classList.remove('is-active'));
+      storedButton.classList.add('is-active');
+    }
+  } else if (selectedCategory) {
     main.querySelectorAll('[data-filter-category]').forEach(btn => {
-      btn.classList.toggle('is-active', btn.dataset.value === activeCategory);
+      btn.classList.toggle('is-active', btn.dataset.value === selectedCategory);
     });
   }
 
@@ -315,6 +325,11 @@ export function renderCatalog(main, activeCategory) {
       main.querySelectorAll(group).forEach(item => item.classList.remove('is-active'));
       btn.classList.add('is-active');
       applyFilters(main);
+      if (btn.hasAttribute('data-filter-category')) {
+        const value = btn.dataset.value || '';
+        const next = value ? `catalog/${encodeURIComponent(value)}` : 'catalog/doors';
+        window.history.replaceState({}, '', appHref(next));
+      }
       if (main.dataset.catalogMode === 'doors') {
         main.querySelector('.catalog-studio__summary')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
