@@ -28,6 +28,27 @@ const NEEDS = [
   },
 ];
 
+const PROJECT_PAIN = [
+  ['Двери выбиваются из визуализации', 'Подбираем стиль, высоту, покрытие и фурнитуру до заказа, чтобы решение не спорило с проектом.'],
+  ['Сложные узлы остаются на дизайнере', 'Помогаем с коробами, скрытыми решениями, панелями, перегородками, доборами и примыканиями.'],
+  ['Клиент теряется между подрядчиками', 'Astera берет на себя замер, расчет, поставку, монтаж и сервис по дверному блоку.'],
+];
+
+const DELIVERABLES = [
+  'подбор моделей и отделок под визуализацию',
+  'ориентир по бюджету и комплектации',
+  'спецификация по проемам и зонам',
+  'поддержка по узлам: скрытый короб, панели, перегородки',
+  'закрепление проекта и партнерские условия',
+];
+
+const OBJECT_TYPES = [
+  'квартиры и апартаменты',
+  'частные дома',
+  'коммерческие интерьеры',
+  'комплектация объектов и ЖК',
+];
+
 const PROCESS = [
   'План или визуализация',
   'Подбор решений',
@@ -42,8 +63,8 @@ export function renderDesigners(main) {
       <div class="designer-hero">
         <div class="designer-hero__copy">
           <span class="studio-kicker">Для дизайнеров и объектов</span>
-          <h1>Дизайнерам, архитекторам и застройщикам</h1>
-          <p>Помогаем закрыть двери, панели, перегородки и входные группы без потери авторской идеи. Подготовим подбор, расчет, технические детали, замер, поставку и монтаж. Для дизайнеров действуют партнерские условия до 20%.</p>
+          <h1>Двери и интерьерные узлы без потери авторской идеи</h1>
+          <p>Astera помогает дизайнеру закрыть межкомнатные двери, панели, рейки, перегородки и входные группы одной спецификацией. Для партнеров действуют условия до 20% — обсуждаем лично, проект закрепляем за автором.</p>
           <div class="studio-hero__actions">
             <a class="studio-btn studio-btn--light" href="${leadLink('Здравствуйте! Я дизайнер/архитектор, хочу получить партнерские условия Astera.')}" target="_blank" rel="noopener noreferrer">Получить условия</a>
             <a class="studio-btn studio-btn--ghost" href="#designer-form">Передать проект ${ARR_SVG}</a>
@@ -53,6 +74,22 @@ export function renderDesigners(main) {
           ${SUPPORT.map(([value, label]) => `<div><strong>${value}</strong><span>${label}</span></div>`).join('')}
         </div>
       </div>
+
+      <section class="designer-pain reveal">
+        <div>
+          <span class="studio-kicker">Зачем дизайнеру Astera</span>
+          <h2>Мы закрываем то, что обычно съедает время на объекте</h2>
+        </div>
+        <div class="designer-pain__grid">
+          ${PROJECT_PAIN.map(([title, text], index) => `
+            <article>
+              <span>${String(index + 1).padStart(2, '0')}</span>
+              <strong>${title}</strong>
+              <p>${text}</p>
+            </article>
+          `).join('')}
+        </div>
+      </section>
 
       <section class="designer-needs">
         <div class="studio-section-head reveal">
@@ -71,6 +108,17 @@ export function renderDesigners(main) {
         </div>
       </section>
 
+      <section class="designer-delivery reveal">
+        <div>
+          <span class="studio-kicker">Что получает проект</span>
+          <h2>Не просто подбор, а рабочий пакет для согласования</h2>
+          <p>Чтобы дизайнеру было проще защитить решение перед клиентом и строителями, мы собираем понятный набор материалов по дверному блоку.</p>
+        </div>
+        <ul>
+          ${DELIVERABLES.map(item => `<li>${item}</li>`).join('')}
+        </ul>
+      </section>
+
       <section class="designer-kit reveal">
         <div>
           <span class="studio-kicker">В проект</span>
@@ -83,6 +131,13 @@ export function renderDesigners(main) {
           <span>стеновые панели и декоративные рейки</span>
           <span>плинтусы, стекло, фурнитура, доборы</span>
           <span>входные двери Astera под фасад и холл</span>
+        </div>
+      </section>
+
+      <section class="designer-objects reveal">
+        <span class="studio-kicker">С кем работаем</span>
+        <div>
+          ${OBJECT_TYPES.map(item => `<span>${item}</span>`).join('')}
         </div>
       </section>
 

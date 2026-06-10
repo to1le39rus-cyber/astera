@@ -8,7 +8,29 @@ const ENTRANCE_FEATURES = [
   ['Размер под проем', 'Проектируем дверь под существующий или новый проем, фасад, холл и внутреннюю отделку.'],
   ['Тепло и тишина', 'Подбираем конструкцию, уплотнение, контур и отделку под квартиру, дом или таунхаус.'],
   ['Отделка под интерьер', 'Внутренняя сторона может поддерживать двери, панели, мебель и общий стиль пространства.'],
-      ['Продуманный монтаж', 'До заказа уточняем узлы примыкания, доборы, откосы, фурнитуру и сроки.'],
+  ['Продуманный монтаж', 'До заказа уточняем узлы примыкания, доборы, откосы, фурнитуру и сроки.'],
+];
+
+const ENTRANCE_SCENARIOS = [
+  {
+    title: 'Квартира',
+    text: 'Акцент на тишину, аккуратную внутреннюю отделку, надежную фурнитуру и спокойный вид со стороны холла.',
+  },
+  {
+    title: 'Дом',
+    text: 'Учитываем фасад, улицу, перепады температуры, тепло, влагу, цвет наружной и внутренней стороны.',
+  },
+  {
+    title: 'Дизайн-проект',
+    text: 'Подбираем внутреннюю панель, ручку, доборы и примыкания так, чтобы вход поддерживал весь интерьер.',
+  },
+];
+
+const ENTRANCE_LAYERS = [
+  ['Конструкция', 'жесткость полотна, короб, контуры уплотнения, петли, замковая зона'],
+  ['Комфорт', 'тепло, тишина, сценарий эксплуатации, квартира или частный дом'],
+  ['Вид', 'наружная отделка, внутренняя панель, ручка, оттенок, геометрия'],
+  ['Монтаж', 'замер, примыкания, откосы, доборы, доставка и аккуратная установка'],
 ];
 
 const ENTRANCE_STEPS = [
@@ -17,6 +39,14 @@ const ENTRANCE_STEPS = [
   'Готовим ориентир по комплектации и стоимости',
   'Делаем замер и фиксируем техническое решение',
   'Изготавливаем, доставляем и устанавливаем дверь',
+];
+
+const ENTRANCE_BRIEF = [
+  'фото проема или фасада',
+  'примерный размер, если он уже есть',
+  'дом или квартира',
+  'что важнее: тишина, тепло, внешний вид, сроки',
+  'желательная внутренняя отделка',
 ];
 
 export function renderEntrance(main) {
@@ -28,8 +58,8 @@ export function renderEntrance(main) {
             <a href="${appHref('')}">Главная</a><span>/</span><a href="${appHref('catalog')}">Каталог</a><span>/</span><strong>Входные двери Astera</strong>
           </nav>
           <span class="studio-kicker">Флагман Astera</span>
-          <h1>Входные двери Astera на заказ</h1>
-          <p>Дверь, которая встречает дом первой: точный размер, спокойная геометрия, отделка под фасад и интерьер, профессиональный монтаж в Калининграде.</p>
+          <h1>Входная дверь, которую делают под ваш дом</h1>
+          <p>Astera проектирует входную дверь как часть архитектуры: размер, конструкция, тепло, тишина, наружная сторона, внутренняя отделка и монтаж в Калининграде.</p>
           <div class="studio-hero__actions">
             <a class="studio-btn studio-btn--dark" href="${leadLink('Здравствуйте! Хочу рассчитать входную дверь Astera под мой проем.')}" target="_blank" rel="noopener noreferrer">Рассчитать дверь</a>
             <a class="studio-btn studio-btn--outline" href="#entrance-form">Передать размеры ${ARR_SVG}</a>
@@ -42,10 +72,10 @@ export function renderEntrance(main) {
 
       <section class="entrance-precision reveal">
         <div>
-          <span class="studio-kicker">Почему отдельно</span>
-          <h2>Входная дверь задает ощущение дома</h2>
+          <span class="studio-kicker">Отдельное направление</span>
+          <h2>Это не позиция из каталога. Это изделие под объект.</h2>
         </div>
-        <p>Она встречает гостей, держит тепло и тишину, продолжает фасад и интерьер прихожей. Поэтому мы собираем решение под ваш проем, отделку и сценарий эксплуатации.</p>
+        <p>Входная дверь встречает гостей, держит тепло и тишину, продолжает фасад и интерьер прихожей. Поэтому мы начинаем с проема, условий эксплуатации и того, какой вид должен быть снаружи и внутри.</p>
       </section>
 
       <section class="entrance-features">
@@ -56,6 +86,36 @@ export function renderEntrance(main) {
             <p>${text}</p>
           </article>
         `).join('')}
+      </section>
+
+      <section class="entrance-scenarios reveal">
+        <div class="entrance-scenarios__head">
+          <span class="studio-kicker">Сценарии</span>
+          <h2>Для квартиры, дома и проекта</h2>
+        </div>
+        <div class="entrance-scenarios__grid">
+          ${ENTRANCE_SCENARIOS.map((item) => `
+            <article>
+              <strong>${item.title}</strong>
+              <p>${item.text}</p>
+            </article>
+          `).join('')}
+        </div>
+      </section>
+
+      <section class="entrance-layers reveal">
+        <div>
+          <span class="studio-kicker">Из чего складывается цена</span>
+          <h2>Считаем не “дверь от”, а полное решение</h2>
+        </div>
+        <div class="entrance-layers__list">
+          ${ENTRANCE_LAYERS.map(([title, text]) => `
+            <article>
+              <strong>${title}</strong>
+              <p>${text}</p>
+            </article>
+          `).join('')}
+        </div>
       </section>
 
       <section class="designer-process reveal">
@@ -69,6 +129,16 @@ export function renderEntrance(main) {
             </div>
           `).join('')}
         </div>
+      </section>
+
+      <section class="entrance-brief reveal">
+        <div>
+          <span class="studio-kicker">Чтобы быстро посчитать</span>
+          <h2>Что можно прислать в Telegram</h2>
+        </div>
+        <ul>
+          ${ENTRANCE_BRIEF.map(item => `<li>${item}</li>`).join('')}
+        </ul>
       </section>
 
       <section class="studio-lead reveal" id="entrance-form">
