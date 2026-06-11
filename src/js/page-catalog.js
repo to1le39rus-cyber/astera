@@ -162,16 +162,58 @@ export function renderCatalog(main, activeCategory) {
   const showDoorCollections = activeCategory === 'doors' || Boolean(categoryByName(activeCategory));
   main.dataset.catalogMode = showDoorCollections ? 'doors' : '';
   main.innerHTML = `
-    <section class="catalog-studio">
+    <section class="catalog-studio ${showDoorCollections ? 'is-door-mode' : 'is-hub-mode'}">
       <div class="catalog-studio__hero">
         <span class="studio-kicker">Выбор направления</span>
-        <h1>С чего начнем интерьер?</h1>
-        <p>Выберите направление, а мы поможем связать двери, панели, входную группу и перегородки в цельный интерьер.</p>
+        <h1>${showDoorCollections ? 'Межкомнатные двери' : 'Каталог как маршрут по интерьеру'}</h1>
+        <p>${showDoorCollections ? 'Сначала выберите настроение коллекции. Дальше рассчитаем модель под проем, отделку, короб, фурнитуру и монтаж.' : 'Начните с главного: межкомнатные двери. Затем добавьте стены, рейки, перегородки или входную дверь Astera, если проект требует цельного решения.'}</p>
         <div class="catalog-studio__actions">
           <a class="studio-btn studio-btn--dark" href="${leadLink('Здравствуйте! Хочу обсудить подбор Astera по интерьеру.')}" target="_blank" rel="noopener noreferrer">Обсудить подбор</a>
           <a class="studio-btn studio-btn--outline" href="${appHref('catalog/doors')}">Смотреть двери</a>
         </div>
       </div>
+
+      ${!showDoorCollections ? `
+      <div class="catalog-choice reveal" aria-label="Выбор направления каталога">
+        ${directions.map((item, index) => `
+          <article class="catalog-choice__item ${index === 0 ? 'catalog-choice__item--main' : ''}">
+            <a class="catalog-choice__media" href="${item.href}" ${item.href.startsWith('http') ? 'target="_blank" rel="noopener noreferrer"' : ''}>
+              ${item.slides?.length ? `
+                <div class="catalog-choice__slider" aria-label="Интерьеры межкомнатных дверей">
+                  ${item.slides.map(slide => `
+                    <figure>
+                      <img src="${assetPath(slide.image)}" alt="${slide.label}" loading="lazy">
+                      <figcaption>${slide.label}</figcaption>
+                    </figure>
+                  `).join('')}
+                </div>
+              ` : item.image ? `<img src="${assetPath(item.image)}" alt="${item.title}" loading="lazy">` : ''}
+            </a>
+            <div class="catalog-choice__body">
+              <span>${String(index + 1).padStart(2, '0')} / ${item.kicker}</span>
+              <h2>${item.title}</h2>
+              <p>${item.text}</p>
+              ${item.chips ? `
+                <div class="catalog-choice__chips" aria-label="Категории дверей">
+                  ${item.chips.map(chip => `<a href="${chip.href}" ${chip.category ? `data-door-category="${chip.category}"` : ''}>${chip.label}</a>`).join('')}
+                </div>
+                <div class="catalog-choice__hint"><span></span></div>
+              ` : ''}
+              <div class="catalog-choice__actions">
+                <a href="${item.href}" ${item.href.startsWith('http') ? 'target="_blank" rel="noopener noreferrer"' : ''}>${item.cta}</a>
+                ${item.second ? `<a href="${item.secondHref}" ${item.secondHref.startsWith('http') ? 'target="_blank" rel="noopener noreferrer"' : ''}>${item.second}</a>` : ''}
+              </div>
+            </div>
+          </article>
+        `).join('')}
+      </div>
+
+      <section class="catalog-help reveal">
+        <span class="studio-kicker">Если не знаете, с чего начать</span>
+        <h2>Пришлите фото интерьера или план. Мы предложим спокойный первый шаг.</h2>
+        <a class="studio-btn studio-btn--dark" href="${leadLink('Здравствуйте! Хочу начать подбор Astera по фото интерьера или плану.')}" target="_blank" rel="noopener noreferrer">Начать подбор</a>
+      </section>
+      ` : ''}
 
       ${!showDoorCollections ? `
       <div class="catalog-directions reveal-stagger" aria-label="Направления каталога">
