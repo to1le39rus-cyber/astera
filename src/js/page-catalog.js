@@ -253,6 +253,26 @@ export function renderCatalog(main, activeCategory) {
       </div>
       ` : ''}
 
+      ${showDoorCollections ? `
+      <div class="door-collections-intro reveal" aria-label="Интерьеры коллекций межкомнатных дверей">
+        <div class="door-collections-slider">
+          ${doorCollectionSlides().map(slide => `
+            <figure class="door-collections-slide">
+              <img src="${assetPath(slide.image)}" alt="${slide.label}" loading="lazy">
+              <figcaption>${slide.label}</figcaption>
+            </figure>
+          `).join('')}
+        </div>
+        <nav class="door-collections-nav" aria-label="Быстрый выбор категории">
+          ${ORDERED_CATEGORIES.map(name => categoryByName(name)).filter(Boolean).map(c => `
+            <a href="${appHref('catalog/doors')}" data-door-category="${c.name}">${c.name}</a>
+          `).join('')}
+          <a href="${appHref('partitions')}">Алюминиевые перегородки</a>
+        </nav>
+        <div class="door-collections-scrollhint" aria-hidden="true"><span></span></div>
+      </div>
+      ` : ''}
+
       <div class="catalog-filter reveal" id="door-collections">
         <div class="catalog-filter__top">
           <label>
@@ -360,6 +380,19 @@ export function renderCatalog(main, activeCategory) {
       btn.classList.toggle('is-active', btn.dataset.value === selectedCategory);
     });
   }
+
+  main.querySelectorAll('.door-collections-nav [data-door-category]').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      const target = link.dataset.doorCategory || '';
+      const targetButton = main.querySelector(`[data-filter-category][data-value="${target}"]`);
+      if (!targetButton) return;
+      main.querySelectorAll('[data-filter-category]').forEach(btn => btn.classList.remove('is-active'));
+      targetButton.classList.add('is-active');
+      applyFilters(main);
+      main.querySelector('.catalog-studio__summary')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
 
   main.querySelectorAll('[data-filter-category], [data-filter-budget]').forEach((btn) => {
     btn.addEventListener('click', () => {
