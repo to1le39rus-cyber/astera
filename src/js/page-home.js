@@ -502,10 +502,13 @@ export function renderHome(main) {
     <section class="astera-partners reveal" id="designer-teaser">
       <div>
         <span class="studio-kicker">Партнерство</span>
-        <h2>Дизайнерам — отдельный рабочий контур</h2>
-        <p>Подбор под визуализацию, образцы, расчет, спецификация, замер и монтаж. Коммерческие условия показываем на отдельной странице, чтобы не смешивать их с розничной покупкой.</p>
+        <h2>Дизайнерам и объектам — отдельный рабочий путь</h2>
+        <p>Для дизайнеров готовим подбор, образцы, расчет и спецификацию под визуализацию. Для объектов собираем повторяемые комплектации дверей, панелей, перегородок и входных групп под сроки и монтаж.</p>
       </div>
-      <a class="studio-btn studio-btn--light" href="${appHref('designers')}">Открыть страницу дизайнеров ${ARR_SVG}</a>
+      <div class="astera-partners__actions">
+        <a class="studio-btn studio-btn--light" href="${appHref('designers')}">Дизайнерам ${ARR_SVG}</a>
+        <a class="studio-btn studio-btn--outline" href="${appHref('developers')}">Застройщикам ${ARR_SVG}</a>
+      </div>
     </section>
 
     <section class="astera-offers reveal" id="promos">

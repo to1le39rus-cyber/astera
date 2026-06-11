@@ -7,6 +7,7 @@ import { renderCatalog } from './page-catalog.js';
 import { renderProduct } from './page-product.js';
 import { renderContacts } from './page-contacts.js';
 import { renderDesigners } from './page-designers.js';
+import { renderDevelopers } from './page-developers.js';
 import { renderEntrance } from './page-entrance.js';
 import { renderSolutions } from './page-solutions.js';
 import { BY_SLUG } from './data.js';
@@ -32,6 +33,10 @@ const META = {
   designers: {
     title: 'Дизайнерам, архитекторам и застройщикам — Astera',
     description: 'Партнерские условия Astera, подбор дверей, панелей, перегородок и входных групп под дизайн-проект.',
+  },
+  developers: {
+    title: 'Застройщикам и комплектация объектов в Калининграде | Astera',
+    description: 'Комплектация дверей, входных групп, панелей и перегородок для квартир, домов, апартаментов и объектов. Расчет, спецификация и монтаж Astera.',
   },
   entrance: {
     title: 'Входные двери Astera на заказ в Калининграде',
@@ -113,6 +118,7 @@ function isInternalRoute(path = '') {
   return !page || [
     'catalog',
     'contacts',
+    'developers',
     'designers',
     'entrance',
     'lead',
@@ -175,6 +181,11 @@ function route() {
     renderDesigners(main);
     setHeroHeader(false);
     setActiveNav('designers');
+  } else if (page === 'developers') {
+    setMeta(META.developers, 'developers');
+    renderDevelopers(main);
+    setHeroHeader(false);
+    setActiveNav('developers');
   } else if (page === 'entrance') {
     setMeta(META.entrance, 'entrance');
     renderEntrance(main);

@@ -106,6 +106,7 @@ export function renderFooter(id = 'site-footer') {
               <a href="${appHref('panels')}">Панели и рейки</a>
               <a href="${appHref('partitions')}">Перегородки</a>
               <a href="${appHref('designers')}">Дизайнерам</a>
+              <a href="${appHref('developers')}">Застройщикам</a>
               <a href="${appHref('promos')}">Предложения</a>
               <a href="${appHref('contacts')}">Контакты</a>
             </div>
