@@ -371,6 +371,69 @@ export function renderHome(main) {
       ` : ''}
     </section>
 
+    <section class="astera-new-flow reveal" id="new-flow">
+      <div class="astera-new-flow__intro">
+        <span class="studio-kicker">Astera / маршрут покупки</span>
+        <h2>Сначала понимаем интерьер. Потом подбираем двери.</h2>
+        <p>Покупателю не нужен длинный рассказ о категориях. Ему нужно быстро понять, что подойдет в его квартиру, дом или проект, сколько это будет стоить и как не ошибиться с проемами, оттенками и монтажом.</p>
+      </div>
+      <div class="astera-new-flow__grid">
+        <a class="astera-new-card astera-new-card--primary" href="${appHref('catalog/doors')}">
+          <span>01 / главный выбор</span>
+          <h3>Межкомнатные двери</h3>
+          <p>Коллекции LORD, подбор под стиль, высоту, покрытие, фурнитуру и монтаж. Начинаем с дверей, потому что они задают ритм всему интерьеру.</p>
+          <strong>Смотреть коллекции ${ARR_SVG}</strong>
+        </a>
+        <a class="astera-new-card" href="${appHref('panels')}">
+          <span>02 / цельная отделка</span>
+          <h3>Панели и рейки</h3>
+          <p>Когда нужны акцентные стены, ТВ-зоны, прихожие, скрытые проходы и спокойные линии вокруг дверей.</p>
+          <strong>Собрать стены ${ARR_SVG}</strong>
+        </a>
+        <a class="astera-new-card" href="${appHref('entrance')}">
+          <span>03 / флагман Astera</span>
+          <h3>Входная дверь на заказ</h3>
+          <p>Собственное направление: конструкция, фасад, внутренняя отделка, тепло, тишина и монтаж под ваш проем.</p>
+          <strong>Рассчитать вход ${ARR_SVG}</strong>
+        </a>
+      </div>
+    </section>
+
+    <section class="astera-buy-path reveal">
+      <div class="astera-buy-path__media">
+        ${editorial ? `<img src="${assetPath(editorial)}" alt="Подбор дверей и интерьерных решений Astera" loading="lazy">` : ''}
+      </div>
+      <div class="astera-buy-path__copy">
+        <span class="studio-kicker">Не каталог ради каталога</span>
+        <h2>В салоне собираем решение, а не просто показываем модель.</h2>
+        <div class="astera-buy-path__steps">
+          ${[
+            ['Фото или план', 'Вы присылаете интерьер, проемы или визуализацию. Можно без точных размеров.'],
+            ['Подбор', 'Мы предлагаем модели, оттенки, фурнитуру и смежные решения без визуального шума.'],
+            ['Расчет', 'Считаем комплект под проем, отделку, короб, наличники, монтаж и сроки.'],
+          ].map(([title, text], index) => `
+            <article>
+              <span>${String(index + 1).padStart(2, '0')}</span>
+              <strong>${title}</strong>
+              <p>${text}</p>
+            </article>
+          `).join('')}
+        </div>
+        <a class="studio-btn studio-btn--dark" href="${leadLink('Здравствуйте! Хочу подобрать двери и интерьерные решения Astera по фото или плану.')}" target="_blank" rel="noopener noreferrer">Начать с моего интерьера</a>
+      </div>
+    </section>
+
+    <section class="astera-editorial-links reveal">
+      <a href="${appHref('designers')}">
+        <span>Дизайнерам</span>
+        <h3>Спецификации, образцы, узлы и партнерские условия.</h3>
+      </a>
+      <a href="${appHref('developers')}">
+        <span>Застройщикам</span>
+        <h3>Повторяемые комплектации для объектов, сроков и монтажа.</h3>
+      </a>
+    </section>
+
     <section class="astera-diagnosis reveal">
       <div class="astera-diagnosis__copy">
         <span class="studio-kicker">Главное направление</span>

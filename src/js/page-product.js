@@ -3,6 +3,19 @@ import { openLightbox } from './lightbox.js';
 import { assetPath } from './asset.js';
 import { appHref, categoryHref } from './routes.js';
 
+const CALC_POINTS = [
+  ['Проем', 'ширина, высота, открывание, стены и примыкания'],
+  ['Комплект', 'полотно, короб, наличники, доборы и скрытые решения'],
+  ['Отделка', 'покрытие, стекло, ручка, петли и сочетание с интерьером'],
+  ['Монтаж', 'замер, доставка, установка и контроль результата'],
+];
+
+const INTERIOR_LAYERS = [
+  ['Панели и рейки', 'Если нужно продолжить линию двери на стене, собрать ТВ-зону, прихожую или скрытый проход.', appHref('panels')],
+  ['Алюминиевые перегородки', 'Когда важно сохранить свет, зонировать кабинет, кухню-гостиную или гардеробную.', appHref('partitions')],
+  ['Входная дверь Astera', 'Флагманское решение под фасад, холл и внутреннюю отделку дома или квартиры.', appHref('entrance')],
+];
+
 export function renderProduct(main, slug) {
   const p = BY_SLUG[slug];
   if (!p) { main.innerHTML = `<div style="padding:120px 40px;text-align:center;font-family:var(--f-serif);font-size:28px;color:var(--c-muted);font-weight:300">Такой модели нет в каталоге. Вернитесь в каталог или напишите нам — подберем похожее решение.</div>`; return; }
@@ -39,10 +52,10 @@ export function renderProduct(main, slug) {
         <div class="prod-info">
           <p class="prod-info__cat">${p.category} · LORD</p>
           <h1 class="prod-info__name">${p.name}</h1>
-          <p class="prod-info__lead">Поможем понять, как ${p.name} будет смотреться именно в вашем интерьере: уточним проем, высоту полотна, покрытие, короб, фурнитуру и монтаж. При необходимости подберем к модели панели, рейки или перегородки.</p>
+          <p class="prod-info__lead">Покажем, как ${p.name} может смотреться в вашем интерьере, и рассчитаем комплектацию под проем, отделку, короб, фурнитуру и монтаж.</p>
           <div class="prod-info__quick">
-            <span>Подбор под интерьер</span>
-            <span>Замер перед заказом</span>
+            <span>Расчет под проем</span>
+            <span>Образцы в салоне</span>
             <span>Официальный партнер LORD</span>
           </div>
           ${price ? `
@@ -52,14 +65,26 @@ export function renderProduct(main, slug) {
               </div>` : ''}
           <div class="prod-fit">
             <div><strong>Подойдет для</strong><span>квартир, домов, таунхаусов и интерьеров по проекту</span></div>
-            <div><strong>Для расчета уточним</strong><span>размер проема, открывание, короб, покрытие, стекло, фурнитуру, панели и сроки</span></div>
+            <div><strong>Для точного расчета</strong><span>размер проема, открывание, короб, покрытие, стекло, фурнитуру, панели и сроки</span></div>
+          </div>
+          <div class="prod-calc">
+            <span class="studio-kicker">Что входит в расчет</span>
+            <div class="prod-calc__grid">
+              ${CALC_POINTS.map(([title, text], index) => `
+                <article>
+                  <span>${String(index + 1).padStart(2, '0')}</span>
+                  <strong>${title}</strong>
+                  <p>${text}</p>
+                </article>
+              `).join('')}
+            </div>
           </div>
           <div class="prod-fast-cta">
             <a href="https://t.me/asteradoors?text=${leadText}" target="_blank" rel="noopener noreferrer">
-              <span>Рассчитать под мой проем</span>
-              ${price ? `<strong>${price}</strong>` : '<strong>ориентир в салоне</strong>'}
+              <span>Рассчитать эту модель</span>
+              ${price ? `<strong>${price}</strong>` : '<strong>стоимость после консультации</strong>'}
             </a>
-            <small>Пришлите размеры или фото. Мы подскажем комплектацию до визита в салон.</small>
+            <small>Пришлите размеры, фото проема или план. Мы подскажем комплектацию до визита в салон.</small>
           </div>
           <div class="prod-info__div"></div>
           <div class="specs" id="specs">
@@ -70,6 +95,18 @@ export function renderProduct(main, slug) {
                 </button>
                 <div class="spec-body-wrap"><div class="spec-body">${s.body}</div></div>
               </div>`).join('')}
+          </div>
+          <div class="prod-info__div"></div>
+          <div class="prod-layers">
+            <span class="studio-kicker">Если нужен цельный интерьер</span>
+            <div class="prod-layers__grid">
+              ${INTERIOR_LAYERS.map(([title, text, href]) => `
+                <a href="${href}">
+                  <strong>${title}</strong>
+                  <span>${text}</span>
+                </a>
+              `).join('')}
+            </div>
           </div>
           <div class="prod-info__div"></div>
           <div class="prod-cta">
