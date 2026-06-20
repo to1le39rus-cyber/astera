@@ -371,46 +371,46 @@ export function renderHome(main) {
       ` : ''}
     </section>
 
-    <section class="astera-new-flow reveal" id="new-flow">
+    <section class="astera-new-flow astera-concierge reveal" id="new-flow">
       <div class="astera-new-flow__intro">
-        <span class="studio-kicker">Astera / маршрут покупки</span>
-        <h2>Сначала понимаем интерьер. Потом подбираем двери.</h2>
-        <p>Покупателю не нужен длинный рассказ о категориях. Ему нужно быстро понять, что подойдет в его квартиру, дом или проект, сколько это будет стоить и как не ошибиться с проемами, оттенками и монтажом.</p>
+        <span class="studio-kicker">Astera / Калининград</span>
+        <h2>Подбираем двери так, чтобы интерьер выглядел собранным.</h2>
+        <p>Начнем с ваших проемов, оттенков, пола и света. Покажем подходящие коллекции, посчитаем комплект и спокойно доведем до замера, поставки и монтажа.</p>
       </div>
       <div class="astera-new-flow__grid">
         <a class="astera-new-card astera-new-card--primary" href="${appHref('catalog/doors')}">
-          <span>01 / главный выбор</span>
+          <span>01 / основной выбор</span>
           <h3>Межкомнатные двери</h3>
-          <p>Коллекции LORD, подбор под стиль, высоту, покрытие, фурнитуру и монтаж. Начинаем с дверей, потому что они задают ритм всему интерьеру.</p>
-          <strong>Смотреть коллекции ${ARR_SVG}</strong>
-        </a>
-        <a class="astera-new-card" href="${appHref('panels')}">
-          <span>02 / цельная отделка</span>
-          <h3>Панели и рейки</h3>
-          <p>Когда нужны акцентные стены, ТВ-зоны, прихожие, скрытые проходы и спокойные линии вокруг дверей.</p>
-          <strong>Собрать стены ${ARR_SVG}</strong>
+          <p>Классика, неоклассика, минимализм и дизайн-коллекции LORD. Подбираем модель, покрытие, высоту, короб и фурнитуру под ваш интерьер.</p>
+          <strong>Выбрать двери ${ARR_SVG}</strong>
         </a>
         <a class="astera-new-card" href="${appHref('entrance')}">
-          <span>03 / флагман Astera</span>
-          <h3>Входная дверь на заказ</h3>
-          <p>Собственное направление: конструкция, фасад, внутренняя отделка, тепло, тишина и монтаж под ваш проем.</p>
+          <span>02 / флагман Astera</span>
+          <h3>Входные двери на заказ</h3>
+          <p>Собственное направление Astera: конструкция, фасад, внутренняя отделка и монтаж под реальный проем.</p>
           <strong>Рассчитать вход ${ARR_SVG}</strong>
+        </a>
+        <a class="astera-new-card" href="${appHref('panels')}">
+          <span>03 / интерьерные стены</span>
+          <h3>Панели и рейки</h3>
+          <p>Акцентные стены, прихожие, ТВ-зоны и скрытые проходы в одной линии с дверями.</p>
+          <strong>Собрать стены ${ARR_SVG}</strong>
         </a>
       </div>
     </section>
 
-    <section class="astera-buy-path reveal">
+    <section class="astera-buy-path astera-atelier reveal">
       <div class="astera-buy-path__media">
-        ${editorial ? `<img src="${assetPath(editorial)}" alt="Подбор дверей и интерьерных решений Astera" loading="lazy">` : ''}
+        ${editorial ? `<img src="${assetPath(editorial)}" alt="Интерьерный подбор дверей и стеновых решений Astera" loading="lazy">` : ''}
       </div>
       <div class="astera-buy-path__copy">
-        <span class="studio-kicker">Не каталог ради каталога</span>
-        <h2>В салоне собираем решение, а не просто показываем модель.</h2>
+        <span class="studio-kicker">Как работаем</span>
+        <h2>Не просим вас разбираться в коробах, покрытиях и узлах.</h2>
         <div class="astera-buy-path__steps">
           ${[
-            ['Фото или план', 'Вы присылаете интерьер, проемы или визуализацию. Можно без точных размеров.'],
-            ['Подбор', 'Мы предлагаем модели, оттенки, фурнитуру и смежные решения без визуального шума.'],
-            ['Расчет', 'Считаем комплект под проем, отделку, короб, наличники, монтаж и сроки.'],
+            ['Покажите интерьер', 'Фото, план, визуализация или просто список проемов. Этого достаточно для первого шага.'],
+            ['Соберем подборку', 'Отсечем лишнее и предложим модели, которые не спорят с вашим пространством.'],
+            ['Дадим расчет', 'Покажем стоимость комплекта: полотна, короб, фурнитура, доборы, монтаж и сроки.'],
           ].map(([title, text], index) => `
             <article>
               <span>${String(index + 1).padStart(2, '0')}</span>
@@ -419,7 +419,7 @@ export function renderHome(main) {
             </article>
           `).join('')}
         </div>
-        <a class="studio-btn studio-btn--dark" href="${appHref('project')}">Начать с моего интерьера</a>
+        <a class="studio-btn studio-btn--dark" href="${appHref('project')}">Получить первый расчет</a>
       </div>
     </section>
 

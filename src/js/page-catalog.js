@@ -67,7 +67,7 @@ function directionCards() {
       mod: 'catalog-direction--featured',
       kicker: 'Основная коллекция',
       title: 'Межкомнатные двери',
-      text: 'Главный выбор для квартиры, дома или дизайн-проекта: стиль, высота, отделка и фурнитура под ваши проемы.',
+      text: 'Начните с дверей: они задают высоту, ритм и первое ощущение интерьера. Подберем коллекцию, отделку и комплектацию под ваши проемы.',
       image: doorImage,
       slides: doorCollectionSlides(),
       href: appHref('catalog/doors'),
@@ -79,7 +79,7 @@ function directionCards() {
     {
       kicker: 'Astera на заказ',
       title: 'Входные двери Astera',
-      text: 'Индивидуальный размер, отделка под фасад и холл, тепло, тишина и аккуратное примыкание к стенам.',
+      text: 'Флагман Astera: дверь под ваш проем, фасад и холл. Считаем конструкцию, отделку, тепло, тишину и монтаж.',
       image: 'images/astera-entrance-door-burkovsky-inspired.png',
       href: appHref('entrance'),
       cta: 'Смотреть флагман',
@@ -89,7 +89,7 @@ function directionCards() {
     {
       kicker: 'Единая отделка',
       title: 'Стеновые панели и рейки',
-      text: 'Для прихожих, ТВ-зон, скрытых проходов и акцентных стен в одной логике с дверями.',
+      text: 'Когда нужно не просто закрыть проемы, а собрать стену: прихожая, ТВ-зона, скрытый проход или акцентная плоскость.',
       image: panelImage,
       href: appHref('panels'),
       cta: 'Смотреть решения',
@@ -99,7 +99,7 @@ function directionCards() {
     {
       kicker: 'Свет и зонирование',
       title: 'Алюминиевые перегородки',
-      text: 'Для кабинета, гардеробной, кухни-гостиной и приватных зон, где важно сохранить свет и легкость.',
+      text: 'Легкое зонирование для кухни-гостиной, кабинета, гардеробной и приватных зон, где важны свет и спокойная геометрия.',
       image: partitionImage,
       href: appHref('partitions'),
       cta: 'Смотреть перегородки',
@@ -164,12 +164,12 @@ export function renderCatalog(main, activeCategory) {
   main.innerHTML = `
     <section class="catalog-studio ${showDoorCollections ? 'is-door-mode' : 'is-hub-mode'}">
       <div class="catalog-studio__hero">
-        <span class="studio-kicker">Выбор направления</span>
-        <h1>${showDoorCollections ? 'Межкомнатные двери' : 'Каталог как маршрут по интерьеру'}</h1>
-        <p>${showDoorCollections ? 'Сначала выберите настроение коллекции. Дальше рассчитаем модель под проем, отделку, короб, фурнитуру и монтаж.' : 'Начните с главного: межкомнатные двери. Затем добавьте стены, рейки, перегородки или входную дверь Astera, если проект требует цельного решения.'}</p>
+        <span class="studio-kicker">Каталог Astera</span>
+        <h1>${showDoorCollections ? 'Межкомнатные двери' : 'Выберите, что нужно вашему интерьеру'}</h1>
+        <p>${showDoorCollections ? 'Выберите коллекцию, а расчет сделаем под реальные проемы: полотно, короб, фурнитура, доборы, монтаж и сроки.' : 'Самый частый старт — межкомнатные двери. Если интерьер требует большего, добавим входную дверь Astera, стеновые панели, рейки или перегородки.'}</p>
         <div class="catalog-studio__actions">
-          <a class="studio-btn studio-btn--dark" href="${leadLink('Здравствуйте! Хочу обсудить подбор Astera по интерьеру.')}" target="_blank" rel="noopener noreferrer">Обсудить подбор</a>
-          <a class="studio-btn studio-btn--outline" href="${appHref('catalog/doors')}">Смотреть двери</a>
+          <a class="studio-btn studio-btn--dark" href="${appHref('catalog/doors')}">Межкомнатные двери</a>
+          <a class="studio-btn studio-btn--outline" href="${leadLink('Здравствуйте! Хочу обсудить подбор Astera по интерьеру.')}" target="_blank" rel="noopener noreferrer">Помочь с выбором</a>
         </div>
       </div>
 
