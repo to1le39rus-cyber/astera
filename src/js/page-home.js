@@ -157,23 +157,31 @@ function leadLink(label = 'Здравствуйте! Хочу обсудить �
 
 function cardHTML(p) {
   const thumb = variantImgs(p)[0] || p.images[0] || '';
-  const price = p.priceFrom ? `от ${fmt(p.priceFrom)} ₽` : 'расчет по проекту';
+  const price = p.priceFrom ? `от ${fmt(p.priceFrom)} ₽` : 'по расчету';
   const variants = variantImgs(p).length;
+  const finish = variants ? `${variants} вариантов отделки` : 'отделка под проект';
 
   return `
     <article class="door-card reveal" data-slug="${p.slug}" role="button" tabindex="0">
       <div class="door-card__media">
         ${thumb ? `<img src="${assetPath(thumb)}" alt="${p.name}" loading="lazy">` : ''}
         <span class="door-card__tag">${p.category}</span>
+        <span class="door-card__price">${price}</span>
       </div>
       <div class="door-card__body">
         <div>
+          <span class="door-card__eyebrow">LORD / ${p.category}</span>
           <h3>${p.name}</h3>
-          <p>${variants ? `${variants} вариантов отделки` : 'отделка под проект'}</p>
+          <p>${finish}. Рассчитаем полотно, короб, фурнитуру и монтаж под ваш проем.</p>
+        </div>
+        <div class="door-card__chips">
+          <span>проем</span>
+          <span>отделка</span>
+          <span>монтаж</span>
         </div>
         <div class="door-card__foot">
-          <strong>${price}</strong>
-          <span>Смотреть модель ${ARR_SVG}</span>
+          <strong>Цена зависит от комплекта</strong>
+          <span>Рассчитать ${ARR_SVG}</span>
         </div>
       </div>
     </article>`;
