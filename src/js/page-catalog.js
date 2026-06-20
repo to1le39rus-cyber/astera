@@ -67,7 +67,7 @@ function directionCards() {
       mod: 'catalog-direction--featured',
       kicker: 'Основная коллекция',
       title: 'Межкомнатные двери',
-      text: 'Начните с дверей: они задают высоту, ритм и первое ощущение интерьера. Подберем коллекцию, отделку и комплектацию под ваши проемы.',
+      text: 'Главный выбор для квартиры, дома или проекта. Подберем коллекцию, покрытие, высоту полотна, короб и фурнитуру под ваш интерьер.',
       image: doorImage,
       slides: doorCollectionSlides(),
       href: appHref('catalog/doors'),
@@ -79,7 +79,7 @@ function directionCards() {
     {
       kicker: 'Astera на заказ',
       title: 'Входные двери Astera',
-      text: 'Флагман Astera: дверь под ваш проем, фасад и холл. Считаем конструкцию, отделку, тепло, тишину и монтаж.',
+      text: 'Входная дверь под размер проема, фасад и внутреннюю отделку. Рассчитаем конструкцию, покрытие, фурнитуру, доставку и монтаж.',
       image: 'images/astera-entrance-door-burkovsky-inspired.png',
       href: appHref('entrance'),
       cta: 'Смотреть флагман',
@@ -89,7 +89,7 @@ function directionCards() {
     {
       kicker: 'Единая отделка',
       title: 'Стеновые панели и рейки',
-      text: 'Когда нужно не просто закрыть проемы, а собрать стену: прихожая, ТВ-зона, скрытый проход или акцентная плоскость.',
+      text: 'Когда нужно собрать стену в одном стиле с дверями: прихожая, ТВ-зона, скрытый проход или акцентная плоскость.',
       image: panelImage,
       href: appHref('panels'),
       cta: 'Смотреть решения',
@@ -165,8 +165,8 @@ export function renderCatalog(main, activeCategory) {
     <section class="catalog-studio ${showDoorCollections ? 'is-door-mode' : 'is-hub-mode'}">
       <div class="catalog-studio__hero">
         <span class="studio-kicker">Каталог Astera</span>
-        <h1>${showDoorCollections ? 'Межкомнатные двери' : 'Выберите, что нужно вашему интерьеру'}</h1>
-        <p>${showDoorCollections ? 'Выберите коллекцию, а расчет сделаем под реальные проемы: полотно, короб, фурнитура, доборы, монтаж и сроки.' : 'Самый частый старт — межкомнатные двери. Если интерьер требует большего, добавим входную дверь Astera, стеновые панели, рейки или перегородки.'}</p>
+        <h1>${showDoorCollections ? 'Межкомнатные двери' : 'Каталог дверей и интерьерных решений Astera'}</h1>
+        <p>${showDoorCollections ? 'Выберите коллекцию, а расчет сделаем под реальные проемы: полотно, короб, фурнитура, доборы, монтаж и сроки.' : 'Начните с межкомнатных дверей или передайте нам задачу целиком: входная дверь, панели, рейки и перегородки под один интерьер.'}</p>
         <div class="catalog-studio__actions">
           <a class="studio-btn studio-btn--dark" href="${appHref('catalog/doors')}">Межкомнатные двери</a>
           <a class="studio-btn studio-btn--outline" href="${leadLink('Здравствуйте! Хочу обсудить подбор Astera по интерьеру.')}" target="_blank" rel="noopener noreferrer">Помочь с выбором</a>
@@ -210,47 +210,9 @@ export function renderCatalog(main, activeCategory) {
 
       <section class="catalog-help reveal">
         <span class="studio-kicker">Если не знаете, с чего начать</span>
-        <h2>Пришлите фото интерьера или план. Мы предложим спокойный первый шаг.</h2>
+        <h2>Пришлите фото интерьера или план. Мы предложим 2-3 подходящих направления и подскажем, что считать первым.</h2>
         <a class="studio-btn studio-btn--dark" href="${appHref('project')}">Начать подбор</a>
       </section>
-      ` : ''}
-
-      ${!showDoorCollections ? `
-      <div class="catalog-directions reveal-stagger" aria-label="Направления каталога">
-        ${directions.map((item) => `
-          <article class="catalog-direction ${item.mod || ''}">
-            <a class="catalog-direction__media" href="${item.href}" ${item.href.startsWith('http') ? 'target="_blank" rel="noopener noreferrer"' : ''}>
-              ${item.slides?.length ? `
-                <div class="catalog-direction__slider" aria-label="Интерьеры межкомнатных дверей">
-                  ${item.slides.map(slide => `
-                    <figure>
-                      <img src="${assetPath(slide.image)}" alt="${slide.label}" loading="lazy">
-                      <figcaption>${slide.label}</figcaption>
-                    </figure>
-                  `).join('')}
-                </div>
-              ` : item.image ? `<img src="${assetPath(item.image)}" alt="${item.title}" loading="lazy">` : ''}
-              <span>${item.kicker}</span>
-            </a>
-            <div class="catalog-direction__body">
-              <div>
-                <h2>${item.title}</h2>
-                <p>${item.text}</p>
-              </div>
-              ${item.chips ? `
-                <div class="catalog-direction__chips" aria-label="Стили межкомнатных дверей">
-                  ${item.chips.map(chip => `<a href="${chip.href}" ${chip.category ? `data-door-category="${chip.category}"` : ''}>${chip.label}</a>`).join('')}
-                </div>
-                <div class="catalog-direction__scrollhint" aria-hidden="true"><span></span></div>
-              ` : ''}
-              <div class="catalog-direction__actions">
-                <a href="${item.href}" ${item.href.startsWith('http') ? 'target="_blank" rel="noopener noreferrer"' : ''}>${item.cta}</a>
-                ${item.second ? `<a class="catalog-direction__muted" href="${item.secondHref}" ${item.secondHref.startsWith('http') ? 'target="_blank" rel="noopener noreferrer"' : ''}>${item.second}</a>` : ''}
-              </div>
-            </div>
-          </article>
-        `).join('')}
-      </div>
       ` : ''}
 
       ${showDoorCollections ? `
@@ -282,7 +244,7 @@ export function renderCatalog(main, activeCategory) {
           <label>
             <span>Сортировка</span>
             <select data-filter-sort>
-              <option value="popular">Рекомендуем</option>
+              <option value="popular">Сначала рекомендуемые</option>
               <option value="price">Сначала дешевле</option>
               <option value="name">По алфавиту</option>
             </select>
@@ -299,11 +261,11 @@ export function renderCatalog(main, activeCategory) {
         </div>
 
         <div class="catalog-filter__group catalog-filter__group--budget" aria-label="Бюджет">
-          <button class="is-active" data-filter-budget data-value="">Любая стоимость</button>
+          <button class="is-active" data-filter-budget data-value="">Любой бюджет</button>
           <button data-filter-budget data-value="mid">до 24 000 ₽</button>
           <button data-filter-budget data-value="premium">24 000-32 000 ₽</button>
           <button data-filter-budget data-value="signature">от 32 000 ₽</button>
-          <button data-filter-budget data-value="custom">индивидуально</button>
+          <button data-filter-budget data-value="custom">По индивидуальному расчету</button>
         </div>
       </div>
 
@@ -346,8 +308,8 @@ export function renderCatalog(main, activeCategory) {
       <a href="${appHref('')}">Главная</a><span>/</span><a href="${appHref('catalog')}">Каталог</a><span>/</span><strong>Межкомнатные двери</strong>
     </nav>
     <span class="studio-kicker">Коллекции дверей Astera</span>
-    <h1>Межкомнатные двери LORD в Калининграде</h1>
-    <p>Классика, неоклассика, минимализм и дизайн. Подберем модель, покрытие, высоту полотна, короб и фурнитуру под ваши проемы.</p>
+    <h1>Межкомнатные двери LORD для квартир, домов и проектов</h1>
+    <p>Подберем коллекцию, покрытие, высоту полотна, короб и фурнитуру под ваш интерьер. Стоимость считаем комплектом: полотно, короб, доборы, фурнитура, доставка и монтаж.</p>
   `;
   main.querySelector('.catalog-filter__top')?.remove();
   main.querySelector('.catalog-filter__group--budget')?.remove();
@@ -364,7 +326,7 @@ export function renderCatalog(main, activeCategory) {
     `;
   }
   const summaryText = main.querySelector('.catalog-studio__summary span');
-  if (summaryText) summaryText.textContent = 'Популярные модели из разных коллекций. Выберите стиль, чтобы сузить подборку.';
+  if (summaryText) summaryText.textContent = 'Популярные модели LORD. Выберите стиль, а мы поможем проверить размеры, отделку и комплектацию.';
   main.querySelector('.catalog-consult')?.remove();
 
   const storedCategory = window.sessionStorage?.getItem('asteraDoorCategory') || '';

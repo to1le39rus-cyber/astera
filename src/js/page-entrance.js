@@ -58,11 +58,11 @@ export function renderEntrance(main) {
             <a href="${appHref('')}">Главная</a><span>/</span><a href="${appHref('catalog')}">Каталог</a><span>/</span><strong>Входные двери Astera</strong>
           </nav>
           <span class="studio-kicker">Флагман Astera</span>
-          <h1>Входная дверь, которую делают под ваш дом</h1>
-          <p>Astera проектирует входную дверь как часть архитектуры: размер, конструкция, тепло, тишина, наружная сторона, внутренняя отделка и монтаж в Калининграде.</p>
+          <h1>Входные двери Astera на заказ</h1>
+          <p>Изготовим дверь под размер проема, фасад и внутреннюю отделку. Рассчитаем конструкцию, тепло- и шумоизоляцию, фурнитуру, доставку и монтаж в Калининграде.</p>
           <div class="studio-hero__actions">
             <a class="studio-btn studio-btn--dark" href="${leadLink('Здравствуйте! Хочу рассчитать входную дверь Astera под мой проем.')}" target="_blank" rel="noopener noreferrer">Рассчитать дверь</a>
-            <a class="studio-btn studio-btn--outline" href="#entrance-form">Передать размеры ${ARR_SVG}</a>
+            <a class="studio-btn studio-btn--outline" href="#entrance-form">Отправить фото или размеры ${ARR_SVG}</a>
           </div>
         </div>
         <div class="entrance-hero__media">
@@ -73,9 +73,9 @@ export function renderEntrance(main) {
       <section class="entrance-precision reveal">
         <div>
           <span class="studio-kicker">Отдельное направление</span>
-          <h2>Это не позиция из каталога. Это изделие под объект.</h2>
+          <h2>Каждая дверь рассчитывается под конкретный проем.</h2>
         </div>
-        <p>Входная дверь встречает гостей, держит тепло и тишину, продолжает фасад и интерьер прихожей. Поэтому мы начинаем с проема, условий эксплуатации и того, какой вид должен быть снаружи и внутри.</p>
+        <p>Мы учитываем условия эксплуатации, сторону установки, отделку снаружи и внутри, ручку, замки, откосы и сроки.</p>
       </section>
 
       <section class="entrance-features">
@@ -144,7 +144,7 @@ export function renderEntrance(main) {
       <section class="studio-lead reveal" id="entrance-form">
         <div class="studio-lead__copy">
           <span class="studio-kicker">Расчет</span>
-          <h2>Пришлите проем или фасад</h2>
+          <h2>Пришлите фото проема, фасада или холла</h2>
           <p>Можно начать с фото, размера или проекта. Мы подскажем, какая конструкция и отделка будут смотреться уместно и служить спокойно.</p>
         </div>
         <form class="studio-form" data-lead-form>

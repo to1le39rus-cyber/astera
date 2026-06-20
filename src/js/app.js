@@ -12,7 +12,7 @@ import { renderEntrance } from './page-entrance.js';
 import { renderProject } from './page-project.js';
 import { renderSolutions } from './page-solutions.js';
 import { BY_SLUG } from './data.js';
-import { routeFromUrl } from './routes.js';
+import { appHref, routeFromUrl } from './routes.js';
 
 const app  = document.getElementById('app');
 const main = document.getElementById('main-content');
@@ -65,6 +65,22 @@ const META = {
 renderHeader();
 renderFooter();
 initLightbox();
+
+function initMobileNavLinks() {
+  const mobileNav = document.getElementById('mobile-nav');
+  if (!mobileNav) return;
+  const routes = {
+    catalog: 'catalog',
+    estimate: 'project',
+    contacts: 'contacts',
+  };
+  mobileNav.querySelectorAll('[data-nav]').forEach((item) => {
+    const routeName = routes[item.dataset.nav];
+    if (routeName) item.setAttribute('href', appHref(routeName));
+  });
+}
+
+initMobileNavLinks();
 
 function canonicalForRoute(route = '') {
   const clean = route.replace(/^\/+|\/+$/g, '');

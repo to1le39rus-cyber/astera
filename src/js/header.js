@@ -80,9 +80,8 @@ export function setActiveNav(page) {
   });
   document.querySelectorAll('.mobile-nav__item').forEach(el => {
     const nav = el.dataset.nav;
-    const isContacts = page === 'contacts' && nav === 'estimate';
     const isProject = page === 'project' && nav === 'estimate';
-    el.classList.toggle('is-active', nav === (page || 'home') || isContacts || isProject);
+    el.classList.toggle('is-active', nav === (page || 'home') || isProject);
   });
 }
 

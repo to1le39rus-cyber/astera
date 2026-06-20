@@ -33,9 +33,9 @@ export function renderProject(main) {
           <nav class="catalog-breadcrumbs" aria-label="Хлебные крошки">
             <a href="${appHref('')}">Главная</a><span>/</span><strong>Расчет проекта</strong>
           </nav>
-          <span class="studio-kicker">Расчет без лишней переписки</span>
-          <h1>Передайте задачу. Мы вернем понятный первый расчет.</h1>
-          <p>Бриф нужен, чтобы сразу понять тип объекта, количество проемов, стадию ремонта и решения, которые стоит считать вместе. Если данных мало, это нормально: начнем с того, что есть.</p>
+          <span class="studio-kicker">Первый расчет по проекту</span>
+          <h1>Опишите проект — мы подготовим первый расчет.</h1>
+          <p>Укажите тип объекта, количество проемов и нужные решения. Если точных данных пока нет, начнем с фото, плана или короткого описания.</p>
         </div>
         <aside class="project-hero__aside">
           <strong>Что подготовить</strong>
@@ -48,7 +48,7 @@ export function renderProject(main) {
 
       <form class="project-brief" data-project-brief>
         <fieldset>
-          <legend>Что считаем</legend>
+          <legend>Тип проекта</legend>
           <div class="project-options project-options--type">
             ${PROJECT_TYPES.map(([title, text], index) => `
               <label>
@@ -63,7 +63,7 @@ export function renderProject(main) {
         </fieldset>
 
         <fieldset>
-          <legend>Какие решения нужны</legend>
+          <legend>Что нужно рассчитать</legend>
           <div class="project-options">
             ${NEEDS.map((need, index) => `
               <label>
@@ -95,12 +95,12 @@ export function renderProject(main) {
             </select>
           </label>
           <label>
-            <span>Ориентир по бюджету</span>
+            <span>Бюджет</span>
             <select name="budget">
               <option>Нужно предложить варианты</option>
               <option>Средний сегмент</option>
               <option selected>Премиальный сегмент</option>
-              <option>Без компромиссов по задаче</option>
+              <option>Максимальная комплектация</option>
             </select>
           </label>
           <label>
@@ -115,8 +115,8 @@ export function renderProject(main) {
         </label>
 
         <div class="project-brief__footer">
-          <button class="studio-btn studio-btn--dark" type="submit">Сформировать заявку</button>
-          <p>После нажатия откроется Telegram с готовым текстом. Можно добавить фото, план или визуализацию.</p>
+          <button class="studio-btn studio-btn--dark" type="submit">Отправить в Telegram</button>
+          <p>Откроется Telegram с готовым сообщением. К нему можно добавить фото, план или визуализацию.</p>
         </div>
       </form>
     </section>`;
@@ -134,10 +134,10 @@ export function renderProject(main) {
     const comment = data.get('comment') || '';
 
     const message = [
-      'Здравствуйте! Хочу получить расчет Astera.',
+      'Здравствуйте! Хочу получить первый расчет Astera по проекту.',
       `Тип: ${type}.`,
-      `Нужно: ${needs.length ? needs.join(', ') : 'нужна консультация'}.`,
-      `Проемы: ${openings}.`,
+      `Решения: ${needs.length ? needs.join(', ') : 'нужна консультация'}.`,
+      `Количество проемов: ${openings}.`,
       `Стадия: ${stage}.`,
       `Бюджет: ${budget}.`,
       `Контакт: ${contact}.`,

@@ -525,11 +525,218 @@ canvas{
 }
 .astera-diagnosis,
 .astera-selector,
-.astera-proof,
 .astera-lines,
 .studio-catalog-preview,
 .astera-offers{
   display:none;
+}
+.astera-interior-plan{
+  max-width:var(--mw);
+  margin:0 auto;
+  padding:clamp(84px,10vw,154px) var(--side) clamp(72px,8vw,118px);
+  display:grid;
+  grid-template-columns:minmax(0,.92fr) minmax(380px,1.08fr);
+  gap:clamp(34px,6vw,96px);
+  align-items:start;
+}
+.astera-interior-plan__copy{
+  position:sticky;
+  top:calc(var(--header-h) + 42px);
+}
+.astera-interior-plan__copy h2,
+.astera-product-stage__head h2{
+  margin:18px 0 26px;
+  color:var(--c-char);
+  font-family:var(--f-serif);
+  font-size:clamp(48px,6.4vw,104px);
+  font-weight:300;
+  line-height:.98;
+}
+.astera-interior-plan__copy p{
+  max-width:620px;
+  color:var(--c-muted);
+  font-size:clamp(16px,1.25vw,19px);
+  line-height:1.85;
+}
+.astera-interior-plan__actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:34px;
+}
+.astera-interior-plan__board{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1px;
+  background:rgba(65,66,61,.13);
+  border:1px solid rgba(65,66,61,.13);
+}
+.astera-interior-plan__board article{
+  min-height:260px;
+  padding:clamp(24px,3vw,42px);
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  background:#f7f8f4;
+}
+.astera-interior-plan__board span,
+.astera-product-card__body span{
+  color:var(--c-olive);
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+}
+.astera-interior-plan__board strong{
+  margin-top:auto;
+  color:var(--c-char);
+  font-family:var(--f-serif);
+  font-size:clamp(30px,3.2vw,48px);
+  font-weight:300;
+  line-height:1;
+}
+.astera-interior-plan__board p{
+  max-width:280px;
+  margin:18px 0 0;
+  color:var(--c-muted);
+  font-size:14px;
+  line-height:1.65;
+}
+.astera-product-stage{
+  max-width:var(--mw);
+  margin:0 auto;
+  padding:0 var(--side) clamp(84px,10vw,144px);
+}
+.astera-product-stage__head{
+  display:grid;
+  grid-template-columns:minmax(180px,.5fr) minmax(0,1.3fr);
+  gap:clamp(28px,6vw,92px);
+  align-items:end;
+  margin-bottom:clamp(36px,5vw,72px);
+}
+.astera-product-stage__head h2{
+  max-width:920px;
+  margin:0;
+}
+.astera-product-stage__grid{
+  display:grid;
+  grid-template-columns:1.12fr .88fr;
+  gap:clamp(16px,2vw,28px);
+}
+.astera-product-card{
+  min-height:620px;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:flex-end;
+  color:#fff;
+  background:#20221d;
+  text-decoration:none;
+}
+.astera-product-card--doors{
+  grid-row:span 2;
+}
+.astera-product-card__media,
+.astera-product-card__media::after,
+.astera-product-card__media img{
+  position:absolute;
+  inset:0;
+}
+.astera-product-card__media::after{
+  content:"";
+  z-index:1;
+  background:linear-gradient(180deg, rgba(16,18,15,.06), rgba(16,18,15,.82));
+}
+.astera-product-card__media img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:saturate(.88) contrast(.96);
+  transform:scale(1.02);
+  transition:transform 1.2s cubic-bezier(.16,1,.3,1), filter .8s ease;
+}
+.astera-product-card:hover .astera-product-card__media img{
+  transform:scale(1.07);
+  filter:saturate(1) contrast(1);
+}
+.astera-product-card__body{
+  position:relative;
+  z-index:2;
+  width:100%;
+  padding:clamp(26px,4vw,58px);
+}
+.astera-product-card__body h3{
+  max-width:620px;
+  margin:18px 0 18px;
+  color:#fff;
+  font-family:var(--f-serif);
+  font-size:clamp(42px,5.8vw,96px);
+  font-weight:300;
+  line-height:.95;
+}
+.astera-product-card:not(.astera-product-card--doors) .astera-product-card__body h3{
+  font-size:clamp(32px,3.5vw,56px);
+}
+.astera-product-card__body p{
+  max-width:520px;
+  margin:0 0 28px;
+  color:rgba(255,255,255,.78);
+  font-size:15px;
+  line-height:1.75;
+}
+.astera-product-card__body strong{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  font-size:11px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+.astera-proof{
+  max-width:var(--mw);
+  margin:0 auto;
+  padding:clamp(34px,4vw,54px) var(--side) clamp(82px,10vw,140px);
+  display:grid;
+  grid-template-columns:minmax(220px,.65fr) minmax(0,1.35fr);
+  gap:clamp(24px,5vw,80px);
+  align-items:end;
+}
+.astera-proof__copy p{
+  max-width:420px;
+  margin:18px 0 0;
+  color:var(--c-muted);
+  font-size:15px;
+  line-height:1.75;
+}
+.astera-proof__facts{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  border-top:1px solid rgba(65,66,61,.16);
+  border-bottom:1px solid rgba(65,66,61,.16);
+}
+.astera-proof__facts div{
+  min-height:150px;
+  padding:30px clamp(18px,2.4vw,38px);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.astera-proof__facts div + div{
+  border-left:1px solid rgba(65,66,61,.12);
+}
+.astera-proof__facts strong{
+  color:var(--c-olive);
+  font-family:var(--f-serif);
+  font-size:clamp(42px,5vw,76px);
+  font-weight:300;
+  line-height:.9;
+}
+.astera-proof__facts span{
+  max-width:160px;
+  margin-top:12px;
+  color:var(--c-muted);
+  font-size:13px;
+  line-height:1.45;
 }
 .studio-advantages{
   display:grid;
@@ -740,52 +947,6 @@ canvas{
   display:flex;
   flex-wrap:wrap;
   gap:12px;
-}
-.astera-proof{
-  max-width:var(--mw);
-  margin:0 auto;
-  padding:clamp(28px,4vw,54px) var(--gutter) clamp(72px,8vw,118px);
-  display:grid;
-  grid-template-columns:minmax(260px,520px) minmax(0,1fr);
-  gap:clamp(34px,7vw,118px);
-  align-items:end;
-}
-.astera-proof__copy p{
-  margin-top:22px;
-  color:var(--c-char);
-  font-family:var(--f-serif);
-  font-size:clamp(28px,3.4vw,54px);
-  font-weight:500;
-  line-height:1.05;
-}
-.astera-proof__facts{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  border-top:1px solid rgba(65,66,61,.14);
-  border-bottom:1px solid rgba(65,66,61,.14);
-}
-.astera-proof__facts div{
-  min-height:148px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  padding:24px clamp(16px,3vw,42px);
-}
-.astera-proof__facts div + div{
-  border-left:1px solid rgba(65,66,61,.12);
-}
-.astera-proof__facts strong{
-  color:#8e8865;
-  font-family:var(--f-serif);
-  font-size:clamp(44px,4.8vw,78px);
-  font-weight:500;
-  line-height:.9;
-}
-.astera-proof__facts span{
-  margin-top:12px;
-  color:var(--c-muted);
-  font-size:13px;
-  line-height:1.5;
 }
 .astera-diagnosis{
   max-width:var(--mw);
@@ -4216,5 +4377,285 @@ canvas{
     height:1px;
     overflow:hidden;
     clip:rect(0 0 0 0);
+  }
+}
+
+/* ===== Final product pass: stable premium layout ===== */
+.astera-interior-plan{
+  max-width:var(--mw);
+  margin:0 auto;
+  padding:clamp(72px,9vw,134px) var(--side);
+  display:grid;
+  grid-template-columns:minmax(320px,.86fr) minmax(420px,1.14fr);
+  gap:clamp(34px,6vw,92px);
+  align-items:start;
+  border-top:1px solid rgba(65,66,61,.1);
+}
+.astera-interior-plan__copy{
+  position:sticky;
+  top:calc(var(--header-h) + 34px);
+}
+.astera-interior-plan h2,
+.astera-product-stage__head h2{
+  margin:18px 0 24px;
+  color:var(--c-char);
+  font-family:var(--f-serif);
+  font-size:clamp(46px,6.4vw,104px);
+  font-weight:300;
+  line-height:.98;
+}
+.astera-interior-plan p{
+  max-width:620px;
+  color:var(--c-muted);
+  font-size:clamp(16px,1.25vw,19px);
+  line-height:1.78;
+}
+.astera-interior-plan__actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:30px;
+}
+.astera-interior-plan__board{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1px;
+  background:rgba(65,66,61,.12);
+  border:1px solid rgba(65,66,61,.12);
+}
+.astera-interior-plan__board article{
+  min-height:260px;
+  padding:clamp(24px,3vw,42px);
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  background:rgba(255,255,255,.76);
+}
+.astera-interior-plan__board span{
+  color:var(--c-olive);
+  font-family:var(--f-serif);
+  font-size:clamp(34px,3.6vw,56px);
+  line-height:1;
+}
+.astera-interior-plan__board strong{
+  display:block;
+  margin-top:auto;
+  color:var(--c-char);
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+.astera-interior-plan__board p{
+  margin:14px 0 0;
+  color:var(--c-muted);
+  font-size:14px;
+  line-height:1.65;
+}
+.astera-product-stage{
+  max-width:var(--mw);
+  margin:0 auto;
+  padding:clamp(54px,7vw,104px) var(--side) clamp(78px,9vw,140px);
+}
+.astera-product-stage__head{
+  max-width:980px;
+  margin-bottom:clamp(34px,5vw,72px);
+}
+.astera-product-stage__grid{
+  display:grid;
+  grid-template-columns:1.08fr .92fr;
+  gap:1px;
+  background:rgba(65,66,61,.12);
+  border:1px solid rgba(65,66,61,.12);
+}
+.astera-product-card{
+  min-height:clamp(480px,46vw,720px);
+  display:grid;
+  grid-template-rows:minmax(260px,1fr) auto;
+  color:var(--c-char);
+  background:#fff;
+  text-decoration:none;
+}
+.astera-product-card--doors{
+  grid-row:span 2;
+}
+.astera-product-card__media{
+  position:relative;
+  min-height:260px;
+  overflow:hidden;
+}
+.astera-product-card__media::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg, rgba(15,16,14,.02), rgba(15,16,14,.28));
+}
+.astera-product-card__media img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .9s cubic-bezier(.16,1,.3,1);
+}
+.astera-product-card:hover .astera-product-card__media img{
+  transform:scale(1.04);
+}
+.astera-product-card__body{
+  min-height:260px;
+  padding:clamp(24px,3.5vw,48px);
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  gap:22px;
+}
+.astera-product-card__body span{
+  color:var(--c-olive);
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+}
+.astera-product-card__body h3{
+  max-width:520px;
+  margin:0;
+  font-family:var(--f-serif);
+  font-size:clamp(36px,4.4vw,76px);
+  font-weight:300;
+  line-height:1;
+}
+.astera-product-card:not(.astera-product-card--doors) .astera-product-card__body h3{
+  font-size:clamp(30px,3vw,48px);
+}
+.astera-product-card__body p{
+  max-width:620px;
+  margin:0;
+  color:var(--c-muted);
+  font-size:15px;
+  line-height:1.72;
+}
+.astera-product-card__body strong{
+  color:var(--c-char);
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+
+.catalog-choice__chips,
+.door-collections-nav,
+.catalog-filter__group{
+  max-width:100%;
+  min-width:0;
+}
+.catalog-choice__chips{
+  overscroll-behavior-x:contain;
+}
+
+@media (max-width:768px){
+  .header__logo,
+  .header--scrolled .header__logo{
+    width:132px;
+    height:42px;
+    min-width:0;
+    flex:0 0 132px;
+    overflow:visible;
+  }
+  .header--scrolled .header__logo{
+    width:124px;
+    flex-basis:124px;
+  }
+  .header__logo-img,
+  .header--scrolled .header__logo-img{
+    position:absolute;
+    inset:0 auto auto 0;
+    width:100%;
+    height:100%;
+    min-width:0;
+    max-height:none;
+    object-fit:contain;
+    object-position:left center;
+  }
+  .footer__logo{
+    width:132px;
+    height:auto;
+    max-height:42px;
+    object-fit:contain;
+    object-position:left center;
+  }
+  .catalog-choice__chips{
+    margin-right:0;
+    padding-right:18px;
+    overflow-x:auto;
+  }
+  .prod-fast-cta strong{
+    max-width:100%;
+    white-space:normal;
+    overflow-wrap:anywhere;
+  }
+  .astera-interior-plan,
+  .astera-product-stage{
+    width:100%;
+    max-width:100%;
+    overflow-x:clip;
+    padding-left:16px;
+    padding-right:16px;
+  }
+  .astera-interior-plan{
+    display:block;
+    padding-top:58px;
+    padding-bottom:58px;
+  }
+  .astera-interior-plan__copy{
+    position:static;
+  }
+  .astera-interior-plan h2,
+  .astera-product-stage__head h2{
+    font-size:clamp(36px,10.8vw,54px);
+    line-height:1;
+  }
+  .astera-interior-plan__actions{
+    display:grid;
+  }
+  .astera-interior-plan__board{
+    grid-template-columns:1fr;
+    margin-top:28px;
+  }
+  .astera-interior-plan__board article{
+    min-height:0;
+    padding:20px;
+  }
+  .astera-interior-plan__board span{
+    font-size:30px;
+  }
+  .astera-product-stage{
+    padding-top:54px;
+    padding-bottom:72px;
+  }
+  .astera-product-stage__grid{
+    grid-template-columns:1fr;
+    gap:12px;
+    background:transparent;
+    border:0;
+  }
+  .astera-product-card,
+  .astera-product-card--doors{
+    min-height:0;
+    border:1px solid rgba(65,66,61,.12);
+  }
+  .astera-product-card__media{
+    min-height:300px;
+  }
+  .astera-product-card__body{
+    min-height:0;
+    padding:22px;
+  }
+  .astera-product-card__body h3,
+  .astera-product-card:not(.astera-product-card--doors) .astera-product-card__body h3{
+    font-size:clamp(32px,9.6vw,46px);
+  }
+  .mobile-nav{
+    left:10px;
+    right:10px;
+    border-radius:14px;
+    box-shadow:0 14px 34px rgba(18,19,17,.11);
   }
 }

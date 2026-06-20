@@ -63,8 +63,8 @@ export function renderDesigners(main) {
       <div class="designer-hero">
         <div class="designer-hero__copy">
           <span class="studio-kicker">Для дизайнеров и объектов</span>
-          <h1>Двери и интерьерные узлы без потери авторской идеи</h1>
-          <p>Astera помогает дизайнеру закрыть межкомнатные двери, панели, рейки, перегородки и входные группы одной спецификацией. Для партнеров действуют условия до 20% — обсуждаем лично, проект закрепляем за автором.</p>
+          <h1>Двери, панели и перегородки под ваш дизайн-проект</h1>
+          <p>Поможем подобрать модели, отделки, фурнитуру и монтажные решения под визуализацию. Подготовим расчет, образцы и условия для дизайнера. Для партнеров действуют условия до 20% — обсуждаем лично, проект закрепляем за автором.</p>
           <div class="studio-hero__actions">
             <a class="studio-btn studio-btn--light" href="${leadLink('Здравствуйте! Я дизайнер/архитектор, хочу получить партнерские условия Astera.')}" target="_blank" rel="noopener noreferrer">Получить условия</a>
             <a class="studio-btn studio-btn--ghost" href="#designer-form">Передать проект ${ARR_SVG}</a>
@@ -78,7 +78,7 @@ export function renderDesigners(main) {
       <section class="designer-pain reveal">
         <div>
           <span class="studio-kicker">Зачем дизайнеру Astera</span>
-          <h2>Мы закрываем то, что обычно съедает время на объекте</h2>
+          <h2>Берем на себя подбор, расчет и технические детали</h2>
         </div>
         <div class="designer-pain__grid">
           ${PROJECT_PAIN.map(([title, text], index) => `
@@ -111,8 +111,8 @@ export function renderDesigners(main) {
       <section class="designer-delivery reveal">
         <div>
           <span class="studio-kicker">Что получает проект</span>
-          <h2>Не просто подбор, а рабочий пакет для согласования</h2>
-          <p>Чтобы дизайнеру было проще защитить решение перед клиентом и строителями, мы собираем понятный набор материалов по дверному блоку.</p>
+          <h2>Все материалы для согласования с клиентом</h2>
+          <p>Чтобы дизайнеру было проще защитить решение перед клиентом и строителями, мы собираем понятный набор материалов по дверям и комплектации.</p>
         </div>
         <ul>
           ${DELIVERABLES.map(item => `<li>${item}</li>`).join('')}
