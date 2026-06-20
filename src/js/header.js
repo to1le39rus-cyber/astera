@@ -36,7 +36,7 @@ export function renderHeader(id = 'site-header') {
           </a>
         </div>
       </div>
-      <a class="header__cta" href="https://t.me/asteradoors" target="_blank" rel="noopener noreferrer"><span>Обсудить проект</span></a>
+      <a class="header__cta" href="${appHref('project')}"><span>Обсудить проект</span></a>
     </div>`;
 
   const contact = el.querySelector('[data-contact-menu]');
@@ -81,7 +81,8 @@ export function setActiveNav(page) {
   document.querySelectorAll('.mobile-nav__item').forEach(el => {
     const nav = el.dataset.nav;
     const isContacts = page === 'contacts' && nav === 'estimate';
-    el.classList.toggle('is-active', nav === (page || 'home') || isContacts);
+    const isProject = page === 'project' && nav === 'estimate';
+    el.classList.toggle('is-active', nav === (page || 'home') || isContacts || isProject);
   });
 }
 
@@ -107,6 +108,7 @@ export function renderFooter(id = 'site-footer') {
               <a href="${appHref('partitions')}">Перегородки</a>
               <a href="${appHref('designers')}">Дизайнерам</a>
               <a href="${appHref('developers')}">Застройщикам</a>
+              <a href="${appHref('project')}">Расчет проекта</a>
               <a href="${appHref('promos')}">Предложения</a>
               <a href="${appHref('contacts')}">Контакты</a>
             </div>

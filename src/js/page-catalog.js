@@ -211,7 +211,7 @@ export function renderCatalog(main, activeCategory) {
       <section class="catalog-help reveal">
         <span class="studio-kicker">Если не знаете, с чего начать</span>
         <h2>Пришлите фото интерьера или план. Мы предложим спокойный первый шаг.</h2>
-        <a class="studio-btn studio-btn--dark" href="${leadLink('Здравствуйте! Хочу начать подбор Astera по фото интерьера или плану.')}" target="_blank" rel="noopener noreferrer">Начать подбор</a>
+        <a class="studio-btn studio-btn--dark" href="${appHref('project')}">Начать подбор</a>
       </section>
       ` : ''}
 

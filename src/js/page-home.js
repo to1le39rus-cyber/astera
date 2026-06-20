@@ -300,7 +300,7 @@ function bindScenarioSelector(container) {
       primary.href = scenario.route;
       primary.innerHTML = `${scenario.cta} ${ARR_SVG}`;
     }
-    if (secondary) secondary.href = leadLink(scenario.message);
+    if (secondary) secondary.href = appHref('project');
   };
 
   buttons.forEach(button => {
@@ -419,7 +419,7 @@ export function renderHome(main) {
             </article>
           `).join('')}
         </div>
-        <a class="studio-btn studio-btn--dark" href="${leadLink('Здравствуйте! Хочу подобрать двери и интерьерные решения Astera по фото или плану.')}" target="_blank" rel="noopener noreferrer">Начать с моего интерьера</a>
+        <a class="studio-btn studio-btn--dark" href="${appHref('project')}">Начать с моего интерьера</a>
       </div>
     </section>
 
@@ -481,7 +481,7 @@ export function renderHome(main) {
           <div class="astera-selector__result" data-scenario-result></div>
           <div class="astera-selector__actions">
             <a class="studio-btn studio-btn--dark" href="${PROJECT_SCENARIOS[0].route}" data-scenario-primary>${PROJECT_SCENARIOS[0].cta} ${ARR_SVG}</a>
-            <a class="studio-btn studio-btn--outline" href="${leadLink(PROJECT_SCENARIOS[0].message)}" target="_blank" rel="noopener noreferrer" data-scenario-secondary>Получить расчет</a>
+            <a class="studio-btn studio-btn--outline" href="${appHref('project')}" data-scenario-secondary>Получить расчет</a>
           </div>
         </article>
       </div>
